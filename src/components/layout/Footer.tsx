@@ -7,7 +7,7 @@ export const EMAIL_URL = "mailto:hello@sammitkin.com";
 
 export function Footer() {
   return (
-    <footer className="bg-[#1f1f1f] py-12">
+    <footer className="bg-[#263340] py-12">
       <Container className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
         <div className="flex flex-col gap-3">
           <Link to="/" aria-label="Back to home">

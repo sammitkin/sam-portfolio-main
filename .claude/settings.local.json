@@ -34,7 +34,9 @@
       "Bash(md5 \"/Users/samxbarber/Desktop/sam-portfolio-main/src/assets/images/moveease-design-clarity.png\" \"/private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/new_design_img_raw.png\")",
       "Bash(md5 \"/Users/samxbarber/Desktop/sam-portfolio-main/src/assets/images/moveease-testing.png\" \"/private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/new_testing_img_raw.png\")",
       "Bash(curl -sL -o /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/check_design_full.png https://www.figma.com/api/mcp/asset/131ae80f-644a-4479-992c-0684f7926d51)",
-      "Bash(md5 /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/check_design_full.png /Users/samxbarber/Desktop/sam-portfolio-main/src/assets/images/moveease-design-full.png)"
+      "Bash(md5 /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/check_design_full.png /Users/samxbarber/Desktop/sam-portfolio-main/src/assets/images/moveease-design-full.png)",
+      "Bash(curl -sL -o /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/new_portrait.png https://www.figma.com/api/mcp/asset/98584227-7a6b-440f-bf25-13a01813423a)",
+      "Bash(md5 /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/new_portrait.png /Users/samxbarber/Desktop/sam-portfolio-main/src/assets/images/portrait.png)"
     ]
   }
 }

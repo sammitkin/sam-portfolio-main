@@ -13,8 +13,13 @@ export function CaseStudyHero() {
               MoveEase
             </h1>
             <div className="mt-5 text-[20px] font-semibold leading-[32px] text-[#3b4b59]">
-              <p>Helping people stay organized before, during,</p>
-              <p>and after a move.</p>
+              <p className="sm:hidden">
+                Helping people stay organized before,
+                <br />
+                during, and after a move.
+              </p>
+              <p className="hidden sm:block">Helping people stay organized before, during,</p>
+              <p className="hidden sm:block">and after a move.</p>
             </div>
             <div className="mt-4 text-[16px] font-normal leading-[26px] text-[#3b4b59]">
               <p>A mobile app that surfaces hidden admin tasks after a move,</p>

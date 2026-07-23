@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__51de26a4-9f65-463f-9f64-c6eae04cea77__get_figma_skill",
+      "mcp__51de26a4-9f65-463f-9f64-c6eae04cea77__get_metadata",
+      "mcp__51de26a4-9f65-463f-9f64-c6eae04cea77__whoami",
+      "mcp__51de26a4-9f65-463f-9f64-c6eae04cea77__get_screenshot",
+      "Bash(curl -sL -o /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/moveease.png \"https://www.figma.com/api/mcp/asset/4e28bcb8-6bb4-4bf8-b87f-84fba9186bca\")",
+      "mcp__51de26a4-9f65-463f-9f64-c6eae04cea77__get_design_context",
+      "Bash(curl -sL -o /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/fullpage.png \"https://www.figma.com/api/mcp/asset/4d99369c-a1a9-4f91-bd73-9d2542681b24\")",
+      "Bash(mkdir -p moveease_assets)",
+      "Bash(curl -sL -o moveease_assets/hero-mockup.png \"https://www.figma.com/api/mcp/asset/5e993293-983b-4eec-8171-e65cf3542bb7\")",
+      "Bash(curl -sL -o moveease_assets/research-1.png \"https://www.figma.com/api/mcp/asset/cdb9e733-ed3f-416b-bcb3-500184c453ec\")",
+      "Bash(curl -sL -o moveease_assets/research-2.png \"https://www.figma.com/api/mcp/asset/9a052bb0-708a-4a6b-bd87-eaa0509e074f\")",
+      "Bash(curl -sL -o moveease_assets/userflow.png \"https://www.figma.com/api/mcp/asset/5ddab6c7-b27e-44e8-b024-711d9100545c\")",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(npx tsc *)",
+      "Bash(curl -sL -o /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/home_update/card-container-4.png https://www.figma.com/api/mcp/asset/f0dda865-66c4-434b-824d-c8e981b467c0)",
+      "Bash(curl -sL -o /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/home_update/number-1.png https://www.figma.com/api/mcp/asset/e7d443c1-2398-4907-86bc-fcde513a8f09)",
+      "Bash(curl -sL -o /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/home_update/number-2.png https://www.figma.com/api/mcp/asset/176195ba-ba70-44a7-a55e-085afcd5ba7d)",
+      "Bash(curl -sL -o /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/home_update/number-3.png https://www.figma.com/api/mcp/asset/012677c0-65ee-45bb-882d-2e2dc55b83bc)",
+      "Bash(file /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/home_update/*.png)",
+      "Bash(md5 /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/home_update/card-container-4.png /Users/samxbarber/Desktop/sam-portfolio-main/src/assets/images/moveease-hero.png)",
+      "Bash(curl -sL -o /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/fig_hero.png https://www.figma.com/api/mcp/asset/60e0b443-12c1-4aa8-a4b3-b42879563ab3)",
+      "Bash(curl -sL -o /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/fig_userflow_container.png https://www.figma.com/api/mcp/asset/75848638-26cb-4e97-a3ae-df74bd34ea51)",
+      "Bash(curl -sL -o /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/fig_testing_container.png https://www.figma.com/api/mcp/asset/f0fe8167-5111-4fb8-9eca-85bfd345f53e)",
+      "Bash(curl -sL -o \"/private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/fig_changecards.png\" \"https://www.figma.com/api/mcp/asset/85585b4b-f24f-4e54-b34d-c303cbdd79d4\")",
+      "Bash(curl -sL -o /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/new_testing_image.png https://www.figma.com/api/mcp/asset/5eba2ddb-9922-4662-97f6-3dd1756293a2)",
+      "Bash(curl -sL -o /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/fig_testing_wrapper.png https://www.figma.com/api/mcp/asset/bce1c008-912d-40d1-a4f0-9168c18eee01)",
+      "Bash(curl -sL -o /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/fig_design_wrapper.png https://www.figma.com/api/mcp/asset/23fbe4bb-66d8-4f54-bcca-a685c4693965)",
+      "Bash(curl -sL -o /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/new_testing_img_raw.png https://www.figma.com/api/mcp/asset/09dc5740-c3df-48ee-878f-088508e99faf)",
+      "Bash(curl -sL -o /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/new_design_img_raw.png https://www.figma.com/api/mcp/asset/be3f504b-5789-4a43-b372-62f65c62fe97)",
+      "Bash(md5 \"/Users/samxbarber/Desktop/sam-portfolio-main/src/assets/images/moveease-design-clarity.png\" \"/private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/new_design_img_raw.png\")",
+      "Bash(md5 \"/Users/samxbarber/Desktop/sam-portfolio-main/src/assets/images/moveease-testing.png\" \"/private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/new_testing_img_raw.png\")",
+      "Bash(curl -sL -o /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/check_design_full.png https://www.figma.com/api/mcp/asset/131ae80f-644a-4479-992c-0684f7926d51)",
+      "Bash(md5 /private/tmp/claude-501/-Users-samxbarber-Desktop-sam-portfolio-main/9d6631d9-879f-4bdc-97ba-37ab668ac067/scratchpad/check_design_full.png /Users/samxbarber/Desktop/sam-portfolio-main/src/assets/images/moveease-design-full.png)"
+    ]
+  }
+}

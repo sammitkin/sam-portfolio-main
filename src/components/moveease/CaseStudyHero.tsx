@@ -22,8 +22,11 @@ export function CaseStudyHero() {
               <p className="hidden sm:block">and after a move.</p>
             </div>
             <div className="mt-4 text-[16px] font-normal leading-[26px] text-[#3b4b59]">
-              <p>A mobile app that surfaces hidden admin tasks after a move,</p>
-              <p>in the right order, before deadlines hit.</p>
+              <p className="sm:hidden">
+                A mobile app that surfaces hidden admin tasks after a move, in the right order, before deadlines hit.
+              </p>
+              <p className="hidden sm:block">A mobile app that surfaces hidden admin tasks after a move,</p>
+              <p className="hidden sm:block">in the right order, before deadlines hit.</p>
             </div>
 
             <div className="mt-10 grid grid-cols-2 gap-4 sm:flex">

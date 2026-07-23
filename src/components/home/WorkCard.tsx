@@ -5,11 +5,11 @@ import { ProjectLinkArrowIcon } from "../icons/Icons";
 export function WorkCard() {
   return (
     <Link to="/moveease" className="group flex flex-col overflow-hidden rounded-lg border border-black/[0.08] bg-white">
-      <div className="h-[256px] overflow-hidden bg-[#f5f5f5]">
+      <div className="flex items-center justify-center bg-[#f5f5f5] p-4 sm:h-[256px] sm:overflow-hidden sm:p-0">
         <img
           src={coverImg}
           alt="MoveEase app screens shown on three phones"
-          className="h-full w-full object-cover"
+          className="aspect-[1449/1085] w-full object-contain sm:aspect-auto sm:h-full sm:object-cover"
           loading="lazy"
         />
       </div>

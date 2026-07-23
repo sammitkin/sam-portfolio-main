@@ -21,7 +21,7 @@ export function CaseStudyHero() {
               <p>in the right order, before deadlines hit.</p>
             </div>
 
-            <div className="mt-10 flex gap-4">
+            <div className="mt-10 grid grid-cols-2 gap-4 sm:flex">
               <MetaCard label="Duration" value="4 months" />
               <MetaCard label="Role" value="Solo Designer" />
               <MetaCard label="Team" value="Solo" />

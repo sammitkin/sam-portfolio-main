@@ -15,7 +15,7 @@ export function SectionHeading({ children }: { children: ReactNode }) {
 
 export function MetaCard({ label, value }: { label: string; value: ReactNode }) {
   return (
-    <div className="flex-1 rounded-lg border border-[rgba(31,31,31,0.08)] bg-white p-[21px]">
+    <div className="max-sm:min-h-[107px] flex-1 rounded-lg border border-[rgba(31,31,31,0.08)] bg-white p-[21px]">
       <p className="text-[11px] font-medium uppercase leading-[16.5px] tracking-[1.8px] text-[#cc6324]">{label}</p>
       <p className="mt-1.5 text-[14px] font-semibold leading-[20px] text-[#1f1f1f]">{value}</p>
     </div>
@@ -24,7 +24,7 @@ export function MetaCard({ label, value }: { label: string; value: ReactNode }) 
 
 export function InsightCard({ number, children }: { number: 1 | 2 | 3; children: ReactNode }) {
   return (
-    <div className="flex items-start gap-2 rounded-lg border border-[rgba(31,31,31,0.08)] bg-white p-[33px]">
+    <div className="max-sm:min-h-[172px] flex items-start gap-2 rounded-lg border border-[rgba(31,31,31,0.08)] bg-white p-[33px]">
       <NumberCircle number={number} />
       <p className="text-[16px] font-normal leading-[26px] text-[#3b4b59]">{children}</p>
     </div>
@@ -33,7 +33,7 @@ export function InsightCard({ number, children }: { number: 1 | 2 | 3; children:
 
 export function QuoteCard({ quote, name }: { quote: string; name: string }) {
   return (
-    <div className="flex flex-col gap-4 rounded-xl border border-[rgba(31,31,31,0.2)] bg-[#f5f4ef] p-[37px]">
+    <div className="max-sm:min-h-[208px] flex flex-col gap-4 rounded-xl border border-[rgba(31,31,31,0.2)] bg-[#f5f4ef] p-[37px]">
       <p className="text-[20px] font-normal leading-[32px] text-[#1f1f1f]">"{quote}"</p>
       <p className="text-[13px] font-medium uppercase leading-[19.5px] tracking-[1.6px] text-[#cc6324]">{name}</p>
     </div>
@@ -42,7 +42,7 @@ export function QuoteCard({ quote, name }: { quote: string; name: string }) {
 
 export function HighlightCard({ eyebrow, heading, body }: { eyebrow: string; heading: ReactNode; body: ReactNode }) {
   return (
-    <div className="rounded-xl bg-[#3b4b59] p-[48px]">
+    <div className="max-sm:min-h-[357px] rounded-xl bg-[#3b4b59] p-[48px]">
       <p className="text-[11px] font-medium uppercase leading-[16.5px] tracking-[2px] text-[#cc6324]">{eyebrow}</p>
       <div className="mt-5 max-w-[432px] text-[18px] font-semibold leading-[28px] text-white">{heading}</div>
       <div className="mt-4 max-w-[432px] text-[15px] font-normal leading-[24px] text-white/65">{body}</div>
@@ -67,7 +67,7 @@ export function ChangeCard({
   after: ReactNode;
 }) {
   return (
-    <div className="grid grid-cols-1 gap-[2px] overflow-hidden rounded-lg border border-[rgba(31,31,31,0.2)] sm:h-[120px] sm:grid-cols-2">
+    <div className="max-sm:min-h-[240px] grid grid-cols-1 gap-[2px] overflow-hidden rounded-lg border border-[rgba(31,31,31,0.2)] sm:h-[120px] sm:grid-cols-2">
       <div className="bg-white p-6">
         <p className="text-[11px] font-medium uppercase leading-[16.5px] tracking-[1.8px] text-[#cc6324]">Before</p>
         <div className="mt-2 text-[14px] font-normal leading-[22.75px] text-[#6b7280]">{before}</div>
@@ -82,7 +82,7 @@ export function ChangeCard({
 
 export function ReflectionCard({ number, title, items }: { number: 1 | 2 | 3; title: string; items: string[] }) {
   return (
-    <div className="rounded-xl bg-white/[0.07] p-[40px]">
+    <div className="max-sm:min-h-[300px] rounded-xl bg-white/[0.07] p-[40px]">
       <NumberCircle number={number} />
       <h3 className="mt-4 text-[18px] font-semibold leading-[26px] text-white">{title}</h3>
       <ul className="mt-5 flex flex-col gap-[10px]">

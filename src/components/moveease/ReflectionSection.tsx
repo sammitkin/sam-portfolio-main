@@ -3,9 +3,9 @@ import { ReflectionCard } from "./shared";
 
 export function ReflectionSection() {
   return (
-    <section className="bg-[#3b4b59] py-20 sm:py-36">
+    <section className="on-dark bg-[#3b4b59] py-20 sm:py-36">
       <Container>
-        <p className="text-[12px] font-medium uppercase leading-[16px] tracking-[2.4px] text-[#cc6324]">
+        <p className="text-[12px] font-medium uppercase leading-[16px] tracking-[2.4px] text-[#f7b286]">
           Reflection &amp; Next Steps
         </p>
         <h2 className="mt-4 text-[32px] font-bold leading-[1.2] tracking-[-1.2px] text-white sm:text-[48px] sm:leading-[60px]">
@@ -13,13 +13,13 @@ export function ReflectionSection() {
         </h2>
 
         <div className="mt-16 rounded-xl border border-[rgba(204,99,36,0.3)] bg-[rgba(204,99,36,0.15)] p-[49px]">
-          <p className="text-[11px] font-medium uppercase leading-[16.5px] tracking-[2px] text-[#cc6324]">
+          <p className="text-[11px] font-medium uppercase leading-[16.5px] tracking-[2px] text-[#f7b286]">
             Biggest Lesson
           </p>
           <h3 className="mt-4 text-[24px] font-bold leading-[1.35] tracking-[-0.5px] text-white sm:text-[28px] sm:leading-[38px]">
             Icon-only buttons can fail under stress.
           </h3>
-          <p className="mt-3 max-w-[560px] text-[16px] font-normal leading-[26px] text-white/65">
+          <p className="mt-3 max-w-[560px] text-[16px] font-normal leading-[26px] text-white/75">
             Interfaces should explain themselves without assuming calm attention.
           </p>
         </div>

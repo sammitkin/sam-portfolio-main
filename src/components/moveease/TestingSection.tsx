@@ -1,4 +1,4 @@
-import testingImg from "@/assets/images/moveease-testing-v2.png";
+import testingImg from "@/assets/images/moveease-testing-v2.webp";
 import { Container } from "../layout/Container";
 import { ChangeCard, FindingCard, SectionHeading, SectionLabel } from "./shared";
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import coverImg from "@/assets/images/moveease-card-cover.png";
+import coverImg from "@/assets/images/moveease-card-cover.webp";
 import { ProjectLinkArrowIcon } from "../icons/Icons";
 
 export function WorkCard() {
@@ -14,11 +14,11 @@ export function WorkCard() {
         />
       </div>
       <div className="flex flex-1 flex-col p-7">
-        <p className="mb-3 text-[12px] font-medium uppercase leading-[16px] tracking-[1.8px] text-[#cc6324]">
+        <p className="mb-3 text-[12px] font-medium uppercase leading-[16px] tracking-[1.8px] text-[#a9501c]">
           UX Research · UX/UI Design
         </p>
         <h3 className="mb-3 text-[20px] font-semibold leading-[27.5px] text-[#1f1f1f]">MoveEase</h3>
-        <p className="mb-6 flex-1 text-[14px] font-normal leading-[22.75px] text-[#6b7280]">
+        <p className="mb-6 flex-1 text-[14px] font-normal leading-[22.75px] text-[#5c6370]">
           A mobile app that helps people moving to a new home stay ahead of address updates, deadlines, and
           paperwork.
         </p>
@@ -46,11 +46,11 @@ export function ComingSoonCard() {
         </div>
       </div>
       <div className="flex flex-1 flex-col p-7">
-        <p className="mb-3 text-[12px] font-medium uppercase leading-[16px] tracking-[1.8px] text-[#cc6324]">
+        <p className="mb-3 text-[12px] font-medium uppercase leading-[16px] tracking-[1.8px] text-[#a9501c]">
           Case Study in Progress
         </p>
         <h3 className="mb-3 text-[20px] font-semibold leading-[27.5px] text-[#1f1f1f]">Coming Soon</h3>
-        <p className="mb-6 flex-1 text-[14px] font-normal leading-[22.75px] text-[#6b7280]">
+        <p className="mb-6 flex-1 text-[14px] font-normal leading-[22.75px] text-[#5c6370]">
           A new case study is currently in development. Check back soon for the full write-up.
         </p>
         <span className="text-[14px] font-medium leading-[20px] text-[rgba(59,75,89,0.3)]">Coming Soon</span>

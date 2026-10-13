@@ -5,14 +5,21 @@ import { SelectedWork } from "../components/home/SelectedWork";
 import { About } from "../components/home/About";
 import { DesignPrinciples } from "../components/home/DesignPrinciples";
 import { Contact } from "../components/home/Contact";
+import { scrollBehavior, usePageMeta } from "../lib/usePageMeta";
 
 export function Home() {
   const location = useLocation();
+  usePageMeta({
+    title: "Sam Mitkin — Product Designer",
+    description:
+      "Sam Mitkin is a product designer focused on service design, customer experience, and research-driven product decisions.",
+    path: "/",
+  });
 
   useEffect(() => {
     if (location.hash) {
       const id = location.hash.replace("#", "");
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      document.getElementById(id)?.scrollIntoView({ behavior: scrollBehavior() });
     }
   }, [location.hash]);
 

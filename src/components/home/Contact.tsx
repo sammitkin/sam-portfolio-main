@@ -1,12 +1,13 @@
 import { EnvelopeIcon, LinkedInIcon } from "../icons/Icons";
 import { LINKEDIN_URL, EMAIL_URL } from "../layout/Footer";
 import { Container } from "../layout/Container";
+import { Eyebrow } from "../ui/Eyebrow";
 
 export function Contact() {
   return (
     <section id="contact" className="bg-[#f5f4ef] py-24 sm:py-36">
       <Container>
-        <p className="text-[12px] font-medium uppercase leading-[16px] tracking-[2.4px] text-[#a9501c]">Get in Touch</p>
+        <Eyebrow>Get in Touch</Eyebrow>
         <h2 className="mt-5 text-[36px] font-bold leading-[1.15] tracking-[-1.2px] text-[#1f1f1f] sm:text-[48px] sm:leading-[60px]">
           Let's Build Better
           <br />

@@ -1,4 +1,4 @@
-import aboutImg from "@/assets/images/about-workspace.png";
+import aboutImg from "@/assets/images/about-workspace.webp";
 import { Container } from "../layout/Container";
 
 export function About() {
@@ -16,7 +16,7 @@ export function About() {
           </div>
 
           <div>
-            <p className="text-[12px] font-medium uppercase leading-[16px] tracking-[2.4px] text-[#cc6324]">About</p>
+            <p className="text-[12px] font-medium uppercase leading-[16px] tracking-[2.4px] text-[#a9501c]">About</p>
             <h2 className="mt-5 text-[36px] font-bold leading-[1.15] tracking-[-1.2px] text-[#1f1f1f] sm:text-[48px] sm:leading-[60px]">
               Rooted in
               <br />
@@ -26,7 +26,7 @@ export function About() {
               <p>I spent over a decade working directly with clients, building businesses, and improving customer experiences.</p>
               <p>Today I bring those same skills into Product Design through research, strategy, and user-centered problem solving.</p>
             </div>
-            <p className="mt-6 max-w-[492px] text-[14px] font-normal leading-[22.75px] text-[#6b7280]">
+            <p className="mt-6 max-w-[492px] text-[14px] font-normal leading-[22.75px] text-[#5c6370]">
               My background in service operations helps me see systems, people, and friction points together. I
               design for real constraints, not ideal conditions.
             </p>

@@ -1,5 +1,5 @@
-import designClarityImg from "@/assets/images/moveease-design-clarity.png";
-import designFullImg from "@/assets/images/moveease-design-full.png";
+import designClarityImg from "@/assets/images/moveease-design-clarity.webp";
+import designFullImg from "@/assets/images/moveease-design-full.webp";
 import { Container } from "../layout/Container";
 import { SectionHeading, SectionLabel } from "./shared";
 

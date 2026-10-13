@@ -1,5 +1,5 @@
-import research1 from "@/assets/images/moveease-research-1.png";
-import research2 from "@/assets/images/moveease-research-2.png";
+import affinityMapImg from "@/assets/images/moveease-affinity-map.webp";
+import interviewNotesImg from "@/assets/images/moveease-interview-notes.webp";
 import { Container } from "../layout/Container";
 import { InsightCard, QuoteCard, SectionHeading, SectionLabel } from "./shared";
 
@@ -31,14 +31,14 @@ export function ResearchSection() {
 
         <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2">
           <img
-            src={research1}
-            alt="Research affinity mapping of interview notes"
+            src={interviewNotesImg}
+            alt="Interview notes from four participants: Victoria, Rodion, Alex and Ekaterina, with each person's top pain point and a quote"
             className="aspect-[527/474] w-full rounded-xl object-cover"
             loading="lazy"
           />
           <img
-            src={research2}
-            alt="Research affinity mapping grouped by theme"
+            src={affinityMapImg}
+            alt="Affinity map grouping interview notes into six themes, from administrative overload to decision-making complexity"
             className="aspect-[527/474] w-full rounded-xl object-cover"
             loading="lazy"
           />

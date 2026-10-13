@@ -1,4 +1,4 @@
-import heroImg from "@/assets/images/moveease-hero.png";
+import heroImg from "@/assets/images/moveease-hero.webp";
 import { Container } from "../layout/Container";
 import { MetaCard, SectionLabel } from "./shared";
 

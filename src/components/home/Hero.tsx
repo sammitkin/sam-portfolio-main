@@ -1,4 +1,4 @@
-import portraitImg from "@/assets/images/portrait.png";
+import portraitImg from "@/assets/images/portrait.webp";
 import { Container } from "../layout/Container";
 import { useSectionNav } from "../layout/navigation";
 import { ArrowRightIcon } from "../icons/Icons";
@@ -11,7 +11,7 @@ export function Hero() {
       <Container>
         <div className="flex flex-col items-start gap-12 md:flex-row md:items-center md:gap-8">
           <div className="min-w-0 flex-1">
-            <p className="text-[12px] font-medium uppercase leading-[16px] tracking-[2.4px] text-[#cc6324]">
+            <p className="text-[12px] font-medium uppercase leading-[16px] tracking-[2.4px] text-[#a9501c]">
               Product Designer
             </p>
 
@@ -25,7 +25,7 @@ export function Hero() {
               Product Designer focused on service design, customer experience, and research-driven solutions.
             </p>
 
-            <p className="mt-6 max-w-[576px] text-[16px] font-normal leading-[26px] text-[#6b7280]">
+            <p className="mt-6 max-w-[576px] text-[16px] font-normal leading-[26px] text-[#5c6370]">
               After more than 10 years building and running a service business, I transitioned into Product Design
               to combine user research, business thinking, and problem solving into meaningful digital products.
             </p>

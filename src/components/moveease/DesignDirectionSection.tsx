@@ -1,4 +1,4 @@
-import userflowImg from "@/assets/images/moveease-userflow.png";
+import userflowImg from "@/assets/images/moveease-userflow.webp";
 import { Container } from "../layout/Container";
 import { HighlightCard, SectionHeading, SectionLabel } from "./shared";
 
@@ -27,7 +27,7 @@ export function DesignDirectionSection() {
         <div className="mt-16 rounded-xl border border-[rgba(31,31,31,0.06)] bg-[#f5f4ef] p-[49px]">
           <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-center lg:gap-[48px]">
             <div className="w-full lg:w-[420px] lg:shrink-0">
-              <p className="text-[11px] font-medium uppercase leading-[16.5px] tracking-[1.8px] text-[#cc6324]">
+              <p className="text-[11px] font-medium uppercase leading-[16.5px] tracking-[1.8px] text-[#a9501c]">
                 User Flow Iteration
               </p>
               <h3 className="mt-4 text-[18px] font-semibold leading-[28px] text-[#1f1f1f]">

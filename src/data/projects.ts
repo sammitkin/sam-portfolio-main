@@ -1,12 +1,12 @@
-import frantHome from "@/assets/images/work/frant-home.webp";
-import frantProfile from "@/assets/images/work/frant-profile.webp";
-import frantMessage from "@/assets/images/work/frant-message.webp";
-import dealsExplore from "@/assets/images/work/deals-explore.webp";
-import dealsActivate from "@/assets/images/work/deals-activate.webp";
-import dealsOffers from "@/assets/images/work/deals-offers.webp";
-import moveDashboard from "@/assets/images/work/moveease-dashboard.webp";
-import moveTasks from "@/assets/images/work/moveease-tasks.webp";
-import moveCalendar from "@/assets/images/work/moveease-calendar.webp";
+import frantHome from "@/assets/images/case/frant/home.webp";
+import frantProfile from "@/assets/images/case/frant/profile.webp";
+import frantMessage from "@/assets/images/case/frant/message.webp";
+import dealsExplore from "@/assets/images/case/deals/explore.webp";
+import dealsActivate from "@/assets/images/case/deals/activate.webp";
+import dealsOffers from "@/assets/images/case/deals/offers.webp";
+import moveDashboard from "@/assets/images/case/moveease/dashboard.webp";
+import moveTasks from "@/assets/images/case/moveease/tasks.webp";
+import moveCalendar from "@/assets/images/case/moveease/calendar.webp";
 
 export type Screen = { src: string; alt: string; width: number; height: number };
 

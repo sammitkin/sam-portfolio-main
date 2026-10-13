@@ -1,51 +1,7 @@
 import { Link } from "react-router-dom";
-import type { Project, Screen } from "../../data/projects";
+import type { Project } from "../../data/projects";
+import { PhoneTrio } from "../case/PhoneTrio";
 import { ProjectLinkArrowIcon } from "../icons/Icons";
-
-const phoneBase =
-  "absolute overflow-hidden bg-white shadow-[0_28px_56px_-24px_rgba(31,31,31,0.35),0_0_0_1px_rgba(31,31,31,0.06)] transition-transform duration-500 ease-out";
-
-/** Corner radius as a ratio of the screen size, so it scales with the phone. */
-const phoneRadius = { borderRadius: "11% / 5%" };
-
-function Phone({ screen, className, eager }: { screen: Screen; className: string; eager?: boolean }) {
-  return (
-    <div className={`${phoneBase} ${className}`} style={phoneRadius}>
-      <img
-        src={screen.src}
-        alt={screen.alt}
-        width={screen.width}
-        height={screen.height}
-        loading={eager ? "eager" : "lazy"}
-        decoding="async"
-        className="block h-auto w-full"
-      />
-    </div>
-  );
-}
-
-function Cover({ project, eager }: { project: Project; eager?: boolean }) {
-  const [left, center, right] = project.screens;
-  return (
-    <div className="relative aspect-square overflow-hidden rounded-2xl bg-[#e9e6df] sm:aspect-[16/9]">
-      <Phone
-        screen={left}
-        eager={eager}
-        className="left-[-6%] top-[20%] w-[38%] sm:left-[12%] sm:top-[16%] sm:w-[24%] group-hover:-translate-y-1"
-      />
-      <Phone
-        screen={right}
-        eager={eager}
-        className="right-[-6%] top-[20%] w-[38%] sm:right-[12%] sm:top-[16%] sm:w-[24%] group-hover:-translate-y-1"
-      />
-      <Phone
-        screen={center}
-        eager={eager}
-        className="left-1/2 top-[8%] z-10 w-[46%] -translate-x-1/2 sm:top-[7%] sm:w-[28%] group-hover:-translate-y-2"
-      />
-    </div>
-  );
-}
 
 export function ProjectEntry({ project, index, eager }: { project: Project; index: number; eager?: boolean }) {
   const number = String(index + 1).padStart(2, "0");
@@ -53,7 +9,7 @@ export function ProjectEntry({ project, index, eager }: { project: Project; inde
 
   return (
     <article className="group relative" aria-labelledby={headingId}>
-      <Cover project={project} eager={eager} />
+      <PhoneTrio screens={project.screens} eager={eager} />
 
       <div className="mt-8 grid grid-cols-1 gap-8 sm:mt-10 lg:grid-cols-12 lg:gap-12">
         <div className="lg:col-span-7">

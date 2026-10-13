@@ -2,6 +2,7 @@ import { Container } from "../layout/Container";
 import { Eyebrow } from "../ui/Eyebrow";
 import { projects } from "../../data/projects";
 import { ProjectEntry } from "./ProjectEntry";
+import { Reveal } from "../ui/Reveal";
 
 export function SelectedWork() {
   return (
@@ -21,7 +22,9 @@ export function SelectedWork() {
 
         <div className="mt-16 flex flex-col gap-24 sm:gap-32">
           {projects.map((project, i) => (
-            <ProjectEntry key={project.slug} project={project} index={i} />
+            <Reveal key={project.slug}>
+              <ProjectEntry project={project} index={i} />
+            </Reveal>
           ))}
         </div>
       </Container>

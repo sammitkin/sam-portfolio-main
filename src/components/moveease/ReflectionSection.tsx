@@ -1,13 +1,12 @@
 import { Container } from "../layout/Container";
 import { ReflectionCard } from "./shared";
+import { Eyebrow } from "../ui/Eyebrow";
 
 export function ReflectionSection() {
   return (
     <section className="on-dark bg-[#3b4b59] py-20 sm:py-36">
       <Container>
-        <p className="text-[12px] font-medium uppercase leading-[16px] tracking-[2.4px] text-[#f7b286]">
-          Reflection &amp; Next Steps
-        </p>
+        <Eyebrow tone="dark">Reflection &amp; Next Steps</Eyebrow>
         <h2 className="mt-4 text-[32px] font-bold leading-[1.2] tracking-[-1.2px] text-white sm:text-[48px] sm:leading-[60px]">
           Lessons from the first build.
         </h2>

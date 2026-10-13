@@ -2,6 +2,7 @@ import portraitImg from "@/assets/images/portrait.webp";
 import { Container } from "../layout/Container";
 import { useSectionNav } from "../layout/navigation";
 import { ArrowRightIcon } from "../icons/Icons";
+import { Eyebrow } from "../ui/Eyebrow";
 
 export function Hero() {
   const goToSection = useSectionNav();
@@ -11,9 +12,7 @@ export function Hero() {
       <Container>
         <div className="flex flex-col items-start gap-12 md:flex-row md:items-center md:gap-8">
           <div className="min-w-0 flex-1">
-            <p className="text-[12px] font-medium uppercase leading-[16px] tracking-[2.4px] text-[#a9501c]">
-              Product Designer
-            </p>
+            <Eyebrow>Product Designer</Eyebrow>
 
             <h1 className="mt-10 text-[clamp(48px,8vw,96px)] font-bold leading-[0.95] tracking-[-2.4px] text-[#1f1f1f]">
               Sam

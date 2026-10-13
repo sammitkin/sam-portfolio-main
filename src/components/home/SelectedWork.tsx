@@ -1,19 +1,28 @@
 import { Container } from "../layout/Container";
-import { ComingSoonCard, WorkCard } from "./WorkCard";
+import { Eyebrow } from "../ui/Eyebrow";
+import { projects } from "../../data/projects";
+import { ProjectEntry } from "./ProjectEntry";
 
 export function SelectedWork() {
   return (
     <section id="work" className="bg-[#f5f4ef] py-24 sm:py-36">
       <Container>
-        <p className="text-[12px] font-medium uppercase leading-[16px] tracking-[2.4px] text-[#a9501c]">Portfolio</p>
-        <h2 className="mt-4 text-[36px] font-bold leading-[1.15] tracking-[-1.2px] text-[#1f1f1f] sm:text-[48px] sm:leading-[60px]">
-          Selected Work
-        </h2>
+        <div className="flex items-end justify-between gap-6">
+          <div>
+            <Eyebrow>Portfolio</Eyebrow>
+            <h2 className="mt-4 text-[36px] font-bold leading-[1.15] tracking-[-1.2px] text-[#1f1f1f] sm:text-[48px] sm:leading-[60px]">
+              Selected Work
+            </h2>
+          </div>
+          <p className="hidden pb-3 font-mono text-[12px] uppercase tracking-[0.08em] text-[#5c6370] sm:block">
+            {String(projects.length).padStart(2, "0")} case studies
+          </p>
+        </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <WorkCard />
-          <ComingSoonCard />
-          <ComingSoonCard />
+        <div className="mt-16 flex flex-col gap-24 sm:gap-32">
+          {projects.map((project, i) => (
+            <ProjectEntry key={project.slug} project={project} index={i} />
+          ))}
         </div>
       </Container>
     </section>

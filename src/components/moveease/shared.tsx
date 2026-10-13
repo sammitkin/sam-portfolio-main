@@ -1,8 +1,9 @@
 import type { ReactNode } from "react";
 import { NumberCircle } from "../icons/Icons";
+import { Eyebrow } from "../ui/Eyebrow";
 
 export function SectionLabel({ children }: { children: ReactNode }) {
-  return <p className="text-[12px] font-medium uppercase leading-[16px] tracking-[2.4px] text-[#a9501c]">{children}</p>;
+  return <Eyebrow>{children}</Eyebrow>;
 }
 
 export function SectionHeading({ children }: { children: ReactNode }) {

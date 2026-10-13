@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { LogoMark } from "../icons/Icons";
 import { Container } from "./Container";
 import { useSectionNav } from "./navigation";
+import { EMAIL_URL } from "./Footer";
 
 const NAV_LINKS = [
   { label: "Work", id: "work" },
@@ -41,12 +42,12 @@ export function Header() {
                 {link.label}
               </button>
             ))}
-            <button
-              onClick={() => handleNavClick("work")}
-              className="rounded-lg bg-[#3b4b59] px-5 py-[10px] text-[14px] font-medium tracking-[0.35px] text-white transition-colors hover:bg-[#2e3c47] focus-visible:outline-2 focus-visible:outline-[#3b4b59]"
+            <a
+              href={EMAIL_URL}
+              className="rounded-lg bg-[#3b4b59] px-5 py-[10px] text-[14px] font-medium tracking-[0.35px] text-white transition-colors hover:bg-[#2e3c47]"
             >
-              View Work
-            </button>
+              Email me
+            </a>
           </div>
 
           <button
@@ -74,12 +75,9 @@ export function Header() {
               {link.label}
             </button>
           ))}
-          <button
-            onClick={() => handleNavClick("work")}
-            className="w-fit rounded-lg bg-[#3b4b59] px-5 py-3 text-left text-[14px] font-medium text-white"
-          >
-            View Work
-          </button>
+          <a href={EMAIL_URL} className="w-fit rounded-lg bg-[#3b4b59] px-5 py-3 text-left text-[14px] font-medium text-white">
+            Email me
+          </a>
         </div>
       )}
     </header>

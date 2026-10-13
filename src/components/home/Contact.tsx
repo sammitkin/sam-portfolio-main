@@ -7,7 +7,7 @@ export function Contact() {
   return (
     <section id="contact" className="bg-[#f5f4ef] py-24 sm:py-36">
       <Container>
-        <Eyebrow>Get in Touch</Eyebrow>
+        <Eyebrow>Get in touch</Eyebrow>
         <h2 className="mt-5 text-[36px] font-bold leading-[1.15] tracking-[-1.2px] text-[#1f1f1f] sm:text-[48px] sm:leading-[60px]">
           Let's Build Better
           <br />

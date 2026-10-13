@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import portraitImg from "@/assets/images/portrait.webp";
 import { Container } from "../layout/Container";
 import { useSectionNav } from "../layout/navigation";
@@ -12,24 +13,24 @@ export function Hero() {
       <Container>
         <div className="flex flex-col items-start gap-12 md:flex-row md:items-center md:gap-8">
           <div className="min-w-0 flex-1">
-            <Eyebrow>Product Designer</Eyebrow>
+            <Eyebrow className="rise">Product Designer</Eyebrow>
 
-            <h1 className="mt-10 text-[clamp(48px,8vw,96px)] font-bold leading-[0.95] tracking-[-2.4px] text-[#1f1f1f]">
+            <h1 style={{ "--i": 1 } as CSSProperties} className="rise mt-10 text-[clamp(48px,8vw,96px)] font-bold leading-[0.95] tracking-[-2.4px] text-[#1f1f1f]">
               Sam
               <br />
               Mitkin
             </h1>
 
-            <p className="mt-8 max-w-[672px] text-[20px] font-normal leading-[32.5px] text-[#3b4b59]">
+            <p style={{ "--i": 2 } as CSSProperties} className="rise mt-8 max-w-[672px] text-[20px] font-normal leading-[32.5px] text-[#3b4b59]">
               Product Designer focused on service design, customer experience, and research-driven solutions.
             </p>
 
-            <p className="mt-6 max-w-[576px] text-[16px] font-normal leading-[26px] text-[#5c6370]">
+            <p style={{ "--i": 3 } as CSSProperties} className="rise mt-6 max-w-[576px] text-[16px] font-normal leading-[26px] text-[#5c6370]">
               After more than 10 years building and running a service business, I transitioned into Product Design
               to combine user research, business thinking, and problem solving into meaningful digital products.
             </p>
 
-            <div className="mt-14 flex flex-wrap gap-4">
+            <div style={{ "--i": 4 } as CSSProperties} className="rise mt-14 flex flex-wrap gap-4">
               <button
                 onClick={() => goToSection("work")}
                 className="flex items-center gap-2 rounded-lg bg-[#3b4b59] px-7 py-[14px] text-[14px] font-medium tracking-[0.35px] text-white transition-colors hover:bg-[#2e3c47]"
@@ -48,7 +49,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="mx-auto w-full max-w-[310px] shrink-0 md:mx-0">
+          <div style={{ "--i": 2 } as CSSProperties} className="rise mx-auto w-full max-w-[310px] shrink-0 md:mx-0">
             <img
               src={portraitImg}
               alt="Sam Mitkin – Product Designer"

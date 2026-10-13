@@ -1,5 +1,20 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/frant",
+      "destination": "/frant.html"
+    },
+    {
+      "source": "/deals-hub",
+      "destination": "/deals-hub.html"
+    },
+    {
+      "source": "/moveease",
+      "destination": "/moveease.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }

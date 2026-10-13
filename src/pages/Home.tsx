@@ -6,15 +6,11 @@ import { About } from "../components/home/About";
 import { DesignPrinciples } from "../components/home/DesignPrinciples";
 import { Contact } from "../components/home/Contact";
 import { scrollBehavior, usePageMeta } from "../lib/usePageMeta";
+import pages from "../data/pages.json";
 
 export function Home() {
   const location = useLocation();
-  usePageMeta({
-    title: "Sam Mitkin — Product Designer",
-    description:
-      "Sam Mitkin is a product designer focused on service design, customer experience, and research-driven product decisions.",
-    path: "/",
-  });
+  usePageMeta({ ...pages["/"], path: "/" });
 
   useEffect(() => {
     if (location.hash) {

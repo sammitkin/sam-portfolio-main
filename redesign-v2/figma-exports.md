@@ -1,10 +1,12 @@
 # Figma frames to export for sharper screenshots
 
+**Status (Oct 14):** Priority 1 is done. All 15 frames were exported at 4x, downscaled to 1x/2x/3x WebP and are live in `redesign-v2`. Priority 2 and 3 are optional: those images sit inside collapsed "More on …" sections and still use the 1x files.
+
 Export each frame as **PNG at 3x** (select frame → Export → 3x → PNG). Keep Figma's file names; I map them back. Zip and attach.
 
 Wide overview images (Frant lo-fi overview, Deals Hub mid-fi overview, MoveEase lo-fi sketches and mid-fi flow) are composites of whole pages; 2x is enough for those, or keep current ones.
 
-## Priority 1 — shown large or in before/after comparisons
+## Priority 1 — shown large or in before/after comparisons ✅ done
 
 | Site image | Figma file | Page | Frame | Link |
 |---|---|---|---|---|
@@ -24,7 +26,7 @@ Wide overview images (Frant lo-fi overview, Deals Hub mid-fi overview, MoveEase 
 | `moveease/dashboard` | MoveEase | Hi-Fi Wireframes (updated) | Dashboard | [open](https://www.figma.com/design/wPhQtkowoAfkDJvvtNnCaB/?node-id=373-1185) |
 | `moveease/calendar` | MoveEase | Hi-Fi Wireframes (updated) | Calendar | [open](https://www.figma.com/design/wPhQtkowoAfkDJvvtNnCaB/?node-id=373-647) |
 
-## Priority 2 — phone rows inside "More on …"
+## Priority 2 (optional) — phone rows inside "More on …"
 
 | Site image | Figma file | Page | Frame | Link |
 |---|---|---|---|---|
@@ -38,7 +40,7 @@ Wide overview images (Frant lo-fi overview, Deals Hub mid-fi overview, MoveEase 
 | `deals/activated` | Deals Hub | Hi Fi | Activated (the one without the top banner) | [open](https://www.figma.com/design/6keENzTOUKuGbDpB0tDPLS/?node-id=211-6072) |
 | `deals/entry` | Deals Hub | Hi Fi | Entry point | [open](https://www.figma.com/design/6keENzTOUKuGbDpB0tDPLS/?node-id=99-1898) |
 
-## Priority 3 — UI kit pages (wide, 2x is fine)
+## Priority 3 (optional) — UI kit pages (wide, 2x is fine)
 
 | Site image | Figma file | Page | Frame | Link |
 |---|---|---|---|---|

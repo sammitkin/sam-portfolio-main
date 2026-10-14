@@ -1,7 +1,7 @@
 /* Case-study building blocks for Brand System v2 (Playful Precision). */
 import { useEffect, useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
-import type { Img } from "../../data/caseImages";
+import { SIZES, type Img } from "../../data/caseImages";
 import { Evidence, Wrap } from "../layout/Wrap";
 import { Zoomable, type LightboxItem } from "./Lightbox";
 import { scrollBehavior } from "../../lib/usePageMeta";
@@ -261,12 +261,14 @@ export function Shot({
   img,
   group,
   index,
+  sizes = SIZES.phone,
   className = "",
   radius = "rounded-[26px] md:rounded-[30px]",
 }: {
   img: Img;
   group?: LightboxItem[];
   index?: number;
+  sizes?: string;
   className?: string;
   radius?: string;
 }) {
@@ -275,6 +277,7 @@ export function Shot({
       img={img}
       group={group}
       index={index}
+      sizes={sizes}
       className={`overflow-hidden shadow-[0_0_0_1px_var(--color-hair)] ${radius} ${className}`}
       imgClassName="block h-auto w-full"
     />
@@ -289,7 +292,7 @@ export function PhoneRow({ items, caption }: { items: { img: Img; tag?: string; 
   }));
   const rows = items.map((it, i) => (
     <li key={i} className={items.length === 2 ? "min-w-0" : "w-[236px] shrink-0 md:w-auto"}>
-      <Shot img={it.img} group={group} index={i} />
+      <Shot img={it.img} group={group} index={i} sizes={items.length === 2 ? SIZES.pair : SIZES.phone} />
       <p className="mt-3 text-[15px] font-medium leading-[1.45] md:mt-3.5 md:text-[16px]">
         {it.tag && <b className="font-extrabold">{it.tag}. </b>}
         {it.label}
@@ -462,6 +465,8 @@ export function ProductBand({ label, bg, screens }: { label: string; bg: string;
           <li key={s.src} className={`mx-auto w-full max-w-[340px] ${i === 1 ? "" : "mt-10 md:mt-20"}`}>
             <img
               src={s.src}
+              srcSet={s.srcSet}
+              sizes={s.srcSet ? SIZES.band : undefined}
               alt={s.alt}
               width={s.width}
               height={s.height}

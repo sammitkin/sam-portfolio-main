@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
-import dealsMid from "@/assets/images/case/deals/mid-chevron.webp";
-import dealsLocal from "@/assets/images/case/deals/local.webp";
-import moveDash from "@/assets/images/case/moveease/dashboard.webp";
-import moveCal from "@/assets/images/case/moveease/calendar.webp";
+import { img, SIZES } from "../../data/caseImages";
 import { Wrap } from "../layout/Wrap";
+
+const dealsMid = img("deals/mid-chevron", "Mid-fi Chevron Local Deal that does not say which card is eligible");
+const dealsLocal = img("deals/local", "Hi-fi Chevron Local Deal showing the exact eligible card");
+const moveDash = img("moveease/dashboard", "MoveEase dashboard");
+const moveCal = img("moveease/calendar", "MoveEase calendar");
+const MOVE_SIZES = "(min-width: 768px) 180px, 100px";
 
 /** Product windows: square corners, product color inside only (Brand System v2 shape rule). */
 export function MoreWork() {
@@ -14,24 +17,28 @@ export function MoreWork() {
           <figure>
             <figcaption className="mb-2.5 text-[13px] font-bold text-deals-soft md:mb-3.5 md:text-[14px]">Round 1, mid-fi</figcaption>
             <img
-              src={dealsMid}
+              src={dealsMid.src}
+              srcSet={dealsMid.srcSet}
+              sizes={SIZES.pair}
               width={390}
               height={844}
               loading="lazy"
               decoding="async"
-              alt="Mid-fi Chevron Local Deal that does not say which card is eligible"
+              alt={dealsMid.alt}
               className="block w-full rounded-t-[18px] md:rounded-t-[26px]"
             />
           </figure>
           <figure>
             <figcaption className="mb-2.5 text-[13px] font-bold text-white md:mb-3.5 md:text-[14px]">Round 2, hi-fi</figcaption>
             <img
-              src={dealsLocal}
+              src={dealsLocal.src}
+              srcSet={dealsLocal.srcSet}
+              sizes={SIZES.pair}
               width={390}
               height={844}
               loading="lazy"
               decoding="async"
-              alt="Hi-fi Chevron Local Deal showing the exact eligible card"
+              alt={dealsLocal.alt}
               className="block w-full rounded-t-[18px] md:rounded-t-[26px]"
             />
           </figure>
@@ -67,21 +74,25 @@ export function MoreWork() {
       >
         <div className="grid h-[176px] grid-cols-1 gap-[18px] overflow-hidden bg-move px-4 pt-[18px] md:h-[420px] md:grid-cols-2 md:px-9 md:pt-10">
           <img
-            src={moveDash}
+            src={moveDash.src}
+            srcSet={moveDash.srcSet}
+            sizes={MOVE_SIZES}
             width={390}
             height={844}
             loading="lazy"
             decoding="async"
-            alt="MoveEase dashboard"
+            alt={moveDash.alt}
             className="block w-full rounded-t-[14px] md:rounded-t-[22px]"
           />
           <img
-            src={moveCal}
+            src={moveCal.src}
+            srcSet={moveCal.srcSet}
+            sizes={MOVE_SIZES}
             width={390}
             height={844}
             loading="lazy"
             decoding="async"
-            alt="MoveEase calendar"
+            alt={moveCal.alt}
             className="mt-12 hidden w-full rounded-t-[22px] md:block"
           />
         </div>

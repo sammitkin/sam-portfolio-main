@@ -1,7 +1,7 @@
 /* Tap-to-enlarge for product screenshots. Native <dialog>: modal focus trap, Escape to close,
    background made inert by the browser. Arrow keys and swipe move within a group. */
 import { createContext, useCallback, useContext, useEffect, useRef, useState, type ReactNode } from "react";
-import type { Img } from "../../data/caseImages";
+import { SIZES, type Img } from "../../data/caseImages";
 
 export type LightboxItem = { img: Img; caption?: string };
 
@@ -112,6 +112,8 @@ export function LightboxProvider({ children }: { children: ReactNode }) {
               <img
                 key={item.img.src}
                 src={item.img.src}
+                srcSet={item.img.srcSet}
+                sizes={item.img.srcSet ? SIZES.lightbox : undefined}
                 alt={item.img.alt}
                 width={item.img.width}
                 height={item.img.height}
@@ -192,6 +194,7 @@ export function Zoomable({
   className = "",
   imgClassName = "",
   loading = "lazy",
+  sizes,
   children,
 }: {
   img: Img;
@@ -200,11 +203,12 @@ export function Zoomable({
   className?: string;
   imgClassName?: string;
   loading?: "lazy" | "eager";
+  sizes?: string;
   children?: ReactNode;
 }) {
   const lb = useLightbox();
   const image = (
-    <img src={img.src} alt={img.alt} width={img.width} height={img.height} loading={loading} decoding="async" className={imgClassName} />
+    <img src={img.src} srcSet={img.srcSet} sizes={img.srcSet ? sizes : undefined} alt={img.alt} width={img.width} height={img.height} loading={loading} decoding="async" className={imgClassName} />
   );
   if (!lb) return <div className={`relative ${className}`}>{image}{children}</div>;
   return (

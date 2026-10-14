@@ -24,7 +24,7 @@ import {
 } from "../components/case2/CaseKit";
 import { Evidence, Wrap } from "../components/layout/Wrap";
 import { Zoomable } from "../components/case2/Lightbox";
-import { img } from "../data/caseImages";
+import { img, SIZES } from "../data/caseImages";
 import { usePageMeta } from "../lib/usePageMeta";
 
 const SECTIONS: SectionDef[] = [
@@ -143,6 +143,8 @@ export function Frant() {
         <div className="mx-auto grid h-[400px] max-w-[1440px] grid-cols-2 items-start gap-3.5 overflow-hidden px-5 pt-8 md:h-[560px] md:grid-cols-3 md:gap-6 md:px-10 md:pt-12 lg:h-[640px] lg:grid-cols-12 lg:px-[72px] lg:pt-0">
           <img
             src={img("frant/home", "").src}
+            srcSet={img("frant/home", "").srcSet}
+            sizes={SIZES.band}
             width={440}
             height={956}
             alt="Frant Home: three regulars are past their usual visit"
@@ -151,6 +153,8 @@ export function Frant() {
           />
           <img
             src={img("frant/visit-logged", "").src}
+            srcSet={img("frant/visit-logged", "").srcSet}
+            sizes={SIZES.band}
             width={440}
             height={956}
             alt="Client profile after a visit is logged: On track"
@@ -365,6 +369,7 @@ export function Frant() {
             <div className="mt-7 bg-frant-tint px-5 py-9 md:mt-10 md:px-10 md:py-12 lg:grid lg:grid-cols-[360px_minmax(0,1fr)] lg:items-start lg:gap-14 lg:p-14">
               <div className="relative mx-auto w-[280px] md:w-[320px] lg:w-[360px]">
                 <Zoomable
+                  sizes={SIZES.decision}
                   img={img("frant/overdue", "Hi-fi overdue list with a sort label, late badges, rhythm bars and a Why this order note")}
                   className="rounded-[32px] shadow-[0_30px_60px_-32px_rgba(110,24,10,0.45)] lg:rounded-[40px]"
                   imgClassName="block w-full rounded-[32px] lg:rounded-[40px]"

@@ -125,6 +125,26 @@ body {
   overflow: hidden;
 }
 
+/* The hero line sits offset up and right of the portrait arch */
+.pf-arch-line {
+  transform: translate(12px, -12px);
+  stroke-width: 7;
+}
+@media (min-width: 1024px) {
+  .pf-arch-line {
+    transform: translate(18px, -18px);
+    stroke-width: 10;
+  }
+}
+
+/* Lightbox dialog */
+.pf-lightbox {
+  border: 0;
+}
+.pf-lightbox[open] {
+  animation: pf-fade 160ms var(--ease-pf);
+}
+
 /* Portrait arch: the curve comes from the mark's turns */
 .pf-arch {
   border-radius: 50% 50% 22px 22px / 38.46% 38.46% 22px 22px;

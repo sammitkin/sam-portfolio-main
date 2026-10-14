@@ -3,6 +3,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import type { Img } from "../../data/caseImages";
 import { Evidence, Wrap } from "../layout/Wrap";
+import { Zoomable, type LightboxItem } from "./Lightbox";
 import { scrollBehavior } from "../../lib/usePageMeta";
 
 export type SectionDef = { id: string; label: string };
@@ -256,25 +257,39 @@ export function Metrics({ items, size = "l" }: { items: { value: string; label: 
   );
 }
 
-export function Shot({ img, className = "", radius = "rounded-[26px] md:rounded-[30px]" }: { img: Img; className?: string; radius?: string }) {
+export function Shot({
+  img,
+  group,
+  index,
+  className = "",
+  radius = "rounded-[26px] md:rounded-[30px]",
+}: {
+  img: Img;
+  group?: LightboxItem[];
+  index?: number;
+  className?: string;
+  radius?: string;
+}) {
   return (
-    <img
-      src={img.src}
-      alt={img.alt}
-      width={img.width}
-      height={img.height}
-      loading="lazy"
-      decoding="async"
-      className={`block h-auto w-full shadow-[0_0_0_1px_var(--color-hair)] ${radius} ${className}`}
+    <Zoomable
+      img={img}
+      group={group}
+      index={index}
+      className={`overflow-hidden shadow-[0_0_0_1px_var(--color-hair)] ${radius} ${className}`}
+      imgClassName="block h-auto w-full"
     />
   );
 }
 
 /** Phone screens with captions. Scrolls sideways on phones, grid from tablet up. */
 export function PhoneRow({ items, caption }: { items: { img: Img; tag?: string; label: ReactNode }[]; caption?: ReactNode }) {
+  const group: LightboxItem[] = items.map((it) => ({
+    img: it.img,
+    caption: [it.tag, typeof it.label === "string" ? it.label : it.img.alt].filter(Boolean).join(". "),
+  }));
   const rows = items.map((it, i) => (
     <li key={i} className={items.length === 2 ? "min-w-0" : "w-[236px] shrink-0 md:w-auto"}>
-      <Shot img={it.img} />
+      <Shot img={it.img} group={group} index={i} />
       <p className="mt-3 text-[15px] font-medium leading-[1.45] md:mt-3.5 md:text-[16px]">
         {it.tag && <b className="font-extrabold">{it.tag}. </b>}
         {it.label}
@@ -285,9 +300,10 @@ export function PhoneRow({ items, caption }: { items: { img: Img; tag?: string; 
     <figure className="mt-8">
       {/* Pairs are comparisons (before/after), so they stay side by side even on phones. Trios scroll. */}
       {items.length === 2 ? (
-        <ul className="grid grid-cols-2 gap-3 md:gap-6 lg:max-w-[66%]">
-          {rows}
-        </ul>
+        <>
+          <ul className="grid grid-cols-2 gap-3 md:gap-6 lg:max-w-[66%]">{rows}</ul>
+          <p className="mt-3 text-[14px] font-semibold text-graphite md:hidden">Tap a screen to enlarge, then swipe to compare.</p>
+        </>
       ) : (
         <div
           tabIndex={0}
@@ -307,16 +323,14 @@ export function WideImage({ img, caption, minWidth }: { img: Img; caption?: Reac
   return (
     <figure className="mt-8">
       <div className="-mx-5 overflow-x-auto px-5 md:mx-0 md:px-0" tabIndex={minWidth ? 0 : undefined} role={minWidth ? "region" : undefined} aria-label={minWidth ? "Wide image, scrolls sideways" : undefined}>
-        <img
-          src={img.src}
-          alt={img.alt}
-          width={img.width}
-          height={img.height}
-          loading="lazy"
-          decoding="async"
-          style={minWidth ? { minWidth } : undefined}
-          className="block h-auto w-full bg-white shadow-[0_0_0_1px_var(--color-hair)]"
-        />
+        <div style={minWidth ? { minWidth } : undefined}>
+          <Zoomable
+            img={img}
+            group={[{ img, caption: typeof caption === "string" ? caption : img.alt }]}
+            className="bg-white shadow-[0_0_0_1px_var(--color-hair)]"
+            imgClassName="block h-auto w-full"
+          />
+        </div>
       </div>
       {caption && <figcaption className="mt-3 max-w-[40em] text-[15px] font-medium leading-[1.5] text-body2">{caption}</figcaption>}
     </figure>
@@ -376,14 +390,14 @@ export function NextCase({ to, name, color, line }: { to: string; name: string; 
     <Wrap className="pt-16 md:pt-24">
       <Link
         to={to}
-        className="group block border-t-2 border-ink pt-[18px] md:grid md:grid-cols-12 md:items-end md:gap-x-6 md:pt-7"
+        className="group block border-t-2 border-ink pt-[18px] md:pt-7 lg:grid lg:grid-cols-12 lg:items-end lg:gap-x-6"
       >
-        <span className="block text-[14px] font-extrabold text-graphite md:col-span-3 md:text-[16px]">Next case study</span>
-        <span className="mt-2.5 flex items-center gap-3 text-[48px] font-extrabold leading-[0.95] tracking-[-0.055em] transition-colors group-hover:text-electric md:col-span-5 md:mt-0 md:gap-5 md:text-[64px] lg:text-[84px]">
+        <span className="block text-[14px] font-extrabold text-graphite md:text-[16px] lg:col-span-3">Next case study</span>
+        <span className="mt-2.5 flex items-center gap-3 whitespace-nowrap text-[48px] font-extrabold leading-[0.95] tracking-[-0.055em] transition-colors group-hover:text-electric md:mt-3 md:gap-5 md:text-[64px] lg:col-span-5 lg:mt-0 lg:text-[clamp(56px,5.85vw,84px)]">
           <span aria-hidden="true" className={`size-[18px] shrink-0 rounded-full md:size-7 ${color}`} />
           {name}
         </span>
-        <span className="mt-2.5 block text-[16px] font-medium leading-[1.5] md:col-span-4 md:mt-0 md:text-[18px]">{line}</span>
+        <span className="mt-2.5 block max-w-[34em] text-[16px] font-medium leading-[1.5] md:mt-4 md:text-[18px] lg:col-span-4 lg:mt-0">{line}</span>
       </Link>
     </Wrap>
   );

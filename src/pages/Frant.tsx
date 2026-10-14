@@ -23,6 +23,7 @@ import {
   type SectionDef,
 } from "../components/case2/CaseKit";
 import { Evidence, Wrap } from "../components/layout/Wrap";
+import { Zoomable } from "../components/case2/Lightbox";
 import { img } from "../data/caseImages";
 import { usePageMeta } from "../lib/usePageMeta";
 
@@ -363,23 +364,20 @@ export function Frant() {
           <Section id="decision" kicker="Key decision" title="Every rank comes with its reason.">
             <div className="mt-7 bg-frant-tint px-5 py-9 md:mt-10 md:px-10 md:py-12 lg:grid lg:grid-cols-[360px_minmax(0,1fr)] lg:items-start lg:gap-14 lg:p-14">
               <div className="relative mx-auto w-[280px] md:w-[320px] lg:w-[360px]">
-                <img
-                  src={img("frant/overdue", "").src}
-                  width={440}
-                  height={956}
-                  loading="lazy"
-                  decoding="async"
-                  alt="Hi-fi overdue list with a sort label, late badges, rhythm bars and a Why this order note"
-                  className="block w-full rounded-[32px] shadow-[0_30px_60px_-32px_rgba(110,24,10,0.45)] lg:rounded-[40px]"
-                />
-                {DECISION.map((d) => (
-                  <Marker
-                    key={d.k}
-                    k={d.k}
-                    style={{ top: d.top }}
-                    className={`absolute shadow-[0_0_0_3px_var(--color-frant-tint)] ${d.side === "left" ? "-left-3 lg:-left-3.5" : "-right-3 lg:-right-3.5"}`}
-                  />
-                ))}
+                <Zoomable
+                  img={img("frant/overdue", "Hi-fi overdue list with a sort label, late badges, rhythm bars and a Why this order note")}
+                  className="rounded-[32px] shadow-[0_30px_60px_-32px_rgba(110,24,10,0.45)] lg:rounded-[40px]"
+                  imgClassName="block w-full rounded-[32px] lg:rounded-[40px]"
+                >
+                  {DECISION.map((d) => (
+                    <Marker
+                      key={d.k}
+                      k={d.k}
+                      style={{ top: d.top }}
+                      className={`absolute shadow-[0_0_0_3px_var(--color-frant-tint)] ${d.side === "left" ? "-left-3 lg:-left-3.5" : "-right-3 lg:-right-3.5"}`}
+                    />
+                  ))}
+                </Zoomable>
               </div>
               <div className="mt-8 lg:mt-0">
                 <ol className="flex flex-col gap-5 lg:gap-[26px]">

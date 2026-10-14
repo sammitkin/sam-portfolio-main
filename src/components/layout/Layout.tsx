@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { LightboxProvider } from "../case2/Lightbox";
 
 export function Layout() {
   const { pathname, hash } = useLocation();
@@ -13,6 +14,7 @@ export function Layout() {
   }, [pathname, hash]);
 
   return (
+    <LightboxProvider>
     <div className="flex min-h-screen flex-col bg-paper text-ink">
       <a
         href="#main"
@@ -27,5 +29,6 @@ export function Layout() {
       <div className="h-[88px] md:h-[120px] lg:h-40" aria-hidden="true" />
       <Footer />
     </div>
+    </LightboxProvider>
   );
 }

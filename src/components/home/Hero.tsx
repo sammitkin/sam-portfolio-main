@@ -22,7 +22,7 @@ function Portrait() {
         aria-hidden="true"
         viewBox="0 0 400 520"
         preserveAspectRatio="none"
-        className="pointer-events-none absolute inset-0 size-full translate-x-3 -translate-y-3 overflow-visible lg:translate-x-[18px] lg:-translate-y-[18px]"
+        className="pf-arch-line pointer-events-none absolute inset-0 size-full overflow-visible"
       >
         <path
           pathLength={1}
@@ -32,7 +32,7 @@ function Portrait() {
           strokeLinecap="round"
           strokeLinejoin="round"
           vectorEffect="non-scaling-stroke"
-          className="pf-draw [stroke-width:7] lg:[stroke-width:10]"
+          className="pf-draw"
         />
       </svg>
     </figure>
@@ -64,7 +64,7 @@ export function Hero() {
           <span className="pf-rise-2 block pl-[0.3em] md:pl-[0.45em] lg:pl-[0.52em]">Mitkin</span>
         </h1>
 
-        <div className="ml-auto mr-1.5 mt-10 w-[74%] md:col-start-2 md:row-start-3 md:mr-3 md:mt-12 md:w-auto lg:col-span-4 lg:col-start-9 lg:row-span-3 lg:row-start-1 lg:mr-0 lg:mt-16">
+        <div className="ml-auto mr-1.5 mt-10 w-[74%] md:col-start-2 md:row-start-3 md:ml-0 md:mr-3 md:mt-12 md:w-auto md:justify-self-stretch lg:col-span-4 lg:col-start-9 lg:row-span-3 lg:row-start-1 lg:mr-0 lg:mt-16">
           <Portrait />
         </div>
 

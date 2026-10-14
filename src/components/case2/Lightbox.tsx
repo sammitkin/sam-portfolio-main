@@ -101,11 +101,19 @@ export function LightboxProvider({ children }: { children: ReactNode }) {
             <div
               className="relative flex min-h-0 flex-1 items-center justify-center px-4 md:px-24"
               onClick={(e) => e.target === e.currentTarget && close()}
-              onTouchStart={(e) => (touchX.current = e.touches[0].clientX)}
+              onTouchStart={(e) => {
+                // A second finger means pinch-zoom, not a swipe: cancel the swipe for this gesture.
+                touchX.current = e.touches.length === 1 ? e.touches[0].clientX : null;
+              }}
+              onTouchMove={(e) => {
+                if (e.touches.length > 1) touchX.current = null;
+              }}
               onTouchEnd={(e) => {
                 if (touchX.current == null) return;
                 const dx = e.changedTouches[0].clientX - touchX.current;
                 touchX.current = null;
+                // While the page is pinch-zoomed, one finger pans the image instead of changing it.
+                if ((window.visualViewport?.scale ?? 1) > 1.01) return;
                 if (Math.abs(dx) > 50) go(dx < 0 ? 1 : -1);
               }}
             >

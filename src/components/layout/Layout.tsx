@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { LightboxProvider } from "../case2/Lightbox";
 
 export function Layout() {
   const { pathname, hash } = useLocation();
@@ -13,10 +14,11 @@ export function Layout() {
   }, [pathname, hash]);
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <LightboxProvider>
+    <div className="flex min-h-screen flex-col bg-paper text-ink">
       <a
         href="#main"
-        className="sr-only z-[60] rounded-lg bg-[#3b4b59] px-4 py-3 text-[14px] font-medium text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+        className="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-[15px] font-bold text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
       >
         Skip to content
       </a>
@@ -24,7 +26,9 @@ export function Layout() {
       <main id="main" tabIndex={-1} className="flex-1 focus:outline-none">
         <Outlet />
       </main>
+      <div className="h-[88px] md:h-[120px] lg:h-40" aria-hidden="true" />
       <Footer />
     </div>
+    </LightboxProvider>
   );
 }

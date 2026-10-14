@@ -1,26 +1,217 @@
 @import "tailwindcss";
 
+/* Brand System v2 — Playful Precision */
 @theme {
-  --font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-sans: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-ui: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-paper: #f5f5f2;
+  --color-ink: #15171a;
+  --color-iris: #c7b8ff;
+  --color-electric: #5a3fe0;
+  --color-electric-deep: #2a1f7a;
+  --color-night: #14102a;
+  --color-graphite: #50565e;
+  --color-body2: #33383f;
+  --color-hair: #dedcd6;
+  --color-on-iris: #2e2a45;
+  --color-on-night: #a39bc4;
+
+  /* Product colors: only inside each product's own band or window */
+  --color-frant: #ff5c48;
+  --color-frant-tint: #fff1ee;
+  --color-deals: #0d2a5c;
+  --color-deals-soft: #c9d6ee;
+  --color-deals-tint: #e9eef7;
+  --color-move: #2769b1;
+  --color-move-tint: #e6effa;
+
+  --ease-pf: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-draw: cubic-bezier(0.6, 0, 0.2, 1);
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+  /* Match the approved boards: unset leading uses the font's own line height */
+  line-height: normal;
 }
 
 body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 :focus-visible {
-  outline: 2px solid #3b4b59;
-  outline-offset: 2px;
+  outline: 2px solid var(--color-electric);
+  outline-offset: 3px;
 }
 
 .on-dark :focus-visible {
   outline-color: #ffffff;
+}
+
+@layer components {
+/* Underlined text links */
+.pf-link {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 2px;
+  transition: color 160ms var(--ease-pf), text-decoration-thickness 160ms var(--ease-pf);
+}
+.pf-link:hover {
+  color: var(--color-electric);
+}
+/* On Iris and Coral the hover color would fail contrast: thicken the line instead */
+.pf-link-quiet:hover {
+  color: inherit;
+  text-decoration-thickness: 3px;
+}
+
+/* Buttons */
+.pf-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 28px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 160ms var(--ease-pf), color 160ms var(--ease-pf), box-shadow 160ms var(--ease-pf);
+}
+.pf-btn-primary {
+  background: var(--color-ink);
+  color: #ffffff;
+}
+.pf-btn-primary:hover {
+  background: var(--color-electric);
+}
+.pf-btn-primary:active {
+  background: var(--color-electric-deep);
+}
+.pf-btn-outline {
+  box-shadow: inset 0 0 0 2px var(--color-ink);
+  color: var(--color-ink);
+}
+.pf-btn-outline:hover {
+  background: rgba(21, 23, 26, 0.08);
+}
+.pf-btn-outline-dark {
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+.pf-btn-outline-dark:hover {
+  box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+/* Expanding rows: grid trick animates height without measuring */
+.pf-expand {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 200ms var(--ease-pf);
+}
+.pf-expand[data-open="true"] {
+  grid-template-rows: 1fr;
+}
+.pf-expand > div {
+  overflow: hidden;
+}
+
+/* The hero line sits offset up and right of the portrait arch */
+.pf-arch-line {
+  transform: translate(12px, -12px);
+  stroke-width: 7;
+}
+@media (min-width: 1024px) {
+  .pf-arch-line {
+    transform: translate(18px, -18px);
+    stroke-width: 10;
+  }
+}
+
+/* Lightbox dialog */
+.pf-lightbox {
+  border: 0;
+}
+.pf-lightbox[open] {
+  animation: pf-fade 160ms var(--ease-pf);
+}
+
+/* Portrait arch: the curve comes from the mark's turns */
+.pf-arch {
+  border-radius: 50% 50% 22px 22px / 38.46% 38.46% 22px 22px;
+}
+
+/* Disclosure for the full case-study detail */
+.pf-details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+.pf-details > summary::-webkit-details-marker {
+  display: none;
+}
+.pf-details[open] .pf-details-chevron {
+  transform: rotate(180deg);
+}
+
+}
+
+/* One load moment in the hero */
+@keyframes pf-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes pf-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes pf-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.pf-rise {
+  animation: pf-rise 600ms var(--ease-pf) backwards;
+}
+.pf-rise-2 {
+  animation: pf-rise 600ms var(--ease-pf) 90ms backwards;
+}
+.pf-draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  animation: pf-draw 1000ms var(--ease-draw) 300ms backwards;
+}
+.pf-draw-pending {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+.pf-draw-footer {
+  stroke-dasharray: 1;
+  animation: pf-draw 1200ms var(--ease-draw) both;
+}
+.pf-fade {
+  animation: pf-fade 240ms var(--ease-pf);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -31,8 +222,11 @@ body {
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .pf-draw-pending {
+    stroke-dashoffset: 0;
   }
 }

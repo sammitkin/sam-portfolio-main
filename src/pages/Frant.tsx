@@ -227,7 +227,7 @@ export function Frant() {
                   </p>
                 </Prose>
                 <Table
-                  head={["", "Detail"]}
+                  head={["Item", "Detail"]}
                   rows={[
                     ["Platform", "iOS, mobile first"],
                     ["Timeline", "Sep 7 – Oct 11, 2026 · about 100 hours"],
@@ -277,7 +277,7 @@ export function Frant() {
                   </p>
                 </Prose>
                 <Table
-                  head={["", "What it offers for lapsed clients", "Ranks regulars by their own rhythm", "Explains why"]}
+                  head={["App", "What it offers for lapsed clients", "Ranks regulars by their own rhythm", "Explains why"]}
                   rows={[
                     ["SQUIRE", "Engage and Smart Rebooking. Lapsed clients shown as a count.", <No />, <No />],
                     ["Booksy", "A “Slipping Away” client group.", <No />, <No />],

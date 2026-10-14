@@ -1,4 +1,5 @@
-import type { Img } from "../components/case/Case";
+export type Img = { src: string; alt: string; width: number; height: number };
+
 import { imageSizes } from "./imageSizes";
 
 const files = import.meta.glob<string>("/src/assets/images/case/**/*.webp", { eager: true, import: "default" });

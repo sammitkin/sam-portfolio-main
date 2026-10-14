@@ -10,7 +10,7 @@ const MoveEase = lazy(() => import("./pages/MoveEase").then((m) => ({ default: m
 
 /** Case pages load on demand. The placeholder keeps the footer from jumping up while they load. */
 function Page({ children }: { children: ReactNode }) {
-  return <Suspense fallback={<div className="min-h-screen bg-[#f5f4ef]" />}>{children}</Suspense>;
+  return <Suspense fallback={<div className="min-h-screen bg-paper" />}>{children}</Suspense>;
 }
 
 export default function App() {

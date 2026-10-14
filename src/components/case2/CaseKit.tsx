@@ -1,8 +1,8 @@
 /* Case-study building blocks for Brand System v2 (Playful Precision). */
 import { useEffect, useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
-import type { Img } from "../case/Case";
-import { Wrap } from "../layout/Wrap";
+import type { Img } from "../../data/caseImages";
+import { Evidence, Wrap } from "../layout/Wrap";
 import { scrollBehavior } from "../../lib/usePageMeta";
 
 export type SectionDef = { id: string; label: string };
@@ -184,7 +184,7 @@ export function SubHeading({ children }: { children: ReactNode }) {
 export function Table({ head, rows, caption, highlightLast }: { head: ReactNode[]; rows: ReactNode[][]; caption?: ReactNode; highlightLast?: boolean }) {
   return (
     <figure className="mt-8">
-      <div className="-mx-5 overflow-x-auto px-5 md:mx-0 md:px-0" tabIndex={0} role="region" aria-label="Table, scrolls sideways on small screens">
+      <div className="-mx-5 overflow-x-auto px-5 md:mx-0 md:px-0" tabIndex={0} role="region" aria-label={`Table: ${head.filter((h) => typeof h === "string" && h).join(", ")}`}>
         <table className="w-full min-w-[560px] border-collapse text-left text-[15px] md:text-[16px]">
           <thead>
             <tr className="border-b-2 border-ink text-[14px] md:text-[15px]">
@@ -225,14 +225,14 @@ export function Table({ head, rows, caption, highlightLast }: { head: ReactNode[
 export const Yes = () => <span className="font-extrabold">Yes</span>;
 export const No = () => <span className="text-graphite">No</span>;
 
-export function Points({ items, columns = 3 }: { items: { title: ReactNode; body: ReactNode; label?: ReactNode }[]; columns?: 2 | 3 }) {
+export function Points({ items, columns = 3 }: { items: { title: ReactNode; body?: ReactNode; label?: ReactNode }[]; columns?: 2 | 3 }) {
   return (
     <ul className={`mt-8 grid gap-0 md:gap-6 ${columns === 3 ? "md:grid-cols-3" : "md:grid-cols-2"}`}>
       {items.map((it, i) => (
         <li key={i} className="border-t-2 border-ink pb-4 pt-3 md:pb-0 md:pt-3.5">
           {it.label && <p className="mb-1.5 text-[14px] font-extrabold text-graphite">{it.label}</p>}
           <b className="text-[18px] font-extrabold tracking-[-0.02em] md:text-[20px]">{it.title}</b>
-          <div className="mt-1 text-[16px] font-medium leading-[1.5] md:text-[17px] [&>p+p]:mt-2 [&_ul]:list-disc [&_ul]:pl-5">{it.body}</div>
+          {it.body && <div className="mt-1 text-[16px] font-medium leading-[1.5] md:text-[17px] [&>p+p]:mt-2 [&_ul]:list-disc [&_ul]:pl-5">{it.body}</div>}
         </li>
       ))}
     </ul>
@@ -272,19 +272,32 @@ export function Shot({ img, className = "", radius = "rounded-[26px] md:rounded-
 
 /** Phone screens with captions. Scrolls sideways on phones, grid from tablet up. */
 export function PhoneRow({ items, caption }: { items: { img: Img; tag?: string; label: ReactNode }[]; caption?: ReactNode }) {
+  const rows = items.map((it, i) => (
+    <li key={i} className={items.length === 2 ? "min-w-0" : "w-[236px] shrink-0 md:w-auto"}>
+      <Shot img={it.img} />
+      <p className="mt-3 text-[15px] font-medium leading-[1.45] md:mt-3.5 md:text-[16px]">
+        {it.tag && <b className="font-extrabold">{it.tag}. </b>}
+        {it.label}
+      </p>
+    </li>
+  ));
   return (
     <figure className="mt-8">
-      <ul className={`-mx-5 flex gap-4 overflow-x-auto px-5 pb-2 md:mx-0 md:grid md:overflow-visible md:px-0 ${items.length === 2 ? "md:grid-cols-2 lg:max-w-[66%]" : "md:grid-cols-3"}`}>
-        {items.map((it, i) => (
-          <li key={i} className="w-[236px] shrink-0 md:w-auto">
-            <Shot img={it.img} />
-            <p className="mt-3 text-[15px] font-medium leading-[1.45] md:mt-3.5 md:text-[16px]">
-              {it.tag && <b className="font-extrabold">{it.tag}. </b>}
-              {it.label}
-            </p>
-          </li>
-        ))}
-      </ul>
+      {/* Pairs are comparisons (before/after), so they stay side by side even on phones. Trios scroll. */}
+      {items.length === 2 ? (
+        <ul className="grid grid-cols-2 gap-3 md:gap-6 lg:max-w-[66%]">
+          {rows}
+        </ul>
+      ) : (
+        <div
+          tabIndex={0}
+          role="region"
+          aria-label={`Screens: ${items.map((it) => it.tag ?? "").filter(Boolean).join(", ")}`}
+          className="-mx-5 overflow-x-auto px-5 pb-2 md:mx-0 md:overflow-visible md:px-0"
+        >
+          <ul className="flex gap-4 md:grid md:grid-cols-3 md:gap-4">{rows}</ul>
+        </div>
+      )}
       {caption && <figcaption className="mt-4 max-w-[40em] text-[15px] font-medium leading-[1.5] text-body2">{caption}</figcaption>}
     </figure>
   );
@@ -374,4 +387,139 @@ export function NextCase({ to, name, color, line }: { to: string; name: string; 
       </Link>
     </Wrap>
   );
+}
+
+/* ---------------------------------------------------------------- page-level pieces */
+
+export function CaseIntro({
+  name,
+  dot,
+  kicker,
+  title,
+  meta,
+  note,
+}: {
+  name: string;
+  dot: string;
+  kicker: string;
+  title: ReactNode;
+  meta: [string, string][];
+  note?: ReactNode;
+}) {
+  return (
+    <Wrap as="header" className="pt-6 md:pt-10 lg:grid lg:grid-cols-12 lg:items-end lg:gap-x-6 lg:pt-12">
+      <p className="text-[14px] font-bold lg:col-span-12 lg:text-[15px]">
+        <Link to="/#work" className="pf-link text-graphite hover:text-ink">
+          Work
+        </Link>{" "}
+        <span aria-hidden="true" className="text-graphite">
+          /
+        </span>{" "}
+        {name}
+      </p>
+      <div className="mt-7 lg:col-span-8 lg:mt-12">
+        <p className="flex items-center gap-2.5 text-[15px] font-extrabold md:gap-3 md:text-[17px]">
+          <span aria-hidden="true" className={`size-3 shrink-0 rounded-full md:size-4 ${dot}`} />
+          {kicker}
+        </p>
+        <h1 className="mt-4 text-[44px] font-extrabold leading-[0.96] tracking-[-0.055em] md:mt-6 md:text-[64px] lg:text-[clamp(64px,5.85vw,84px)] lg:leading-[0.95]">
+          {title}
+        </h1>
+        {note && <p className="mt-5 max-w-[40em] text-[14px] font-medium leading-[1.5] text-graphite md:text-[15px]">{note}</p>}
+      </div>
+      <dl className="mt-7 border-t-2 border-ink md:grid md:grid-cols-2 md:gap-x-6 lg:col-span-4 lg:mt-0 lg:block">
+        {meta.map(([k, v]) => (
+          <div key={k} className="flex justify-between gap-3 border-b border-hair py-[11px] lg:gap-4 lg:py-[13px]">
+            <dt className="text-[14px] font-medium text-graphite lg:text-[15px]">{k}</dt>
+            <dd className="text-right text-[14px] font-extrabold lg:text-[15px]">{v}</dd>
+          </div>
+        ))}
+      </dl>
+    </Wrap>
+  );
+}
+
+/** Straight-edged, full-bleed product band with three screens, cropped at the bottom. */
+export function ProductBand({ label, bg, screens }: { label: string; bg: string; screens: [Img, Img, Img] }) {
+  return (
+    <section aria-label={label} className={`mt-10 md:mt-14 lg:mt-16 ${bg}`}>
+      <ul className="mx-auto grid h-[380px] max-w-[1440px] grid-cols-3 items-start gap-3 overflow-hidden px-5 pt-8 md:h-[520px] md:gap-6 md:px-10 md:pt-12 lg:h-[600px] lg:gap-8 lg:px-[72px] lg:pt-16">
+        {screens.map((s, i) => (
+          <li key={s.src} className={`mx-auto w-full max-w-[340px] ${i === 1 ? "" : "mt-10 md:mt-20"}`}>
+            <img
+              src={s.src}
+              alt={s.alt}
+              width={s.width}
+              height={s.height}
+              fetchPriority={i === 1 ? "high" : undefined}
+              decoding="async"
+              className="block w-full rounded-t-[18px] shadow-[0_-20px_60px_-30px_rgba(0,0,0,0.5)] md:rounded-t-[32px] lg:rounded-t-[40px]"
+            />
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+export function Glance({ items }: { items: { label: string; kind?: "tested" | "hypothesis"; body: ReactNode }[] }) {
+  return (
+    <Wrap as="section" aria-label="At a glance" className="grid gap-5 pt-12 md:grid-cols-2 md:gap-6 md:pt-16 lg:grid-cols-4 lg:pt-20">
+      {items.map((g) => (
+        <div key={g.label} className="border-t-2 border-ink pt-4">
+          {g.kind ? (
+            <Evidence kind={g.kind} className="text-[15px]">
+              {g.label}
+            </Evidence>
+          ) : (
+            <p className="text-[15px] font-extrabold">{g.label}</p>
+          )}
+          <p className="mt-2.5 text-[16px] font-medium leading-[1.5] lg:text-[17px]">{g.body}</p>
+        </div>
+      ))}
+    </Wrap>
+  );
+}
+
+/** A labelled aside: what kind of claim this is (method, open question), then the text. */
+export function Note({ label, kind, children }: { label: string; kind?: "tested" | "hypothesis"; children: ReactNode }) {
+  return (
+    <div className="mt-8 max-w-[44em] rounded-[22px] bg-white p-5 shadow-[0_0_0_1px_var(--color-hair)] md:p-6">
+      {kind ? (
+        <Evidence kind={kind} className="text-[14px]">
+          {label}
+        </Evidence>
+      ) : (
+        <p className="text-[14px] font-extrabold">{label}</p>
+      )}
+      <p className="mt-2 text-[16px] font-medium leading-[1.55]">{children}</p>
+    </div>
+  );
+}
+
+export function Chips({ items, label }: { items: string[]; label: string }) {
+  return (
+    <ul aria-label={label} className="mt-6 flex max-w-[44em] flex-wrap gap-2">
+      {items.map((t) => (
+        <li key={t} className="inline-flex min-h-10 items-center rounded-full bg-white px-4 text-[15px] font-bold shadow-[inset_0_0_0_2px_var(--color-ink)]">
+          {t}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/** The case body: sticky index on desktop, sections on the right. */
+export function CaseBody({ sections, active, children }: { sections: SectionDef[]; active: number; children: ReactNode }) {
+  return (
+    <div className="mx-auto max-w-[1440px] lg:grid lg:grid-cols-12 lg:gap-x-6 lg:px-[72px]">
+      <DesktopIndex sections={sections} active={active} />
+      <div className="min-w-0 lg:col-span-9 lg:col-start-4">{children}</div>
+    </div>
+  );
+}
+
+/** A tinted product panel for the key decision: before and after, side by side, with the tested result. */
+export function DecisionPanel({ tint, children }: { tint: string; children: ReactNode }) {
+  return <div className={`mt-7 px-5 py-9 md:mt-10 md:px-10 md:py-12 lg:p-14 ${tint}`}>{children}</div>;
 }

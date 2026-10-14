@@ -2,21 +2,21 @@
   "/": {
     "title": "Sam Mitkin — Product Designer",
     "description": "Sam Mitkin is a product designer focused on service design, customer experience, and research-driven product decisions.",
-    "image": "/og-image.jpg"
+    "image": "/og-image.jpg?v=2"
   },
   "/frant": {
     "title": "Frant Case Study — Sam Mitkin",
     "description": "Frant: an iOS app that helps independent barbers keep their regulars. Six interviews, two rounds of usability testing, a 22-screen prototype and UI kit.",
-    "image": "/og/frant.jpg"
+    "image": "/og/frant.jpg?v=2"
   },
   "/deals-hub": {
     "title": "Deals Hub Case Study — Sam Mitkin",
     "description": "Deals Hub: a feature concept that brings Bank of America cash back deals into one native place. Five interviews and two rounds of usability testing.",
-    "image": "/og/deals-hub.jpg"
+    "image": "/og/deals-hub.jpg?v=2"
   },
   "/moveease": {
     "title": "MoveEase Case Study — Sam Mitkin",
     "description": "MoveEase: a mobile app that helps people handle the admin tasks after a move. Research, design and usability testing by Sam Mitkin.",
-    "image": "/og/moveease.jpg"
+    "image": "/og/moveease.jpg?v=2"
   }
 }

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { img, SIZES } from "../../data/caseImages";
 import { Wrap } from "../layout/Wrap";
 
-const dealsMid = img("deals/mid-chevron", "Mid-fi Chevron Local Deal that does not say which card is eligible");
+const dealsExplore = img("deals/explore", "Deals Hub Explore tab with cash back earned and featured deals");
 const dealsLocal = img("deals/local", "Hi-fi Chevron Local Deal showing the exact eligible card");
 const moveDash = img("moveease/dashboard", "MoveEase dashboard");
 const moveCal = img("moveease/calendar", "MoveEase calendar");
@@ -15,27 +15,27 @@ export function MoreWork() {
       <article id="deals" aria-labelledby="deals-title" className="lg:col-span-7">
         <div className="-mx-5 grid h-[380px] grid-cols-2 gap-3.5 overflow-hidden bg-deals px-5 pt-7 md:mx-0 md:h-[520px] md:gap-7 md:px-12 md:pt-10 lg:h-[540px]">
           <figure>
-            <figcaption className="mb-2.5 text-[13px] font-bold text-deals-soft md:mb-3.5 md:text-[14px]">Round 1, mid-fi</figcaption>
+            <figcaption className="mb-2.5 text-[13px] font-bold text-deals-soft md:mb-3.5 md:text-[14px]">Every deal in one place</figcaption>
             <img
-              src={dealsMid.src}
-              srcSet={dealsMid.srcSet}
+              src={dealsExplore.src}
+              srcSet={dealsExplore.srcSet}
               sizes={SIZES.pair}
-              width={390}
-              height={844}
+              width={dealsExplore.width}
+              height={dealsExplore.height}
               loading="lazy"
               decoding="async"
-              alt={dealsMid.alt}
+              alt={dealsExplore.alt}
               className="block w-full rounded-t-[18px] md:rounded-t-[26px]"
             />
           </figure>
           <figure>
-            <figcaption className="mb-2.5 text-[13px] font-bold text-white md:mb-3.5 md:text-[14px]">Round 2, hi-fi</figcaption>
+            <figcaption className="mb-2.5 text-[13px] font-bold text-white md:mb-3.5 md:text-[14px]">The exact card, up front</figcaption>
             <img
               src={dealsLocal.src}
               srcSet={dealsLocal.srcSet}
               sizes={SIZES.pair}
-              width={390}
-              height={844}
+              width={dealsLocal.width}
+              height={dealsLocal.height}
               loading="lazy"
               decoding="async"
               alt={dealsLocal.alt}

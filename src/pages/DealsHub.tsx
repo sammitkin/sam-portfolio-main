@@ -38,7 +38,7 @@ export function DealsHub() {
   usePageMeta({
     title: "Deals Hub Case Study — Sam Mitkin",
     description:
-      "Deals Hub: a feature concept that brings Bank of America cash back deals into one native place. Five interviews and two rounds of usability testing.",
+      "Deals Hub: a feature concept that brings Bank of America cash-back deals into one native place. Five interviews and two rounds of usability testing.",
     path: "/deals-hub",
   });
   const active = useActiveSection(IDS);
@@ -51,7 +51,7 @@ export function DealsHub() {
         name="Deals Hub"
         dot="bg-deals"
         kicker="Deals Hub, an iOS feature concept for banking"
-        title="One clear, native place for bank cash back deals."
+        title="One clear, native place for bank cash-back deals."
         note="Student concept project. Not affiliated with or endorsed by Bank of America. Merchant names and logos belong to their owners. Account balances shown are fictional."
         meta={[
           ["Role", "Solo UX/UI designer"],
@@ -84,7 +84,7 @@ export function DealsHub() {
           {
             label: "Result, tested",
             kind: "tested",
-            body: "In round one, 1 of 5 couldn't tell which card a Local Deal needed. After the fix, 5 of 5 found the eligible card on every offer type.",
+            body: "In round one, 1 of 5 couldn’t tell which card a Local Deal needed. After the fix, 5 of 5 found the eligible card on every offer type.",
           },
           {
             label: "Open question, to validate",
@@ -100,7 +100,7 @@ export function DealsHub() {
           <Pad>
             <Points
               items={[
-                { title: "It doesn't feel native", body: "Offers open in an embedded web view with their own header and navigation." },
+                { title: "It doesn’t feel native", body: "Offers open in an embedded web view with their own header and navigation." },
                 { title: "Offer types look identical", body: "Nothing in the grid tells you what each offer needs you to do before you tap in." },
                 { title: "Savings are hidden", body: "Total cash back sits two taps deep, in Earning History." },
               ]}
@@ -108,7 +108,7 @@ export function DealsHub() {
             <More label="More on the gap and the competitors">
               <Prose>
                 <p>
-                  BankAmeriDeals hides cash back offers in an embedded web view, makes different offer types look the
+                  BankAmeriDeals hides cash-back offers in an embedded web view, makes different offer types look the
                   same, and buries total savings. For a Designlab capstone, I designed Deals Hub: a native feature for
                   finding, activating and tracking deals inside the Bank of America app.
                 </p>
@@ -126,12 +126,12 @@ export function DealsHub() {
               <Points
                 columns={2}
                 items={[
-                  { label: "Shared across the industry", title: "Weak discoverability." },
-                  { label: "Specific to Bank of America", title: "No native feel, and inconsistent activation patterns." },
+                  { label: "Shared across the industry", title: "Weak discoverability" },
+                  { label: "Specific to Bank of America", title: "No native feel, and inconsistent activation patterns" },
                 ]}
               />
               <p className="mt-3 text-[15px] font-medium text-body2">Competitive analysis against American Express, Chase and Wells Fargo.</p>
-              <SubHeading>The name changed. The research didn't.</SubHeading>
+              <SubHeading>The name changed. The research didn’t.</SubHeading>
               <Prose className="mt-4">
                 <p>
                   I started under the working name Rewards Hub. In week one, my mentor pointed out that it read like an
@@ -176,7 +176,7 @@ export function DealsHub() {
                     body: (
                       <>
                         <p>Event coordinator. A casual, low-effort user who wants convenience.</p>
-                        <p className="font-bold">“I just want the discount to show up. I'm not going to hunt for it.”</p>
+                        <p className="font-bold">“I just want the discount to show up. I’m not going to hunt for it.”</p>
                       </>
                     ),
                   },
@@ -186,7 +186,7 @@ export function DealsHub() {
                     body: (
                       <>
                         <p>Independent business owner. An analytical user who wants proof and control.</p>
-                        <p className="font-bold">“I don't trust the interface alone. If the app can't show me proof, I'll go find it myself.”</p>
+                        <p className="font-bold">“I don’t trust the interface alone. If the app can’t show me proof, I’ll go find it myself.”</p>
                       </>
                     ),
                   },
@@ -216,7 +216,7 @@ export function DealsHub() {
                 <p>
                   I sketched two versions of the lo-fi flow, then built a clickable mid-fi prototype in Figma. I kept all
                   three offer mechanics in it, Activate, Shop online and Local Deal, because a single simplified offer
-                  wouldn't test the real source of confusion.
+                  wouldn’t test the real source of confusion.
                 </p>
               </Prose>
               <WideImage
@@ -249,8 +249,8 @@ export function DealsHub() {
           <DecisionPanel tint="bg-deals-tint">
             <Prose>
               <p>
-                In round one, the eligible card element I'd built for Activate offers like Starbucks didn't carry over to
-                Local Deals like Chevron. One participant could see the words “eligible card” but couldn't tell which of
+                In round one, the eligible card element I’d built for Activate offers like Starbucks didn’t carry over to
+                Local Deals like Chevron. One participant could see the words “eligible card” but couldn’t tell which of
                 his cards it meant. It blocked a real purchase decision, so it became the top priority for hi-fi.
               </p>
             </Prose>
@@ -263,7 +263,7 @@ export function DealsHub() {
             <div className="mt-8 max-w-[44em] border-t-2 border-ink pt-4">
               <Evidence className="text-[14px] lg:text-[15px]">Tested, same 5 participants in both rounds</Evidence>
               <p className="mt-2.5 text-[18px] font-bold leading-[1.4] lg:text-[20px]">
-                1 of 5 couldn't identify the card for a Local Deal in round one. In round two, 5 of 5 found the eligible
+                1 of 5 couldn’t identify the card for a Local Deal in round one. In round two, 5 of 5 found the eligible
                 card on every offer type.
               </p>
             </div>
@@ -271,7 +271,7 @@ export function DealsHub() {
           <Pad>
             <Metrics
               items={[
-                { value: "1/5", label: "couldn't identify the card for a Local Deal in round one" },
+                { value: "1/5", label: "couldn’t identify the card for a Local Deal in round one" },
                 { value: "5/5", label: "found the eligible card on every offer type in round two" },
                 { value: "5", label: "same participants in both rounds" },
                 { value: "4", label: "targeted iterations after round two" },
@@ -294,7 +294,7 @@ export function DealsHub() {
               <Prose className="mt-4">
                 <p>
                   When I walked my mentor through the prototype, he pointed out that the activated state still looked
-                  pressable. A completed offer can't be undone, so I turned it into a status.
+                  pressable. A completed offer can’t be undone, so I turned it into a status.
                 </p>
               </Prose>
               <PhoneRow
@@ -336,14 +336,14 @@ export function DealsHub() {
                 <p>
                   I connected every key screen into one clickable Figma prototype, from the entry point through
                   activation, redirect and tracking. A few interactions, like the merchant redirect, are intentional dead
-                  ends because in a real product they leave the app. I documented them so they wouldn't read as errors.
+                  ends because in a real product they leave the app. I documented them so they wouldn’t read as errors.
                 </p>
               </Prose>
               <SubHeading>How I used AI</SubHeading>
               <Prose className="mt-4">
                 <p>
                   I used Claude to structure interview notes and to check my writing for overclaiming. It caught places
-                  where I had generalized one participant's comment as if it applied to everyone. I used an AI image tool
+                  where I had generalized one participant’s comment as if it applied to everyone. I used an AI image tool
                   for early hi-fi concepts, then rebuilt every screen in Figma by hand. The research findings and design
                   decisions were mine.
                 </p>
@@ -353,7 +353,7 @@ export function DealsHub() {
         </Section>
       </CaseBody>
 
-      <Lesson>Testing the same people twice told me whether the fix worked. It also told me what it couldn't prove.</Lesson>
+      <Lesson>Testing the same people twice told me whether the fix worked. It also told me what it couldn’t prove.</Lesson>
 
       <NextCase
         to="/moveease"

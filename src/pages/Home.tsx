@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Hero } from "../components/home/Hero";
-import { WorkIndex } from "../components/home/WorkIndex";
 import { FrantFeature } from "../components/home/FrantFeature";
 import { MoreWork } from "../components/home/MoreWork";
 import { About } from "../components/home/About";
@@ -26,9 +25,11 @@ export function Home() {
   return (
     <>
       <Hero />
-      <WorkIndex />
-      <FrantFeature />
-      <MoreWork />
+      {/* Work starts right after the hero: Frant first, then Deals Hub and MoveEase. */}
+      <div id="work">
+        <FrantFeature />
+        <MoreWork />
+      </div>
       <About />
     </>
   );

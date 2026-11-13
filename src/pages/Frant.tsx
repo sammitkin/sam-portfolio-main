@@ -200,7 +200,7 @@ export function Frant() {
               </Quote>
               <Points
                 items={[
-                  { title: "They notice too late", body: "Mauri after six weeks. Stacey, four months." },
+                  { title: "They notice too late", body: "Mauri noticed after six weeks, Stacey after four months." },
                   { title: "They can’t tell who’s first", body: "Several late clients, no way to choose." },
                   { title: "Reaching out feels pushy", body: "A text can sound desperate." },
                 ]}
@@ -209,15 +209,15 @@ export function Frant() {
                 <Prose>
                   <p>
                     Frant is an iOS app that helps independent barbers notice when a regular is overdue, see why, and reach
-                    out in their own words. I'm a working barber, so I started with a question from my own chair: why do
+                    out in their own words. I’m a working barber, so I started with a question from my own chair: why do
                     regular clients slip away without anyone noticing in time?
                   </p>
                   <p>
                     I interviewed six people: three solo barbers and hairstylists, two shop owners and one commission
-                    barber. I wasn't testing an idea yet. I wanted to see how they notice that a regular has gone quiet.
+                    barber. I wasn’t testing an idea yet. I wanted to see how they notice that a regular has gone quiet.
                   </p>
                   <p>
-                    The solo participants knew each client's rhythm by heart. Mauri knew one regular came every two or
+                    The solo participants knew each client’s rhythm by heart. Mauri knew one regular came every two or
                     three weeks. Liam had a color client who came every four weeks for years. None of it was written down.
                   </p>
                   <p>
@@ -227,7 +227,7 @@ export function Frant() {
                   </p>
                   <p>
                     I grouped the notes into an affinity map with nine clusters. Three problems kept showing up together,
-                    and they were linked: a perfect list of overdue clients wouldn't help if the barber still felt awkward
+                    and they were linked: a perfect list of overdue clients wouldn’t help if the barber still felt awkward
                     sending the text. Frant had to help with noticing, choosing and reaching out.
                   </p>
                 </Prose>
@@ -272,12 +272,12 @@ export function Frant() {
                     campaigns. His problem was too much information, not too little.
                   </p>
                 </Prose>
-                <Quote by="Jorge, shop owner">You can spend forever looking at reports. I don't need fifty things.</Quote>
+                <Quote by="Jorge, shop owner">You can spend forever looking at reports. I don’t need fifty things.</Quote>
                 <Quote by="Cray, shop owner">If somebody showed me one thing and said, ‘This needs attention today,’ maybe.</Quote>
                 <Prose className="mt-8">
                   <p>
                     Next I compared SQUIRE, Booksy and Vagaro. All three already group lapsed clients in some way. In my
-                    own SQUIRE account, the client screen showed 13 lapsed clients as a number. I couldn't open that list
+                    own SQUIRE account, the client screen showed 13 lapsed clients as a number. I couldn’t open that list
                     or sort it by last visit.
                   </p>
                 </Prose>
@@ -295,7 +295,7 @@ export function Frant() {
                 <Prose className="mt-8">
                   <p>
                     Owners had staff, tools and a different pain, so I focused on solo and independent barbers. My
-                    personas kept every later decision honest about who Frant is for, and who it isn't for.
+                    personas kept every later decision honest about who Frant is for, and who it isn’t for.
                   </p>
                 </Prose>
                 <Points
@@ -309,7 +309,7 @@ export function Frant() {
                     {
                       label: "Secondary persona, MVP boundary",
                       title: "Devon Price, commission barber",
-                      body: "Based on one commission barber. His real problem is that the shop owns his client data. Frant doesn't solve that. My first draft implied it did, so I rewrote it with a clear scope limit.",
+                      body: "Based on one commission barber. His real problem is that the shop owns his client data. Frant doesn’t solve that. My first draft implied it did, so I rewrote it with a clear scope limit.",
                     },
                   ]}
                 />
@@ -320,7 +320,7 @@ export function Frant() {
                     rhythm, explains why, helps the barber reach out and tracks what happens next.
                   </p>
                 </Prose>
-                <Flow steps={["See who's overdue", "Understand why", "Reach out", "Track the result"]} caption="The one loop the MVP was built around." />
+                <Flow steps={["See who’s overdue", "Understand why", "Reach out", "Track the result"]} caption="The one loop the MVP was built around." />
                 <Points
                   items={[
                     {
@@ -413,16 +413,16 @@ export function Frant() {
                     Frant never sends a message on its own.
                   </p>
                   <p className="mt-2.5 text-[16px] font-medium leading-[1.5] md:mt-3 md:text-[17px]">
-                    It opens iOS Messages with an editable draft. “I want it coming from me, not some app.” Mauri
+                    It opens iOS Messages with an editable draft. “I want it coming from me, not some app.” — Mauri
                   </p>
                 </div>
                 <div className="border-t-2 border-ink pt-3.5 md:pt-4">
                   <p className="text-[14px] font-extrabold text-graphite md:text-[15px]">The draft, before and after</p>
                   <p className="mt-2 text-[15px] font-medium leading-[1.5] text-graphite line-through md:mt-2.5 md:text-[16px]">
-                    “Hey Mike, it's been a few weeks since your last cut — want me to grab you a spot this week?”
+                    “Hey Mike, it’s been a few weeks since your last cut — want me to grab you a spot this week?”
                   </p>
                   <p className="mt-2 text-[15px] font-bold leading-[1.5] md:mt-2.5 md:text-[16px]">
-                    “Hey Mike, got a couple openings this week if you're due for a cut. Want me to save you a spot?”
+                    “Hey Mike, got a couple openings this week if you’re due for a cut. Want me to save you a spot?”
                   </p>
                   <Evidence className="mt-3 text-[13px] md:mt-3.5 md:text-[14px]">Sent with little or no edit: 0 of 5, then 4 of 5</Evidence>
                 </div>
@@ -456,7 +456,7 @@ export function Frant() {
                     nobody knew why Mike was first. Mauri said he might text James first if James was a better client.
                   </p>
                 </Prose>
-                <Quote by="Liam, solo hairstylist">I don't love the idea that the app decides who I should reach out to first.</Quote>
+                <Quote by="Liam, solo hairstylist">I don’t love the idea that the app decides who I should reach out to first.</Quote>
                 <PhoneRow
                   items={[
                     { img: img("frant/lofi-overdue", "Lo-fi overdue list with numbered clients and no explanation of the order"), tag: "Before", label: "Numbered list. No reason for the order." },
@@ -467,9 +467,9 @@ export function Frant() {
                 <SubHeading>2. The message had to sound like the barber.</SubHeading>
                 <Prose className="mt-4">
                   <p>
-                    All five target users said they'd rewrite the default text. Sophia said it “sounds like I'm tracking
-                    him.” Liam said it felt like “I've been watching that you haven't come back.” The new draft is short,
-                    offers a spot this week and never mentions how long it's been. The barber can still edit every word.
+                    All five target users said they’d rewrite the default text. Sophia, one of the testers, said it “sounds like I’m tracking
+                    him.” Liam said it felt like “I’ve been watching that you haven’t come back.” The new draft is short,
+                    offers a spot this week and never mentions how long it’s been. The barber can still edit every word.
                   </p>
                 </Prose>
                 <SubHeading>3. Names over numbers.</SubHeading>
@@ -487,7 +487,7 @@ export function Frant() {
                   ]}
                   caption="The two Home options from the lo-fi test. In hi-fi, the $240 figure was removed."
                 />
-                <Quote by="Mauri, solo barber">If I'm opening this because I'm slow, just show me the people. I don't need a dashboard.</Quote>
+                <Quote by="Mauri, solo barber">If I’m opening this because I’m slow, just show me the people. I don’t need a dashboard.</Quote>
               </More>
             </Pad>
           </Section>
@@ -500,12 +500,12 @@ export function Frant() {
                   { value: "42/45", label: "task attempts without a hint (93%)" },
                   { value: "4.6", label: "average ease, target was 4.5" },
                   { value: "5", label: "testers, same in both rounds" },
-                  { value: "2", label: "tasks only at their minimum" },
+                  { value: "2", label: "tasks only met the minimum" },
                 ]}
               />
               <Prose className="mt-8 md:mt-9">
                 <p>
-                  Marking a client as contacted and logging a visit only reached their targets. People understood the
+                  Marking a client as contacted and logging a visit only just met their targets. People understood the
                   buttons; once the text was sent, the job felt done.
                 </p>
               </Prose>
@@ -543,11 +543,11 @@ export function Frant() {
                 <Prose className="mt-4">
                   <p>
                     Both asked the barber to update Frant after something had already happened outside the app. In task 5,
-                    two of five didn't think to mark Mike as contacted. Mauri figured the app would know. In task 7, Mauri
-                    and Stacey said they'd forget to log every visit by hand.
+                    two of five didn’t think to mark Mike as contacted. Mauri figured the app would know. In task 7, Mauri
+                    and Stacey said they’d forget to log every visit by hand.
                   </p>
                   <p>
-                    This wasn't a usability bug. People understood the buttons. The risk was behavior: once the real
+                    This wasn’t a usability bug. People understood the buttons. The risk was behavior: once the real
                     action happened, the job felt finished. If barbers stop updating Frant, the list goes stale and the
                     product loses its value.
                   </p>
@@ -576,25 +576,25 @@ export function Frant() {
                 <Prose>
                   <p>
                     Instead of more explanation on the buttons, I moved the question to the moment the barber needs it.
-                    These changes came after the last test, so they're hypotheses for the next one.
+                    These changes came after the last test, so they’re hypotheses for the next one.
                   </p>
                   <p>
-                    The “Did you send it to Mike?” sheet admits Frant can't see the Messages app. On the booking day, Home
+                    The “Did you send it to Mike?” sheet admits Frant can’t see the Messages app. On the booking day, Home
                     asks “Did Mike come in?” and one tap logs the visit. After logging, the profile shows a clear result:
-                    On track, with the next expected visit. Stephanie expected this in testing.
+                    On track, with the next expected visit. One tester, Stephanie, expected exactly this.
                   </p>
                   <p>
                     I also added a <strong>Replied</strong> state between Contacted and Rebooked, because in both rounds
                     people judged outreach by a reply or a booking. And I changed one onboarding line: “Learns each
-                    client's rhythm” became “Tracks each client's rhythm.” Sophia pointed out that she sets the rhythm
-                    herself. Frant doesn't learn anything yet, so the old line promised too much.
+                    client’s rhythm” became “Tracks each client’s rhythm.” Sophia pointed out that she sets the rhythm
+                    herself. Frant doesn’t learn anything yet, so the old line promised too much.
                   </p>
                 </Prose>
               </More>
             </Pad>
           </Section>
 
-          {/* 6 What's next */}
+          {/* 6 What’s next */}
           <Section id="next" kicker="What’s next">
             <Pad>
               <Points
@@ -635,11 +635,11 @@ export function Frant() {
                 <Flow steps={["Overdue", "Contacted", "Replied", "Rebooked", "Visit logged", "On track"]} caption="The retention loop, as six client states." />
                 <PhoneRow
                   items={[
-                    { img: img("frant/home", "Frant Home showing three regulars past their usual visit"), tag: "Home", label: "This week's overdue regulars, names first." },
+                    { img: img("frant/home", "Frant Home showing three regulars past their usual visit"), tag: "Home", label: "This week’s overdue regulars, names first." },
                     { img: img("frant/message", "Message draft sheet with templates and an Open in Messages button"), tag: "Reach out", label: "An editable draft that opens in iOS Messages." },
-                    { img: img("frant/schedule", "Schedule with today's appointments and an open slot that links to overdue regulars"), tag: "Schedule", label: "A trigger, not a calendar: an open slot links to overdue regulars." },
+                    { img: img("frant/schedule", "Schedule with today’s appointments and an open slot that links to overdue regulars"), tag: "Schedule", label: "A trigger, not a calendar: an open slot links to overdue regulars." },
                   ]}
-                  caption="All five testers used the open slot. Most said they wouldn't keep a second calendar unless it synced with theirs, so Schedule stays light."
+                  caption="All five testers used the open slot. Most said they wouldn’t keep a second calendar unless it synced with theirs, so Schedule stays light."
                 />
                 <SubHeading>A UI kit for the final visual language.</SubHeading>
                 <Prose className="mt-4">
@@ -653,7 +653,7 @@ export function Frant() {
                 <WideImage img={img("frant/kit-color", "Frant UI kit color page: brand, neutral and system colors with contrast ratios")} />
                 <WideImage
                   img={img("frant/kit-status", "Frant UI kit status labels for each step of the retention loop")}
-                  caption="Status labels mark each step of the retention loop. Some composite components were built after the hi-fi screens and aren't in every screen yet."
+                  caption="Status labels mark each step of the retention loop. Some composite components were built after the hi-fi screens and aren’t in every screen yet."
                 />
                 <SubHeading>A usable screen is not the same as a used product.</SubHeading>
                 <Prose className="mt-4">
@@ -663,7 +663,7 @@ export function Frant() {
                     the same way.
                   </p>
                   <p>
-                    Frant hasn't launched, so I have no retention or revenue results. After launch I'd measure two things:
+                    Frant hasn’t launched, so I have no retention or revenue results. After launch I’d measure two things:
                     how many overdue clients rebook after outreach, and how often barbers answer the check-ins. The second
                     number would show whether the loop survives real days at the chair.
                   </p>

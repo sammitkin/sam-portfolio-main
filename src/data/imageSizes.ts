@@ -140,13 +140,9 @@ export const imageSizes: Record<string, [number, number]> = {
     360,
     800
   ],
-  "tasky/affinity-1": [
+  "tasky/affinity": [
     800,
-    705
-  ],
-  "tasky/affinity-2": [
-    800,
-    654
+    2637
   ],
   "tasky/code": [
     360,

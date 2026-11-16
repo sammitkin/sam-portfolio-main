@@ -169,8 +169,9 @@ export function Tasky() {
             </Prose>
             <Quote by="Person who posts work, interview">There’s no platform, there’s no place for informal work.</Quote>
             <WideImage
-              img={img("tasky/affinity-1", "Affinity map, clusters 1 to 5: finding work and workers, trust, clear expectations, communication and reliability")}
-              caption="Affinity map, clusters 1 to 5 of 10. Yellow notes are quotes, blue notes are observations, and each cluster ends with an insight and a possible opportunity."
+              className="md:max-w-[560px]"
+              img={img("tasky/affinity", "Affinity map with 10 clusters, from finding work and workers to profiles and reviews, followed by questions and assumptions to validate and the client’s decisions")}
+              caption="The full affinity map: 10 clusters, then the questions to validate and the client’s decisions. Yellow notes are quotes, blue notes are observations. Click the map to zoom in."
             />
 
             <SubHeading>Mapping the work day showed where trust breaks: outside the app.</SubHeading>
@@ -208,10 +209,6 @@ export function Tasky() {
                   by text. The client reviewed the guide, and we used her wording, such as “work” instead of “task.”
                 </p>
               </Prose>
-              <WideImage
-                img={img("tasky/affinity-2", "Affinity map, clusters 6 to 10: proof that the job is done, payments, transportation and location, safety and risk, and profiles and reviews")}
-                caption="Affinity map, clusters 6 to 10."
-              />
             </More>
           </Pad>
         </Section>

@@ -322,9 +322,9 @@ export function PhoneRow({ items, caption }: { items: { img: Img; tag?: string; 
   );
 }
 
-export function WideImage({ img, caption, minWidth }: { img: Img; caption?: ReactNode; minWidth?: number }) {
+export function WideImage({ img, caption, minWidth, className = "" }: { img: Img; caption?: ReactNode; minWidth?: number; className?: string }) {
   return (
-    <figure className="mt-8">
+    <figure className={`mt-8 ${className}`}>
       <div className="-mx-5 overflow-x-auto px-5 md:mx-0 md:px-0" tabIndex={minWidth ? 0 : undefined} role={minWidth ? "region" : undefined} aria-label={minWidth ? "Wide image, scrolls sideways" : undefined}>
         <div style={minWidth ? { minWidth } : undefined}>
           <Zoomable

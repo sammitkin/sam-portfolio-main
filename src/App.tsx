@@ -6,6 +6,7 @@ import { NotFound } from "./pages/NotFound";
 
 const Frant = lazy(() => import("./pages/Frant").then((m) => ({ default: m.Frant })));
 const DealsHub = lazy(() => import("./pages/DealsHub").then((m) => ({ default: m.DealsHub })));
+const Tasky = lazy(() => import("./pages/Tasky").then((m) => ({ default: m.Tasky })));
 const MoveEase = lazy(() => import("./pages/MoveEase").then((m) => ({ default: m.MoveEase })));
 
 /** Case pages load on demand. The placeholder keeps the footer from jumping up while they load. */
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/frant" element={<Page><Frant /></Page>} />
           <Route path="/deals-hub" element={<Page><DealsHub /></Page>} />
+          <Route path="/tasky" element={<Page><Tasky /></Page>} />
           <Route path="/moveease" element={<Page><MoveEase /></Page>} />
           <Route path="*" element={<NotFound />} />
         </Route>

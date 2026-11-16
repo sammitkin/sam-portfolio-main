@@ -25,6 +25,9 @@
   --color-deals-tint: #e9eef7;
   --color-move: #2769b1;
   --color-move-tint: #e6effa;
+  --color-tasky: #075c65;
+  --color-tasky-soft: #bfe3e6;
+  --color-tasky-tint: #e8f3f4;
 
   --ease-pf: cubic-bezier(0.2, 0.7, 0.2, 1);
   --ease-draw: cubic-bezier(0.6, 0, 0.2, 1);

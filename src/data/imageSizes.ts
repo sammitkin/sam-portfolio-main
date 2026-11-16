@@ -128,12 +128,88 @@ export const imageSizes: Record<string, [number, number]> = {
     390,
     844
   ],
+  "moveease/tasks": [
+    390,
+    844
+  ],
   "moveease/tasks-before": [
     390,
     844
   ],
-  "moveease/tasks": [
-    390,
-    844
+  "tasky/active": [
+    360,
+    800
+  ],
+  "tasky/affinity": [
+    800,
+    2637
+  ],
+  "tasky/code": [
+    360,
+    800
+  ],
+  "tasky/confirm": [
+    360,
+    800
+  ],
+  "tasky/datamodel": [
+    1000,
+    871
+  ],
+  "tasky/details": [
+    360,
+    800
+  ],
+  "tasky/early": [
+    360,
+    800
+  ],
+  "tasky/find": [
+    360,
+    800
+  ],
+  "tasky/journey": [
+    1000,
+    691
+  ],
+  "tasky/old-current": [
+    360,
+    939
+  ],
+  "tasky/old-finish": [
+    360,
+    855
+  ],
+  "tasky/paid": [
+    360,
+    800
+  ],
+  "tasky/selected": [
+    360,
+    800
+  ],
+  "tasky/sent": [
+    360,
+    800
+  ],
+  "tasky/sitemap": [
+    1000,
+    1031
+  ],
+  "tasky/start": [
+    360,
+    800
+  ],
+  "tasky/v2-details": [
+    360,
+    800
+  ],
+  "tasky/v2-find": [
+    360,
+    800
+  ],
+  "tasky/v2-home": [
+    360,
+    800
   ]
 };

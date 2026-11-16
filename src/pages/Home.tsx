@@ -25,7 +25,7 @@ export function Home() {
   return (
     <>
       <Hero />
-      {/* Work starts right after the hero: Frant first, then Deals Hub and MoveEase. */}
+      {/* Work starts right after the hero: Frant first, then Tasky, Deals Hub and MoveEase. */}
       <div id="work">
         <FrantFeature />
         <MoreWork />

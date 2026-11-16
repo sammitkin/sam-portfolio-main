@@ -322,9 +322,9 @@ export function PhoneRow({ items, caption }: { items: { img: Img; tag?: string; 
   );
 }
 
-export function WideImage({ img, caption, minWidth }: { img: Img; caption?: ReactNode; minWidth?: number }) {
+export function WideImage({ img, caption, minWidth, className = "" }: { img: Img; caption?: ReactNode; minWidth?: number; className?: string }) {
   return (
-    <figure className="mt-8">
+    <figure className={`mt-8 ${className}`}>
       <div className="-mx-5 overflow-x-auto px-5 md:mx-0 md:px-0" tabIndex={minWidth ? 0 : undefined} role={minWidth ? "region" : undefined} aria-label={minWidth ? "Wide image, scrolls sideways" : undefined}>
         <div style={minWidth ? { minWidth } : undefined}>
           <Zoomable
@@ -415,6 +415,7 @@ export function CaseIntro({
   title,
   meta,
   note,
+  link,
 }: {
   name: string;
   dot: string;
@@ -422,6 +423,7 @@ export function CaseIntro({
   title: ReactNode;
   meta: [string, string][];
   note?: ReactNode;
+  link?: { href: string; label: string };
 }) {
   return (
     <Wrap as="header" className="pt-6 md:pt-10 lg:grid lg:grid-cols-12 lg:items-end lg:gap-x-6 lg:pt-12">
@@ -443,6 +445,7 @@ export function CaseIntro({
           {title}
         </h1>
         {note && <p className="mt-5 max-w-[40em] text-[14px] font-medium leading-[1.5] text-graphite md:text-[15px]">{note}</p>}
+        {link && <ExternalButton href={link.href} label={link.label} className="mt-6" />}
       </div>
       <dl className="mt-7 border-t-2 border-ink md:grid md:grid-cols-2 md:gap-x-6 lg:col-span-4 lg:mt-0 lg:block">
         {meta.map(([k, v]) => (
@@ -541,4 +544,17 @@ export function CaseBody({ sections, active, children }: { sections: SectionDef[
 /** A tinted product panel for the key decision: before and after, side by side, with the tested result. */
 export function DecisionPanel({ tint, children }: { tint: string; children: ReactNode }) {
   return <div className={`mt-7 px-5 py-9 md:mt-10 md:px-10 md:py-12 lg:p-14 ${tint}`}>{children}</div>;
+}
+
+/** A button-styled link that opens outside the site, e.g. a Figma prototype. */
+export function ExternalButton({ href, label, className = "" }: { href: string; label: string; className?: string }) {
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className={`pf-btn pf-btn-primary ${className}`}>
+      {label}
+      <span className="sr-only"> (opens in a new tab)</span>
+      <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true" className="ml-2">
+        <path d="M6 3h7v7M13 3L4 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </a>
+  );
 }

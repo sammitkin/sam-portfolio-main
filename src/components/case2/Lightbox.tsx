@@ -19,6 +19,9 @@ export function LightboxProvider({ children }: { children: ReactNode }) {
   const touchX = useRef<number | null>(null);
   const [items, setItems] = useState<LightboxItem[]>([]);
   const [index, setIndex] = useState(0);
+  // Wide boards (maps, sitemaps) can be zoomed to full size and panned.
+  const [zoomed, setZoomed] = useState(false);
+  useEffect(() => setZoomed(false), [index, items]);
 
   const open = useCallback((list: LightboxItem[], i: number, from: HTMLElement | null) => {
     trigger.current = from;
@@ -46,6 +49,14 @@ export function LightboxProvider({ children }: { children: ReactNode }) {
 
   const item = items[index];
   const many = items.length > 1;
+  const wide = !!item && item.img.width >= 700;
+  // Fit the image to the screen by its own aspect ratio, so wide boards fill the width
+  // instead of being drawn at phone-screenshot size.
+  const fitSizes = item ? `min(${wide ? "100vw - 32px" : "92vw"}, calc((100dvh - 150px) * ${(item.img.width / item.img.height).toFixed(3)}))` : undefined;
+  const zoomWidth = item ? item.img.width * 2.5 : 0;
+  // Very tall boards open at reading width and scroll down, instead of shrinking to a sliver.
+  const tall = wide && item.img.width / item.img.height < 0.6;
+  const scroll = zoomed || tall;
 
   return (
     <LightboxContext.Provider value={{ open }}>
@@ -83,7 +94,7 @@ export function LightboxProvider({ children }: { children: ReactNode }) {
           <div className="flex h-full flex-col" onClick={(e) => e.target === e.currentTarget && close()}>
             <div className="flex items-center justify-between gap-4 px-4 pb-2 pt-4 md:px-8 md:pt-6">
               <p className="text-[14px] font-bold text-on-night" aria-live="polite">
-                {many ? `${index + 1} of ${items.length}` : ""}
+                {many ? `${index + 1} of ${items.length}` : wide ? (zoomed ? "Scroll to move around. Click to fit." : tall ? "Scroll down to see it all. Click to zoom in." : "Click the image to zoom in.") : ""}
               </p>
               <button
                 ref={closeBtn}
@@ -99,7 +110,7 @@ export function LightboxProvider({ children }: { children: ReactNode }) {
             </div>
 
             <div
-              className="relative flex min-h-0 flex-1 items-center justify-center px-4 md:px-24"
+              className={`relative min-h-0 flex-1 ${scroll ? "overflow-auto px-4" : `flex items-center justify-center px-4 ${wide ? "md:px-8" : "md:px-24"}`}`}
               onClick={(e) => e.target === e.currentTarget && close()}
               onTouchStart={(e) => {
                 // A second finger means pinch-zoom, not a swipe: cancel the swipe for this gesture.
@@ -121,12 +132,20 @@ export function LightboxProvider({ children }: { children: ReactNode }) {
                 key={item.img.src}
                 src={item.img.src}
                 srcSet={item.img.srcSet}
-                sizes={item.img.srcSet ? SIZES.lightbox : undefined}
+                sizes={item.img.srcSet ? (zoomed ? `${zoomWidth}px` : tall ? "min(100vw - 32px, 1100px)" : fitSizes ?? SIZES.lightbox) : undefined}
                 alt={item.img.alt}
                 width={item.img.width}
                 height={item.img.height}
                 decoding="async"
-                className="pf-fade block h-auto max-h-full w-auto max-w-full rounded-[20px] object-contain md:rounded-[28px]"
+                onClick={wide ? () => setZoomed((z) => !z) : undefined}
+                style={
+                  zoomed
+                    ? { width: zoomWidth, maxWidth: "none", maxHeight: "none" }
+                    : tall
+                      ? { width: "min(calc(100vw - 32px), 1100px)", maxWidth: "none", maxHeight: "none", margin: "0 auto" }
+                      : undefined
+                }
+                className={`pf-fade block h-auto rounded-[20px] object-contain md:rounded-[28px] ${zoomed ? "cursor-zoom-out" : tall ? "cursor-zoom-in" : `max-h-full w-auto max-w-full ${wide ? "cursor-zoom-in" : ""}`}`}
               />
               {many && (
                 <>

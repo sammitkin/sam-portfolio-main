@@ -3,6 +3,7 @@ import {
   CaseIntro,
   Chips,
   DecisionPanel,
+  ExternalButton,
   Flow,
   Glance,
   Lesson,
@@ -38,6 +39,8 @@ const SECTIONS: SectionDef[] = [
   { id: "reflection", label: "Reflection" },
 ];
 const IDS = SECTIONS.map((s) => s.id);
+const PROTOTYPE_URL =
+  "https://www.figma.com/proto/bYIUhkfblHIR1kaMVnRbJg/Tasky-MVP-Prototype-%7C-DesignLab-Capstone?node-id=2290-7583&starting-point-node-id=2290-7583&scaling=scale-down";
 
 export function Tasky() {
   usePageMeta({
@@ -58,6 +61,7 @@ export function Tasky() {
         kicker="Tasky, a client project for PlanIt! Efficiency Solutions"
         title="Finding local work people can trust."
         note="Team project with two other UX designers. I led research and synthesis, owned the worker flow (about 35 screens and states), and joined and tested our clickable prototype. My teammates owned the poster and staff flows. Shared with the client’s permission."
+        link={{ href: PROTOTYPE_URL, label: "Try the prototype" }}
         meta={[
           ["Client", "PlanIt! Efficiency Solutions"],
           ["My role", "Research lead, worker flow owner"],
@@ -372,11 +376,12 @@ export function Tasky() {
                 { label: "Delivered", title: "Handoff doc", body: "Scope, design decisions, acceptance criteria, open questions and Phase 2 recommendations." },
               ]}
             />
-            <Quote size="l" by="Client sponsor, PlanIt! Efficiency Solutions · rated the project 5/5">
-              Very impressive, intuitive and aesthetically pleasing.
+            <ExternalButton href={PROTOTYPE_URL} label="Try the clickable prototype" className="mt-8" />
+            <Quote size="l" by="Kara Morgan, Founder, COO and Lead Innovator, PlanIt! Efficiency Solutions · Riipen review, 5/5">
+              Each team member contributed complementary skills and delivered a very impressive final product.
             </Quote>
             <Prose className="mt-6">
-              <p>She said the app exceeded her expectations and that she would gladly work with our team again.</p>
+              <p>She rated the team 5 out of 5 for communication, creativity, critical thinking and professionalism.</p>
             </Prose>
           </Pad>
         </Section>

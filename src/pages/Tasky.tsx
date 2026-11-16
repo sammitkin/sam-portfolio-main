@@ -373,8 +373,11 @@ export function Tasky() {
               ]}
             />
             <Quote size="l" by="Client sponsor, PlanIt! Efficiency Solutions · rated the project 5/5">
-              The final product, the Tasky app exceeded all of my expectation and I will gladly work with this team again.
+              Very impressive, intuitive and aesthetically pleasing.
             </Quote>
+            <Prose className="mt-6">
+              <p>She said the app exceeded her expectations and that she would gladly work with our team again.</p>
+            </Prose>
           </Pad>
         </Section>
 

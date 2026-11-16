@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { img, SIZES } from "../../data/caseImages";
 import { Wrap } from "../layout/Wrap";
 
+const taskyDetails = img("tasky/details", "Tasky work details: pay, date, how long and the town, with an I am interested button");
+const taskyCode = img("tasky/code", "Tasky screen asking the worker to get the completion code from the poster");
 const dealsExplore = img("deals/explore", "Deals Hub Explore tab with cash back earned and featured deals");
 const dealsLocal = img("deals/local", "Hi-fi Chevron Local Deal showing the exact eligible card");
 const moveDash = img("moveease/dashboard", "MoveEase dashboard");
@@ -12,7 +14,50 @@ const MOVE_SIZES = "(min-width: 768px) 180px, 100px";
 export function MoreWork() {
   return (
     <Wrap as="section" aria-label="More work" className="pt-[72px] md:pt-28 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-6 lg:pt-32">
-      <article id="deals" aria-labelledby="deals-title" className="lg:col-span-7">
+      <article id="tasky" aria-labelledby="tasky-title" className="lg:col-span-12 lg:grid lg:grid-cols-12 lg:items-end lg:gap-x-6">
+        <div className="-mx-5 grid h-[380px] grid-cols-2 gap-3.5 overflow-hidden bg-tasky px-5 pt-7 md:mx-0 md:h-[520px] md:gap-7 md:px-12 md:pt-10 lg:col-span-7 lg:h-[540px]">
+          {[
+            [taskyDetails, "Decide before you commit", "text-tasky-soft"],
+            [taskyCode, "One simple rule for the code", "text-white"],
+          ].map(([im, label, color]) => {
+            const i = im as typeof taskyDetails;
+            return (
+              <figure key={i.src}>
+                <figcaption className={`mb-2.5 text-[13px] font-bold md:mb-3.5 md:text-[14px] ${color as string}`}>{label as string}</figcaption>
+                <img
+                  src={i.src}
+                  srcSet={i.srcSet}
+                  sizes={SIZES.pair}
+                  width={i.width}
+                  height={i.height}
+                  loading="lazy"
+                  decoding="async"
+                  alt={i.alt}
+                  className="block w-full rounded-t-[18px] md:rounded-t-[26px]"
+                />
+              </figure>
+            );
+          })}
+        </div>
+        <div className="mt-6 md:mt-7 lg:col-span-5 lg:mt-0">
+          <p className="text-[13px] font-bold text-graphite md:text-[14px]">Client project · rated 5/5 by the client</p>
+          <h2 id="tasky-title" className="mt-1.5 text-[34px] font-extrabold leading-none tracking-[-0.04em] md:text-[40px]">
+            Tasky
+          </h2>
+          <p className="mt-2 text-[20px] font-bold leading-[1.2] tracking-[-0.02em] md:mt-2.5 md:text-[22px]">
+            Finding local work people can trust.
+          </p>
+          <p className="mt-3 text-[16px] font-medium leading-[1.55] md:text-[17px]">
+            A three-person team for PlanIt! Efficiency Solutions. I led research and owned the worker flow, for towns
+            where pay is in cash and homes have no street numbers.
+          </p>
+          <Link to="/tasky" className="pf-link mt-1.5 inline-flex min-h-11 items-center text-[16px] font-extrabold md:mt-2">
+            Read the Tasky case study
+          </Link>
+        </div>
+      </article>
+
+      <article id="deals" aria-labelledby="deals-title" className="mt-[72px] md:mt-28 lg:col-span-7 lg:mt-32">
         <div className="-mx-5 grid h-[380px] grid-cols-2 gap-3.5 overflow-hidden bg-deals px-5 pt-7 md:mx-0 md:h-[520px] md:gap-7 md:px-12 md:pt-10 lg:h-[540px]">
           <figure>
             <figcaption className="mb-2.5 text-[13px] font-bold text-deals-soft md:mb-3.5 md:text-[14px]">Every deal in one place</figcaption>
@@ -70,7 +115,7 @@ export function MoreWork() {
       <article
         id="moveease"
         aria-labelledby="moveease-title"
-        className="mt-14 grid grid-cols-[132px_1fr] items-start gap-[18px] border-t-2 border-ink pt-5 md:mt-24 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] md:gap-10 md:border-t-0 md:pt-0 lg:col-span-4 lg:col-start-9 lg:mt-40 lg:block"
+        className="mt-14 grid grid-cols-[132px_1fr] items-start gap-[18px] border-t-2 border-ink pt-5 md:mt-24 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] md:gap-10 md:border-t-0 md:pt-0 lg:col-span-4 lg:col-start-9 lg:mt-72 lg:block"
       >
         <div className="grid h-[176px] grid-cols-1 gap-[18px] overflow-hidden bg-move px-4 pt-[18px] md:h-[420px] md:grid-cols-2 md:px-9 md:pt-10">
           <img

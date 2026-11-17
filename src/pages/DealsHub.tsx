@@ -16,6 +16,7 @@ import {
   ProductBand,
   Prose,
   Section,
+  Table,
   SubHeading,
   WideImage,
   useActiveSection,
@@ -133,7 +134,18 @@ export function DealsHub() {
                   { label: "Specific to Bank of America", title: "No native feel, and inconsistent activation patterns" },
                 ]}
               />
-              <p className="mt-3 text-[15px] font-medium text-body2">Competitive analysis against American Express, Chase and Wells Fargo.</p>
+              <Table
+                head={["Criteria", "Bank of America", "American Express", "Chase", "Wells Fargo"]}
+                rows={[
+                  ["Discoverability", "Weakest. Scroll-only entry; opens as a separate branded web experience", "Best. Dedicated tab in the bottom nav", "Medium. Home scroll or menu", "Weak. Scroll only, no menu path"],
+                  ["Total savings visible", "No. Two taps deep in Earning History", "Yes, on the Offers tab", "Yes, “Total saved”", "Yes, “Earned To Date”"],
+                  ["Activated offer tracking", "Two paths in; the dollar total has only one, via the menu", "Good. One clear view", "Good. Four tabs", "Good. Three tabs"],
+                  ["Activation consistency", "Mixed. Some offers activate, others jump to a merchant site", "Deliberate. Add to Card plus a consent line", "Consistent one-tap Activate", "Consistent one-tap Activate"],
+                  ["Catalog navigation", "Filters on some categories only; local dining uses a separate filter", "Category chips", "Category chips and search", "Category dropdown"],
+                  ["Feels native", "No. Separate visual brand and header", "Yes", "Yes", "Yes"],
+                ]}
+                caption="Competitive analysis on six criteria. Weak discoverability is shared across the industry; the missing native feel and mixed activation are specific to Bank of America."
+              />
               <SubHeading>The name changed. The research didn’t.</SubHeading>
               <Prose className="mt-4">
                 <p>
@@ -367,6 +379,14 @@ export function DealsHub() {
                 name rather than ignore.
               </p>
             </Prose>
+            <SubHeading>Next steps</SubHeading>
+            <Points
+              items={[
+                { title: "Validate processing time", body: "Replace the “3–5 business days” placeholder with real product rules." },
+                { title: "Test with new people", body: "The same five participants knew the flow by round two. Fresh users would show first-time friction." },
+                { title: "Close two open questions", body: "Whether people trust the savings total, and whether offers should be personalized." },
+              ]}
+            />
             <More label="More on the prototype and how I used AI">
               <Prose>
                 <p>

@@ -2,6 +2,7 @@ import type { CSSProperties } from "react";
 import { Link } from "react-router-dom";
 import {
   DesktopIndex,
+  ExternalButton,
   Flow,
   Lesson,
   Metrics,
@@ -27,9 +28,13 @@ import { Zoomable } from "../components/case2/Lightbox";
 import { img, SIZES } from "../data/caseImages";
 import { usePageMeta } from "../lib/usePageMeta";
 
+const PROTOTYPE_URL =
+  "https://www.figma.com/proto/xxOP7m8bagR3tfM7vdBKXf/End-to-End-Application?node-id=113-49&starting-point-node-id=113-49&scaling=scale-down";
+
 const SECTIONS: SectionDef[] = [
   { id: "problem", label: "Problem" },
   { id: "research", label: "Research" },
+  { id: "branding", label: "Branding" },
   { id: "decision", label: "Key decision" },
   { id: "testing", label: "Testing" },
   { id: "iteration", label: "Iteration" },
@@ -127,6 +132,7 @@ export function Frant() {
           <h1 className="mt-4 text-[44px] font-extrabold leading-[0.96] tracking-[-0.055em] md:mt-6 md:text-[64px] lg:text-[clamp(64px,5.85vw,84px)] lg:leading-[0.95]">
             Helping barbers keep their regulars, and what happens after Send.
           </h1>
+          <ExternalButton href={PROTOTYPE_URL} label="Try the prototype" className="mt-7" />
         </div>
         <dl className="mt-7 border-t-2 border-ink md:grid md:grid-cols-2 md:gap-x-6 lg:col-span-4 lg:mt-0 lg:block">
           {META.map(([k, v]) => (
@@ -205,6 +211,11 @@ export function Frant() {
                   { title: "Reaching out feels pushy", body: "A text can sound desperate." },
                 ]}
               />
+              <WideImage
+                className="md:max-w-[640px]"
+                img={img("frant/affinity", "Affinity map with nine clusters, from noticing happens reactively to business and client data habits, with quotes from each participant")}
+                caption="Affinity map: nine clusters from six interviews. Noticing late, no priority order and discomfort with outreach became the three problems Frant had to solve together."
+              />
               <More label="More on the interviews">
                 <Prose>
                   <p>
@@ -264,6 +275,19 @@ export function Frant() {
                   ],
                 ]}
                 highlightLast
+              />
+              <SubHeading>One journey: notice, review, reach out.</SubHeading>
+              <Prose className="mt-4">
+                <p>
+                  I mapped the core job for Andre, my primary persona, before drawing screens. Two decisions shape the
+                  flow: he can stop before reaching out, and a client with no reply stays on the overdue list instead of
+                  disappearing.
+                </p>
+              </Prose>
+              <WideImage
+                className="md:max-w-[640px]"
+                img={img("frant/userflow", "User flow: Andre opens the app, finds overdue clients, reviews a client profile, sends an editable message, and marks the client as rebooked or keeps them on the overdue list")}
+                caption="User flow for the core job. Solid arrows are the main path; dashed arrows are alternate paths and loops back."
               />
               <More label="More on research and scope">
                 <Prose>
@@ -361,6 +385,40 @@ export function Frant() {
                   highlightLast
                 />
               </More>
+            </Pad>
+          </Section>
+
+          {/* Branding */}
+          <Section id="branding" kicker="Branding" title="A warm, confident brand for a one-chair business.">
+            <Pad>
+              <Prose className="mt-6">
+                <p>
+                  Frant’s brand values are personal, clear, independent, effortless and confident. The lowercase wordmark
+                  gives the product a professional base. The coral organic form adds warmth and is the signal people
+                  recognize: it works on its own as the app icon when the wordmark is too small to read.
+                </p>
+              </Prose>
+              <WideImage img={img("frant/logo", "Frant logo: the lowercase wordmark frant in black on a soft coral organic shape")} />
+              <Prose className="mt-8">
+                <p>
+                  After mentor feedback I simplified the mark for small sizes. The coral form now stands alone in app
+                  icons and compact places, without an “F” or “FR” monogram, and the full wordmark stays primary when
+                  there is room.
+                </p>
+              </Prose>
+              <WideImage
+                img={img("frant/logo-scale", "Frant logo at four sizes: large, medium, small, and the coral form alone as the app icon and favicon")}
+                caption="The full wordmark when space allows; the coral form alone in compact places."
+              />
+              <Points
+                items={[
+                  { title: "One accent", body: "Warm neutrals carry the interface. Coral is kept for primary actions and overdue status." },
+                  { title: "Three typefaces", body: "Instrument Sans for headings and buttons, Inter for body text, DM Mono for small labels and dates." },
+                  { title: "Readable first", body: "Black labels on coral reach 6.4:1, and colored text uses a deeper coral at 5.2:1." },
+                ]}
+              />
+              <WideImage img={img("frant/kit-color", "Frant color system: brand, neutral and system colors with their uses and contrast ratios")} caption="Color: brand, neutrals and system colors, each with its job and contrast ratio." />
+              <WideImage img={img("frant/kit-type", "Frant type scale from Hero to Mono, with Instrument Sans, Inter and DM Mono samples")} caption="Typography: one type scale for every iPhone size." />
             </Pad>
           </Section>
 
@@ -650,7 +708,7 @@ export function Frant() {
                     at 6.4:1, and colored text uses a deeper coral at 5.2:1.
                   </p>
                 </Prose>
-                <WideImage img={img("frant/kit-color", "Frant UI kit color page: brand, neutral and system colors with contrast ratios")} />
+                <WideImage img={img("frant/kit-buttons", "Frant UI kit buttons: primary, dark, secondary, danger and ghost, each in default, pressed and disabled states")} caption="Buttons: five styles, each with default, pressed and disabled states. One primary action per screen at most." />
                 <WideImage
                   img={img("frant/kit-status", "Frant UI kit status labels for each step of the retention loop")}
                   caption="Status labels mark each step of the retention loop. Some composite components were built after the hi-fi screens and aren’t in every screen yet."

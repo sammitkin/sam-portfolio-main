@@ -36,17 +36,29 @@ export const imageSizes: Record<string, [number, number]> = {
     390,
     844
   ],
+  "frant/affinity": [
+    800,
+    1069
+  ],
   "frant/home": [
     440,
     956
   ],
+  "frant/kit-buttons": [
+    1000,
+    669
+  ],
   "frant/kit-color": [
-    1600,
-    1113
+    1000,
+    696
   ],
   "frant/kit-status": [
-    1600,
-    658
+    1000,
+    411
+  ],
+  "frant/kit-type": [
+    1000,
+    1178
   ],
   "frant/lofi-home-names": [
     440,
@@ -68,6 +80,14 @@ export const imageSizes: Record<string, [number, number]> = {
     2800,
     340
   ],
+  "frant/logo": [
+    1000,
+    375
+  ],
+  "frant/logo-scale": [
+    1000,
+    455
+  ],
   "frant/message": [
     440,
     956
@@ -87,6 +107,10 @@ export const imageSizes: Record<string, [number, number]> = {
   "frant/sent-check": [
     440,
     956
+  ],
+  "frant/userflow": [
+    800,
+    1178
   ],
   "frant/visit-check": [
     440,

@@ -16,6 +16,7 @@ import {
   ProductBand,
   Prose,
   Section,
+  Table,
   SubHeading,
   WideImage,
   useActiveSection,
@@ -33,6 +34,8 @@ const SECTIONS: SectionDef[] = [
   { id: "reflection", label: "Reflection" },
 ];
 const IDS = SECTIONS.map((s) => s.id);
+const PROTOTYPE_URL =
+  "https://www.figma.com/proto/6keENzTOUKuGbDpB0tDPLS/Deals-Hub?node-id=99-1898&starting-point-node-id=99-1898&scaling=scale-down";
 
 export function DealsHub() {
   usePageMeta({
@@ -53,6 +56,7 @@ export function DealsHub() {
         kicker="Deals Hub, an iOS feature concept for banking"
         title="One clear, native place for bank cash-back deals."
         note="Student concept project. Not affiliated with or endorsed by Bank of America. Merchant names and logos belong to their owners. Account balances shown are fictional."
+        link={{ href: PROTOTYPE_URL, label: "Try the prototype" }}
         meta={[
           ["Role", "Solo UX/UI designer"],
           ["Timeline", "4 weeks, 75-hour budget, 2026"],
@@ -130,7 +134,18 @@ export function DealsHub() {
                   { label: "Specific to Bank of America", title: "No native feel, and inconsistent activation patterns" },
                 ]}
               />
-              <p className="mt-3 text-[15px] font-medium text-body2">Competitive analysis against American Express, Chase and Wells Fargo.</p>
+              <Table
+                head={["Criteria", "Bank of America", "American Express", "Chase", "Wells Fargo"]}
+                rows={[
+                  ["Discoverability", "Weakest. Scroll-only entry; opens as a separate branded web experience", "Best. Dedicated tab in the bottom nav", "Medium. Home scroll or menu", "Weak. Scroll only, no menu path"],
+                  ["Total savings visible", "No. Two taps deep in Earning History", "Yes, on the Offers tab", "Yes, “Total saved”", "Yes, “Earned To Date”"],
+                  ["Activated offer tracking", "Two paths in; the dollar total has only one, via the menu", "Good. One clear view", "Good. Four tabs", "Good. Three tabs"],
+                  ["Activation consistency", "Mixed. Some offers activate, others jump to a merchant site", "Deliberate. Add to Card plus a consent line", "Consistent one-tap Activate", "Consistent one-tap Activate"],
+                  ["Catalog navigation", "Filters on some categories only; local dining uses a separate filter", "Category chips", "Category chips and search", "Category dropdown"],
+                  ["Feels native", "No. Separate visual brand and header", "Yes", "Yes", "Yes"],
+                ]}
+                caption="Competitive analysis on six criteria. Weak discoverability is shared across the industry; the missing native feel and mixed activation are specific to Bank of America."
+              />
               <SubHeading>The name changed. The research didn’t.</SubHeading>
               <Prose className="mt-4">
                 <p>
@@ -154,9 +169,20 @@ export function DealsHub() {
               items={[
                 { title: "Discovery is contextual, not habitual", body: "Engagement with offers depended on the moment, not on a routine." },
                 { title: "Offer mechanics create uncertainty before action", body: "Different offer types left people unsure what would happen." },
-                { title: "Status visibility gaps force manual workarounds" },
-                { title: "Users need different levels of control" },
+                {
+                  title: "Status visibility gaps force manual workarounds",
+                  body: "With no clear activated, pending and paid trail, engaged users built their own. One took screenshots as proof; another activated a local deal and couldn’t find it again.",
+                },
+                {
+                  title: "Users need different levels of control",
+                  body: "Casual users wanted cash back applied automatically. Engaged users checked dates, minimum spend and terms before adding an offer.",
+                },
               ]}
+            />
+            <WideImage
+              className="md:max-w-[640px]"
+              img={img("deals/affinity", "Affinity map with four clusters: discovery is contextual, offer mechanics create uncertainty, status visibility gaps, and different levels of control, plus open questions")}
+              caption="Affinity map: four clusters from five interviews, color coded by participant, plus two open questions for the next round."
             />
             <More label="More on the interviews and personas">
               <Prose>
@@ -203,6 +229,28 @@ export function DealsHub() {
             <Prose className="mt-6">
               <p>Each offer type got its own accent color, so people can recognize the mechanic before reading any text.</p>
             </Prose>
+            <SubHeading>One flow, three offer types.</SubHeading>
+            <Prose className="mt-4">
+              <p>
+                Every offer starts in the same place, then splits by what it needs from you: activate it on a card, shop
+                through a link, or visit a local store. Only activated offers need a status trail, so that path ends in
+                tracking, where an unmatched purchase can be reported.
+              </p>
+            </Prose>
+            <WideImage
+              className="md:max-w-[560px]"
+              img={img("deals/userflow", "User flow: open the app, tap Deals Hub, select an offer, then branch by offer type. Activated offers move to My Offers; if a purchase isn’t matched, the user can report a missing reward")}
+              caption="User flow: discover, activate and track an offer. Ovals mark start and end points, diamonds mark decisions."
+            />
+            <SubHeading>Two lo-fi passes before mid-fi.</SubHeading>
+            <Prose className="mt-4">
+              <p>
+                I sketched the six-screen flow by hand first, then redrew it as a cleaner second pass: a list instead of a
+                grid on Deals Hub home, Activate next to the eligible card, and a single progress bar in My Offers.
+              </p>
+            </Prose>
+            <WideImage img={img("deals/lofi-v1", "Lo-fi version 1, hand-drawn: entry point, Deals Hub home, activate offer, shop through link, local deal and my activated offers")} caption="Lo-fi, version 1. Click to zoom in." />
+            <WideImage img={img("deals/lofi-v2", "Lo-fi version 2: the same six screens redrawn with a list layout and the Activate button next to the eligible card")} caption="Lo-fi, version 2. Click to zoom in." />
             <PhoneRow
               items={[
                 { img: img("deals/activate", "Starbucks offer with the eligible card and an Activate offer button"), tag: "Activate", label: "One tap adds the offer to the eligible card." },
@@ -331,6 +379,14 @@ export function DealsHub() {
                 name rather than ignore.
               </p>
             </Prose>
+            <SubHeading>Next steps</SubHeading>
+            <Points
+              items={[
+                { title: "Validate processing time", body: "Replace the “3–5 business days” placeholder with real product rules." },
+                { title: "Test with new people", body: "The same five participants knew the flow by round two. Fresh users would show first-time friction." },
+                { title: "Close two open questions", body: "Whether people trust the savings total, and whether offers should be personalized." },
+              ]}
+            />
             <More label="More on the prototype and how I used AI">
               <Prose>
                 <p>

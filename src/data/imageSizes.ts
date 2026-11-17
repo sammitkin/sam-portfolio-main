@@ -8,6 +8,10 @@ export const imageSizes: Record<string, [number, number]> = {
     390,
     844
   ],
+  "deals/affinity": [
+    1000,
+    976
+  ],
   "deals/entry": [
     388,
     844
@@ -19,6 +23,14 @@ export const imageSizes: Record<string, [number, number]> = {
   "deals/local": [
     390,
     844
+  ],
+  "deals/lofi-v1": [
+    1200,
+    454
+  ],
+  "deals/lofi-v2": [
+    1200,
+    454
   ],
   "deals/mid-chevron": [
     390,
@@ -35,6 +47,10 @@ export const imageSizes: Record<string, [number, number]> = {
   "deals/shop": [
     390,
     844
+  ],
+  "deals/userflow": [
+    800,
+    2160
   ],
   "frant/affinity": [
     800,

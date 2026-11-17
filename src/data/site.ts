@@ -7,4 +7,4 @@ export const LINKEDIN_URL = "https://www.linkedin.com/in/sammitkin/";
  * is hidden while this is null, so we never ship a link that goes nowhere.
  * When ready, put the file in /public (e.g. "/sam-mitkin-resume.pdf") and set it here.
  */
-export const RESUME_URL: string | null = null;
+export const RESUME_URL: string | null = "/sam-mitkin-resume.pdf";

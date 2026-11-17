@@ -71,7 +71,7 @@ const META = [
   ["Role", "Solo UX/UI designer"],
   ["Timeline", "Sep 7 – Oct 11, 2026"],
   ["Context", "Designlab capstone, not a client project"],
-  ["Status", "Prototype, not launched"],
+  ["Status", "MVP in development, not launched"],
 ];
 
 const GLANCE: { label: string; kind?: "tested" | "hypothesis"; body: string }[] = [
@@ -672,6 +672,7 @@ export function Frant() {
                     title: "Next",
                     body: (
                       <ul>
+                        <li>I’m now building Frant as an MVP, starting from this prototype.</li>
                         <li>Test the check-ins over a real week of work.</li>
                         <li>Recruit barbers outside my coworking space.</li>
                         <li>Measure how often barbers answer the check-ins without a reminder.</li>

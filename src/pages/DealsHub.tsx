@@ -222,13 +222,13 @@ export function DealsHub() {
               <p>
                 Every offer starts in the same place, then splits by what it needs from you: activate it on a card, shop
                 through a link, or visit a local store. Only activated offers need a status trail, so that path ends in
-                tracking.
+                tracking, where an unmatched purchase can be reported.
               </p>
             </Prose>
             <WideImage
               className="md:max-w-[560px]"
-              img={img("deals/userflow", "User flow: open the app, tap Deals Hub, select an offer, then Activate, Shop through link or Local deal; activated offers show a lifecycle status and a report path")}
-              caption="User flow: discover, activate and track an offer."
+              img={img("deals/userflow", "User flow: open the app, tap Deals Hub, select an offer, then branch by offer type. Activated offers move to My Offers; if a purchase isn’t matched, the user can report a missing reward")}
+              caption="User flow: discover, activate and track an offer. Ovals mark start and end points, diamonds mark decisions."
             />
             <SubHeading>Two lo-fi passes before mid-fi.</SubHeading>
             <Prose className="mt-4">

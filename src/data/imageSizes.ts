@@ -50,7 +50,7 @@ export const imageSizes: Record<string, [number, number]> = {
   ],
   "deals/userflow": [
     800,
-    1153
+    2160
   ],
   "frant/affinity": [
     800,

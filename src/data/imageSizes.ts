@@ -36,6 +36,10 @@ export const imageSizes: Record<string, [number, number]> = {
     390,
     844
   ],
+  "frant/affinity": [
+    800,
+    1069
+  ],
   "frant/home": [
     440,
     956
@@ -87,6 +91,10 @@ export const imageSizes: Record<string, [number, number]> = {
   "frant/sent-check": [
     440,
     956
+  ],
+  "frant/userflow": [
+    800,
+    1178
   ],
   "frant/visit-check": [
     440,

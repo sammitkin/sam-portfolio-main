@@ -2,6 +2,7 @@ import type { CSSProperties } from "react";
 import { Link } from "react-router-dom";
 import {
   DesktopIndex,
+  ExternalButton,
   Flow,
   Lesson,
   Metrics,
@@ -26,6 +27,9 @@ import { Evidence, Wrap } from "../components/layout/Wrap";
 import { Zoomable } from "../components/case2/Lightbox";
 import { img, SIZES } from "../data/caseImages";
 import { usePageMeta } from "../lib/usePageMeta";
+
+const PROTOTYPE_URL =
+  "https://www.figma.com/proto/xxOP7m8bagR3tfM7vdBKXf/End-to-End-Application?node-id=113-49&starting-point-node-id=113-49&scaling=scale-down";
 
 const SECTIONS: SectionDef[] = [
   { id: "problem", label: "Problem" },
@@ -127,6 +131,7 @@ export function Frant() {
           <h1 className="mt-4 text-[44px] font-extrabold leading-[0.96] tracking-[-0.055em] md:mt-6 md:text-[64px] lg:text-[clamp(64px,5.85vw,84px)] lg:leading-[0.95]">
             Helping barbers keep their regulars, and what happens after Send.
           </h1>
+          <ExternalButton href={PROTOTYPE_URL} label="Try the prototype" className="mt-7" />
         </div>
         <dl className="mt-7 border-t-2 border-ink md:grid md:grid-cols-2 md:gap-x-6 lg:col-span-4 lg:mt-0 lg:block">
           {META.map(([k, v]) => (
@@ -205,6 +210,11 @@ export function Frant() {
                   { title: "Reaching out feels pushy", body: "A text can sound desperate." },
                 ]}
               />
+              <WideImage
+                className="md:max-w-[640px]"
+                img={img("frant/affinity", "Affinity map with nine clusters, from noticing happens reactively to business and client data habits, with quotes from each participant")}
+                caption="Affinity map: nine clusters from six interviews. Noticing late, no priority order and discomfort with outreach became the three problems Frant had to solve together."
+              />
               <More label="More on the interviews">
                 <Prose>
                   <p>
@@ -264,6 +274,19 @@ export function Frant() {
                   ],
                 ]}
                 highlightLast
+              />
+              <SubHeading>One journey: notice, review, reach out.</SubHeading>
+              <Prose className="mt-4">
+                <p>
+                  I mapped the core job for Andre, my primary persona, before drawing screens. Two decisions shape the
+                  flow: he can stop before reaching out, and a client with no reply stays on the overdue list instead of
+                  disappearing.
+                </p>
+              </Prose>
+              <WideImage
+                className="md:max-w-[640px]"
+                img={img("frant/userflow", "User flow: Andre opens the app, finds overdue clients, reviews a client profile, sends an editable message, and marks the client as rebooked or keeps them on the overdue list")}
+                caption="User flow for the core job. Solid arrows are the main path; dashed arrows are alternate paths and loops back."
               />
               <More label="More on research and scope">
                 <Prose>

@@ -33,6 +33,8 @@ const SECTIONS: SectionDef[] = [
   { id: "reflection", label: "Reflection" },
 ];
 const IDS = SECTIONS.map((s) => s.id);
+const PROTOTYPE_URL =
+  "https://www.figma.com/proto/6keENzTOUKuGbDpB0tDPLS/Deals-Hub?node-id=99-1898&starting-point-node-id=99-1898&scaling=scale-down";
 
 export function DealsHub() {
   usePageMeta({
@@ -53,6 +55,7 @@ export function DealsHub() {
         kicker="Deals Hub, an iOS feature concept for banking"
         title="One clear, native place for bank cash-back deals."
         note="Student concept project. Not affiliated with or endorsed by Bank of America. Merchant names and logos belong to their owners. Account balances shown are fictional."
+        link={{ href: PROTOTYPE_URL, label: "Try the prototype" }}
         meta={[
           ["Role", "Solo UX/UI designer"],
           ["Timeline", "4 weeks, 75-hour budget, 2026"],
@@ -154,9 +157,20 @@ export function DealsHub() {
               items={[
                 { title: "Discovery is contextual, not habitual", body: "Engagement with offers depended on the moment, not on a routine." },
                 { title: "Offer mechanics create uncertainty before action", body: "Different offer types left people unsure what would happen." },
-                { title: "Status visibility gaps force manual workarounds" },
-                { title: "Users need different levels of control" },
+                {
+                  title: "Status visibility gaps force manual workarounds",
+                  body: "With no clear activated, pending and paid trail, engaged users built their own. One took screenshots as proof; another activated a local deal and couldn’t find it again.",
+                },
+                {
+                  title: "Users need different levels of control",
+                  body: "Casual users wanted cash back applied automatically. Engaged users checked dates, minimum spend and terms before adding an offer.",
+                },
               ]}
+            />
+            <WideImage
+              className="md:max-w-[640px]"
+              img={img("deals/affinity", "Affinity map with four clusters: discovery is contextual, offer mechanics create uncertainty, status visibility gaps, and different levels of control, plus open questions")}
+              caption="Affinity map: four clusters from five interviews, color coded by participant, plus two open questions for the next round."
             />
             <More label="More on the interviews and personas">
               <Prose>
@@ -203,6 +217,28 @@ export function DealsHub() {
             <Prose className="mt-6">
               <p>Each offer type got its own accent color, so people can recognize the mechanic before reading any text.</p>
             </Prose>
+            <SubHeading>One flow, three offer types.</SubHeading>
+            <Prose className="mt-4">
+              <p>
+                Every offer starts in the same place, then splits by what it needs from you: activate it on a card, shop
+                through a link, or visit a local store. Only activated offers need a status trail, so that path ends in
+                tracking.
+              </p>
+            </Prose>
+            <WideImage
+              className="md:max-w-[560px]"
+              img={img("deals/userflow", "User flow: open the app, tap Deals Hub, select an offer, then Activate, Shop through link or Local deal; activated offers show a lifecycle status and a report path")}
+              caption="User flow: discover, activate and track an offer."
+            />
+            <SubHeading>Two lo-fi passes before mid-fi.</SubHeading>
+            <Prose className="mt-4">
+              <p>
+                I sketched the six-screen flow by hand first, then redrew it as a cleaner second pass: a list instead of a
+                grid on Deals Hub home, Activate next to the eligible card, and a single progress bar in My Offers.
+              </p>
+            </Prose>
+            <WideImage img={img("deals/lofi-v1", "Lo-fi version 1, hand-drawn: entry point, Deals Hub home, activate offer, shop through link, local deal and my activated offers")} caption="Lo-fi, version 1. Click to zoom in." />
+            <WideImage img={img("deals/lofi-v2", "Lo-fi version 2: the same six screens redrawn with a list layout and the Activate button next to the eligible card")} caption="Lo-fi, version 2. Click to zoom in." />
             <PhoneRow
               items={[
                 { img: img("deals/activate", "Starbucks offer with the eligible card and an Activate offer button"), tag: "Activate", label: "One tap adds the offer to the eligible card." },

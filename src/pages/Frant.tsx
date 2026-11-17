@@ -34,6 +34,7 @@ const PROTOTYPE_URL =
 const SECTIONS: SectionDef[] = [
   { id: "problem", label: "Problem" },
   { id: "research", label: "Research" },
+  { id: "branding", label: "Branding" },
   { id: "decision", label: "Key decision" },
   { id: "testing", label: "Testing" },
   { id: "iteration", label: "Iteration" },
@@ -387,6 +388,40 @@ export function Frant() {
             </Pad>
           </Section>
 
+          {/* Branding */}
+          <Section id="branding" kicker="Branding" title="A warm, confident brand for a one-chair business.">
+            <Pad>
+              <Prose className="mt-6">
+                <p>
+                  Frant’s brand values are personal, clear, independent, effortless and confident. The lowercase wordmark
+                  gives the product a professional base. The coral organic form adds warmth and is the signal people
+                  recognize: it works on its own as the app icon when the wordmark is too small to read.
+                </p>
+              </Prose>
+              <WideImage img={img("frant/logo", "Frant logo: the lowercase wordmark frant in black on a soft coral organic shape")} />
+              <Prose className="mt-8">
+                <p>
+                  After mentor feedback I simplified the mark for small sizes. The coral form now stands alone in app
+                  icons and compact places, without an “F” or “FR” monogram, and the full wordmark stays primary when
+                  there is room.
+                </p>
+              </Prose>
+              <WideImage
+                img={img("frant/logo-scale", "Frant logo at four sizes: large, medium, small, and the coral form alone as the app icon and favicon")}
+                caption="The full wordmark when space allows; the coral form alone in compact places."
+              />
+              <Points
+                items={[
+                  { title: "One accent", body: "Warm neutrals carry the interface. Coral is kept for primary actions and overdue status." },
+                  { title: "Three typefaces", body: "Instrument Sans for headings and buttons, Inter for body text, DM Mono for small labels and dates." },
+                  { title: "Readable first", body: "Black labels on coral reach 6.4:1, and colored text uses a deeper coral at 5.2:1." },
+                ]}
+              />
+              <WideImage img={img("frant/kit-color", "Frant color system: brand, neutral and system colors with their uses and contrast ratios")} caption="Color: brand, neutrals and system colors, each with its job and contrast ratio." />
+              <WideImage img={img("frant/kit-type", "Frant type scale from Hero to Mono, with Instrument Sans, Inter and DM Mono samples")} caption="Typography: one type scale for every iPhone size." />
+            </Pad>
+          </Section>
+
           {/* 3 Key decision */}
           <Section id="decision" kicker="Key decision" title="Every rank comes with its reason.">
             <div className="mt-7 bg-frant-tint px-5 py-9 md:mt-10 md:px-10 md:py-12 lg:grid lg:grid-cols-[360px_minmax(0,1fr)] lg:items-start lg:gap-14 lg:p-14">
@@ -673,7 +708,7 @@ export function Frant() {
                     at 6.4:1, and colored text uses a deeper coral at 5.2:1.
                   </p>
                 </Prose>
-                <WideImage img={img("frant/kit-color", "Frant UI kit color page: brand, neutral and system colors with contrast ratios")} />
+                <WideImage img={img("frant/kit-buttons", "Frant UI kit buttons: primary, dark, secondary, danger and ghost, each in default, pressed and disabled states")} caption="Buttons: five styles, each with default, pressed and disabled states. One primary action per screen at most." />
                 <WideImage
                   img={img("frant/kit-status", "Frant UI kit status labels for each step of the retention loop")}
                   caption="Status labels mark each step of the retention loop. Some composite components were built after the hi-fi screens and aren’t in every screen yet."

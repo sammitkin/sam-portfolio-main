@@ -10,9 +10,9 @@ import hike3 from "@/assets/images/about/hike@3x.webp";
 import { Wrap } from "../layout/Wrap";
 
 const PHOTOS = [
-  { src: [work1, work2, work3], alt: "Sam styling a model's hair with a comb and hairspray on an outdoor shoot", caption: "Styling on a shoot." },
+  { src: [work1, work2, work3], alt: "Sam styling a model's hair with a comb and hairspray on an outdoor Redken shoot", caption: "On set for Redken." },
   { src: [soccer1, soccer2, soccer3], alt: "Sam and a teammate in black soccer kits holding a trophy on a field in Los Angeles", caption: "City league soccer, Los Angeles." },
-  { src: [hike1, hike2, hike3], alt: "Sam in a yellow rain jacket in a meadow below misty granite cliffs", caption: "Out hiking." },
+  { src: [hike1, hike2, hike3], alt: "Sam in a yellow rain jacket in a Yosemite meadow below misty granite cliffs", caption: "Yosemite, one of 10 national parks so far." },
 ];
 
 const PRINCIPLES = [
@@ -44,11 +44,11 @@ export function About() {
         </p>
         <p>
           I trained at Designlab’s UX Academy and design products for people and small businesses: research first, then
-          the simplest thing that works. I’m looking for a product designer role in Los Angeles, hybrid or remote.
+          the simplest thing that works. I’m looking for a product designer role in Los Angeles, on-site or hybrid, or fully remote.
         </p>
         <p>
-          Off the clock I play soccer in a city league, hike, ride and lift. I also finished music school in piano with
-          honors. I speak Russian and English.
+          Off the clock I play soccer in a city league and travel to hike: 10 US national parks so far. I also ride, lift
+          and finished music school in piano with honors. I speak Russian and English.
         </p>
       </div>
 

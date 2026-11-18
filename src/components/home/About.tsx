@@ -12,7 +12,7 @@ import { SectionRule } from "./SectionRule";
 
 const PHOTOS = [
   { src: [work1, work2, work3], alt: "Sam styling a model’s hair with a comb and hairspray on an outdoor Redken shoot", caption: "On set for Redken." },
-  { src: [soccer1, soccer2, soccer3], alt: "Sam and a teammate in black soccer kits holding a trophy on a field in Los Angeles", caption: "City league soccer, Los Angeles." },
+  { src: [soccer1, soccer2, soccer3], alt: "Sam and a teammate in black soccer kits holding the championship trophy on a field in Los Angeles", caption: "Fall 2025 champions, LA Municipal Soccer League." },
   { src: [hike1, hike2, hike3], alt: "Sam in a yellow rain jacket in a Yosemite meadow below misty granite cliffs", caption: "Yosemite, one of 10 national parks so far." },
 ];
 
@@ -40,12 +40,14 @@ export function About() {
           on those problems for more people at once.
         </p>
         <p>
-          I trained at Designlab’s UX Academy and design products for people and small businesses: research first, then
-          the simplest thing that works. I’m looking for a product designer role in Los Angeles, on-site or hybrid, or fully remote.
+          I studied product design at Designlab’s UX Academy. I design for people and small businesses: research first,
+          then the simplest thing that works. I’m based in Los Angeles and open to on-site or hybrid roles here, as well
+          as remote roles across the U.S.
         </p>
         <p>
-          Off the clock I play soccer in a city league and travel to hike: 10 US national parks so far. I also ride, lift
-          and finished music school in piano with honors. I speak Russian and English.
+          Off the clock I play in the Los Angeles Municipal Soccer League and lift weights. I travel a lot and try to
+          hike wherever I go: 10 U.S. national parks so far. I also graduated from music school
+          with honors, where I studied piano. I speak Russian and English.
         </p>
       </div>
 

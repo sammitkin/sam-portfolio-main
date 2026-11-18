@@ -94,8 +94,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div ref={draw.ref} className="mt-16 lg:mt-[88px]">
-          <Logo color="#c7b8ff" label="SM, Sam Mitkin" className="h-auto w-full md:w-[82%] lg:w-[68%]" pathClassName={draw.cls} />
+        <div ref={draw.ref} className="mt-14 lg:mt-[72px]">
+          <Logo color="#c7b8ff" label="SM, Sam Mitkin" className="h-auto w-full" pathClassName={draw.cls} />
         </div>
 
         <div className="mt-7 flex justify-between text-[13px] font-semibold text-on-night md:text-[14px] lg:mt-10">

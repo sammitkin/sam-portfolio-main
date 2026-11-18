@@ -27,19 +27,18 @@ export function About() {
       </h2>
       <div className="mt-5 max-w-[36em] text-[17px] font-medium leading-[1.6] md:mt-8 lg:col-span-6 lg:col-start-7 lg:mt-0 lg:text-[19px] [&>p+p]:mt-3.5 lg:[&>p+p]:mt-[18px]">
         <p>
-          Before product design, I spent more than 11 years in the barber industry, first in Russia, then in Los
-          Angeles. I ran my own studio, trained other barbers and worked as a brand ambassador for Redken (L’Oréal).
-          Thousands of clients sat in my chair.
+          I spent more than 11 years in the barber industry, first in Russia and later in Los Angeles. I ran my own
+          studio, trained other barbers and worked as a brand ambassador for Redken (L’Oréal). Thousands of clients sat
+          in my chair.
         </p>
         <p>
-          That work taught me what research now gives words to: ask good questions, listen past the first request, and
-          notice when someone quietly stops coming back. Over time I got more interested in the systems around the chair,
-          like booking, retention and the tools that get in the way, than in any single cut. Product design lets me work
-          on those problems for more people at once.
+          The chair taught me what research now gives words to: listen past the first request, and notice when a
+          regular quietly stops coming back. I got more interested in the systems around the chair, like booking and
+          retention, than in any single cut.
         </p>
         <p>
-          I trained at Designlab’s UX Academy and design products for people and small businesses: research first, then
-          the simplest thing that works. I’m looking for a product designer role in Los Angeles, on-site or hybrid, or fully remote.
+          I trained at Designlab’s UX Academy. Now I design for people and small businesses: research first, then the
+          simplest thing that works. I’m looking for a product designer role in Los Angeles, on-site, hybrid or remote.
         </p>
         <p>
           Outside of design, I ride, lift weights and play piano. I speak Russian and English.

@@ -69,7 +69,7 @@ export function Footer() {
           Currently seeking product design opportunities
         </p>
         <h2 className="mt-5 max-w-[11em] text-[56px] font-extrabold leading-[0.92] tracking-[-0.06em] md:mt-7 md:text-[clamp(72px,8.9vw,128px)] md:leading-[0.9]">
-          Let's build better experiences.
+          Let’s build better experiences.
         </h2>
 
         <div className="mt-9 flex flex-col gap-5 md:mt-16 lg:flex-row lg:flex-wrap lg:items-center lg:justify-between lg:gap-6">

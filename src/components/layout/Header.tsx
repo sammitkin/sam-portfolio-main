@@ -50,6 +50,9 @@ export function Header() {
     if (!open) return;
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    // Keep keyboard and screen-reader focus inside the menu: the page behind becomes inert.
+    const behind = Array.from(document.querySelectorAll<HTMLElement>("main, footer"));
+    behind.forEach((el) => el.setAttribute("inert", ""));
     firstMenuLink.current?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -60,6 +63,7 @@ export function Header() {
     window.addEventListener("keydown", onKey);
     return () => {
       document.body.style.overflow = prev;
+      behind.forEach((el) => el.removeAttribute("inert"));
       window.removeEventListener("keydown", onKey);
     };
   }, [open]);

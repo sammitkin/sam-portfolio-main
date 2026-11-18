@@ -55,7 +55,7 @@ export function MoveEase() {
         dot="bg-move"
         kicker="MoveEase, an iOS app, research and UI"
         title="Staying ahead of the admin after a move."
-        note="A mobile app that helps people moving to a new home stay ahead of address updates, deadlines, and paperwork. It surfaces hidden admin tasks after a move, in the right order, before deadlines hit."
+        note="A mobile app that helps people moving to a new home stay ahead of address updates, deadlines and paperwork. It surfaces hidden admin tasks after a move, in the right order, before deadlines hit."
         meta={[
           ["Role", "Solo UX/UI designer"],
           ["Duration", "4 months, 2026"],
@@ -78,7 +78,7 @@ export function MoveEase() {
         items={[
           {
             label: "Problem",
-            body: "After a move, every institution has its own deadline, process and penalty. There's no master list and no clear order.",
+            body: "After a move, every institution has its own deadline, process and penalty. There’s no master list and no clear order.",
           },
           {
             label: "What I did",
@@ -110,8 +110,8 @@ export function MoveEase() {
             <Chips items={INSTITUTIONS} label="Institutions to update after a move" />
             <Prose className="mt-6">
               <p>
-                There's no master list and no clear order. Tasks keep showing up for weeks, and people don't know how many
-                are coming until they're already behind.
+                There’s no master list and no clear order. Tasks keep showing up for weeks, and people don’t know how many
+                are coming until they’re already behind.
               </p>
             </Prose>
             <Quote by="Victoria, 29, moved within the same building">I kept thinking I was done, and then another thing would come up.</Quote>
@@ -124,11 +124,11 @@ export function MoveEase() {
             <Points
               items={[
                 { title: "Admin overload", body: "Too many institutions, no single source of truth." },
-                { title: "No clear sequence", body: "People don't know what to do first." },
+                { title: "No clear sequence", body: "People don’t know what to do first." },
                 { title: "Hidden deadlines", body: "Consequences appear only after a deadline is missed." },
                 { title: "Coordination gap", body: "One partner carries the entire load alone." },
                 { title: "Document chaos", body: "Files scattered across email, paper and phone notes." },
-                { title: "Constant stress", body: "Not knowing what's left creates background anxiety." },
+                { title: "Constant stress", body: "Not knowing what’s left creates background anxiety." },
               ]}
             />
             <More label="Who I interviewed">
@@ -154,7 +154,7 @@ export function MoveEase() {
             <figure className="mt-8 border-t-2 border-ink pt-4">
               <p className="text-[14px] font-extrabold text-graphite md:text-[15px]">How might we</p>
               <blockquote className="mt-2 max-w-[22em] text-[26px] font-extrabold leading-[1.1] tracking-[-0.035em] md:text-[36px]">
-                Help people moving homes stay ahead of address updates, deadlines, and paperwork, so nothing falls through
+                Help people moving homes stay ahead of address updates, deadlines and paperwork, so nothing falls through
                 the cracks?
               </blockquote>
               <figcaption className="mt-3 text-[15px] font-medium text-body2">This question guided every design decision that followed.</figcaption>
@@ -182,7 +182,7 @@ export function MoveEase() {
             <More label="More on the persona and scope">
               <Prose>
                 <p>
-                  <strong>Victoria's goals:</strong> finish every move task without missing anything, always know the next
+                  <strong>Victoria’s goals:</strong> finish every move task without missing anything, always know the next
                   thing to do, feel calm and in control.
                 </p>
                 <p>
@@ -261,14 +261,14 @@ export function MoveEase() {
               <WideImage
                 img={img("moveease/midfi-flow", "Mid-fi screens connected by arrows: Dashboard, My Tasks, Task detail, Calendar and Shared Plan")}
                 minWidth={900}
-                caption="Mid-fi flow: from the dashboard to a task, its deadline, and the shared plan."
+                caption="Mid-fi flow: from the dashboard to a task, its deadline and the shared plan."
               />
               <SubHeading>Three decisions that shaped the interface.</SubHeading>
               <Points
                 items={[
                   { title: "Dashboard first", body: "Victoria has no time to dig through menus. The dashboard shows the next task and next deadline immediately." },
                   { title: "Calm visual system", body: "One blue primary, a near-white background and clear type. Green is reserved for completed tasks." },
-                  { title: "Shared Plan", body: "Rodion's move worked because his wife built a spreadsheet. MoveEase had to be that shared plan." },
+                  { title: "Shared Plan", body: "Rodion’s move worked because his wife built a spreadsheet. MoveEase had to be that shared plan." },
                 ]}
               />
             </More>
@@ -337,7 +337,7 @@ export function MoveEase() {
                   ),
                 },
                 {
-                  label: "What I'd do differently",
+                  label: "What I’d do differently",
                   title: "Decide earlier",
                   body: (
                     <ul>
@@ -348,7 +348,7 @@ export function MoveEase() {
                 },
                 {
                   label: "Next steps",
-                  title: "Test it for real",
+                  title: "Polish, then test for real",
                   body: (
                     <ul>
                       <li>Add completion animations.</li>

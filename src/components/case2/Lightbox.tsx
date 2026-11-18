@@ -96,6 +96,17 @@ export function LightboxProvider({ children }: { children: ReactNode }) {
               <p className="text-[14px] font-bold text-on-night" aria-live="polite">
                 {many ? `${index + 1} of ${items.length}` : wide ? (zoomed ? "Scroll to move around. Click to fit." : tall ? "Scroll down to see it all. Click to zoom in." : "Click the image to zoom in.") : ""}
               </p>
+              <div className="flex items-center gap-2">
+              {wide && (
+                <button
+                  type="button"
+                  aria-pressed={zoomed}
+                  onClick={() => setZoomed((z) => !z)}
+                  className="inline-flex min-h-11 items-center rounded-full px-[18px] text-[15px] font-extrabold text-white shadow-[inset_0_0_0_2px_currentColor] hover:text-iris"
+                >
+                  {zoomed ? "Fit to screen" : "Zoom in"}
+                </button>
+              )}
               <button
                 ref={closeBtn}
                 type="button"
@@ -107,6 +118,7 @@ export function LightboxProvider({ children }: { children: ReactNode }) {
                 </svg>
                 Close
               </button>
+              </div>
             </div>
 
             <div

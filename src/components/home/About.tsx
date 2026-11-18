@@ -10,7 +10,7 @@ import hike3 from "@/assets/images/about/hike@3x.webp";
 import { Wrap } from "../layout/Wrap";
 
 const PHOTOS = [
-  { src: [work1, work2, work3], alt: "Sam styling a model's hair with a comb and hairspray on an outdoor Redken shoot", caption: "On set for Redken." },
+  { src: [work1, work2, work3], alt: "Sam styling a model’s hair with a comb and hairspray on an outdoor Redken shoot", caption: "On set for Redken." },
   { src: [soccer1, soccer2, soccer3], alt: "Sam and a teammate in black soccer kits holding a trophy on a field in Los Angeles", caption: "City league soccer, Los Angeles." },
   { src: [hike1, hike2, hike3], alt: "Sam in a yellow rain jacket in a Yosemite meadow below misty granite cliffs", caption: "Yosemite, one of 10 national parks so far." },
 ];

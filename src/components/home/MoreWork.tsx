@@ -99,7 +99,7 @@ export function MoreWork() {
           </div>
           <div>
             <p className="mt-3 text-[16px] font-medium leading-[1.55] md:mt-0 md:text-[17px]">
-              In round one, 1 of 5 couldn't tell which card a Local Deal needed. After the fix, 5 of 5 found it on every
+              In round one, 1 of 5 couldn’t tell which card a Local Deal needed. After the fix, 5 of 5 found it on every
               offer type.
             </p>
             <p className="mt-2 text-[13px] font-medium text-graphite md:mt-2.5 md:text-[14px]">

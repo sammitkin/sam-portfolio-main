@@ -219,7 +219,7 @@ export function Frant() {
               <More label="More on the interviews">
                 <Prose>
                   <p>
-                    Frant is an iOS app that helps independent barbers notice when a regular is overdue, see why, and reach
+                    Frant is an iOS app that helps independent barbers notice when a regular is overdue, see why and reach
                     out in their own words. I’m a working barber, so I started with a question from my own chair: why do
                     regular clients slip away without anyone noticing in time?
                   </p>
@@ -314,7 +314,7 @@ export function Frant() {
                     ["Frant", "A ranked list of overdue regulars, one client at a time.", <Yes />, <Yes />],
                   ]}
                   highlightLast
-                  caption="Broad lapsed buckets are common. A ranked, explained list per client was missing. That became the gap: who needs me now, why, and what do I do next?"
+                  caption="Broad lapsed buckets are common. A ranked, explained list per client was missing. That became the gap: who needs me now, why and what do I do next?"
                 />
                 <Prose className="mt-8">
                   <p>
@@ -407,7 +407,7 @@ export function Frant() {
                 </p>
               </Prose>
               <WideImage
-                img={img("frant/logo-scale", "Frant logo at four sizes: large, medium, small, and the coral form alone as the app icon and favicon")}
+                img={img("frant/logo-scale", "Frant logo at four sizes: large, medium, small and the coral form alone as the app icon and favicon")}
                 caption="The full wordmark when space allows; the coral form alone in compact places."
               />
               <Points
@@ -556,7 +556,7 @@ export function Frant() {
               <Metrics
                 items={[
                   { value: "42/45", label: "task attempts without a hint (93%)" },
-                  { value: "4.6", label: "average ease, target was 4.5" },
+                  { value: "4.6", label: "average ease across all tasks, out of 5" },
                   { value: "5", label: "testers, same in both rounds" },
                   { value: "2", label: "tasks only met the minimum" },
                 ]}
@@ -580,8 +580,8 @@ export function Frant() {
                 <Metrics
                   size="m"
                   items={[
-                    { value: "42/45", label: "attempts done without a hint (93%)" },
-                    { value: "4.6", label: "average ease out of 5 (target 4.5)" },
+                    { value: "80%", label: "target for attempts without a hint" },
+                    { value: "4.5", label: "target for average ease" },
                     { value: "5/5", label: "explained why Mike was first" },
                     { value: "9", label: "tasks, sign up to delete" },
                   ]}
@@ -589,7 +589,7 @@ export function Frant() {
                 <Table
                   head={["Task", "Round one", "Round two"]}
                   rows={[
-                    ["Choose who to contact first", "Ease 4.0", "Ease 4.8"],
+                    ["Choose who to contact first (ease out of 5)", "4.0", "4.8"],
                     ["Send the draft as is or with a small edit", "0 of 5", "4 of 5"],
                     ["Set up and add a client alone", "4 of 5", "5 of 5"],
                     ["Mark contacted without a prompt (new)", "Not tested", "3 of 5, at target"],

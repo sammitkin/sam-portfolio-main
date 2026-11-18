@@ -11,7 +11,7 @@ export function Home() {
   usePageMeta({
     title: "Sam Mitkin — Product Designer",
     description:
-      "Sam Mitkin is a product designer focused on service design, customer experience, and research-driven product decisions.",
+      "Sam Mitkin is a product designer focused on service design, customer experience and research-driven product decisions.",
     path: "/",
   });
 

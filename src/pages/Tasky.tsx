@@ -351,7 +351,7 @@ export function Tasky() {
               <PhoneRow
                 items={[
                   { img: img("tasky/old-current", "Old Current work screen showing the worker’s own completion code 5826"), tag: "Old current work", label: "The code showed here, while the work was in progress." },
-                  { img: img("tasky/old-finish", "Old Finish work screen asking Did you get EC$40 in cash and for the completion code"), tag: "Old finish work", label: "And had to be typed in here, from memory." },
+                  { img: img("tasky/old-finish", "Old Finish work screen asking Did you get EC$40 in cash and for the completion code"), tag: "Old finish work", label: "The code then had to be typed in here, from memory." },
                 ]}
               />
             </More>

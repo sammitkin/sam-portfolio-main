@@ -9,6 +9,10 @@
       "destination": "/deals-hub.html"
     },
     {
+      "source": "/tasky",
+      "destination": "/tasky.html"
+    },
+    {
       "source": "/moveease",
       "destination": "/moveease.html"
     },

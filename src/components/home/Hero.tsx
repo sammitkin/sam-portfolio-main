@@ -42,7 +42,7 @@ function Portrait() {
 export function Hero() {
   const goToSection = useSectionNav();
   return (
-    <section aria-labelledby="hero-name" className="mx-auto max-w-[1440px] px-2 md:px-3 lg:px-4">
+    <section aria-labelledby="hero-name" className="mx-auto max-w-[1440px] px-2 pb-2 md:px-3 md:pb-3 lg:px-4 lg:pb-4">
       <div className="rounded-[28px] bg-iris px-5 pb-7 pt-5 md:grid md:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] md:gap-x-10 md:rounded-[32px] md:p-10 lg:grid-cols-12 lg:items-start lg:gap-x-6 lg:rounded-[40px] lg:px-14 lg:pb-16 lg:pt-10">
         <p className="m-0 inline-flex min-h-9 items-center gap-2.5 justify-self-start rounded-full bg-white pl-3 pr-3.5 text-[13px] font-bold md:col-span-2 md:min-h-10 md:pl-3.5 md:pr-4 md:text-[14px] lg:col-span-6 lg:row-start-1">
           <span aria-hidden="true" className="size-2 rounded-full bg-electric md:size-[9px]" />

@@ -414,6 +414,13 @@ export function DealsHub() {
 
       <Lesson>Testing the same people twice told me whether the fix worked. It also told me what it couldn’t prove.</Lesson>
 
+      <Wrap className="pt-10 md:pt-12">
+        <p className="max-w-[40em] text-[14px] font-medium leading-[1.5] text-graphite">
+          Student concept project. Not affiliated with or endorsed by Bank of America. Merchant names and logos belong to
+          their owners. Account balances shown are fictional.
+        </p>
+      </Wrap>
+
       <NextCase
         to="/moveease"
         name="MoveEase"
@@ -421,12 +428,6 @@ export function DealsHub() {
         line="Staying ahead of the admin after a move. Testing led to two fixes."
       />
 
-      <Wrap className="pt-10 md:pt-12">
-        <p className="max-w-[40em] text-[14px] font-medium leading-[1.5] text-graphite">
-          Student concept project. Not affiliated with or endorsed by Bank of America. Merchant names and logos belong to
-          their owners. Account balances shown are fictional.
-        </p>
-      </Wrap>
     </>
   );
 }

@@ -753,7 +753,7 @@ export function Frant() {
 
       <Lesson>The hardest product problem was not on the screen. It started when the barber left the app.</Lesson>
 
-      <NextCase to="/deals-hub" name="Deals Hub" color="bg-deals" line="Show the exact card before someone pays. 5 of 5 found it in round two." />
+      <NextCase to="/tasky" name="Tasky" color="bg-tasky" line="Finding local work people can trust. A client project, rated 5/5." />
     </>
   );
 }

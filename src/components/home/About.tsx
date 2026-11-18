@@ -19,7 +19,7 @@ const PHOTOS = [
 
 export function About() {
   return (
-    <Wrap as="section" id="about" aria-labelledby="about-title" className="pt-[88px] md:pt-32 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-6 lg:pt-40">
+    <Wrap as="section" id="about" aria-labelledby="about-title" className="scroll-mt-[-88px] pt-[88px] md:scroll-mt-[-128px] md:pt-32 lg:scroll-mt-[-160px] lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-6 lg:pt-40">
       <SectionRule label="About" className="md:mb-10 lg:mb-14" />
       <h2
         id="about-title"

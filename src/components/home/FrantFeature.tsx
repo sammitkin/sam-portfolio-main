@@ -44,8 +44,9 @@ function Screen({ open, setOpen }: { open: ClientId | null; setOpen: (id: Client
           return (
             <li
               key={c.id}
-              className={`mt-2 rounded-[18px] bg-white transition-shadow duration-200 ${isOpen ? "shadow-[0_0_0_2px_var(--color-frant)]" : "shadow-[0_0_0_1px_rgba(11,11,11,0.08)]"}`}
+              className={`relative mt-2 rounded-[18px] bg-white transition-shadow duration-200 ${isOpen ? "shadow-[0_0_0_2px_var(--color-frant)]" : "shadow-[0_0_0_1px_rgba(11,11,11,0.08)]"}`}
             >
+              {c.n === 1 && <Mark k="A" className="-right-2 -top-2.5 z-10" />}
               <button
                 type="button"
                 aria-expanded={isOpen}
@@ -64,17 +65,16 @@ function Screen({ open, setOpen }: { open: ClientId | null; setOpen: (id: Client
                 </span>
                 <span className="relative whitespace-nowrap rounded-full bg-[#ffd7d0] px-[9px] py-1 text-[12.5px] font-semibold text-[#9e2f1f]">
                   {c.late}
-                  {c.n === 1 && <Mark k="A" className="-right-[11px] -top-[11px]" />}
                 </span>
               </button>
               <div id={panel} className="pf-expand" data-open={isOpen}>
                 <div>
-                  <div className="relative px-3.5 pb-3.5">
+                  <div className="relative px-3.5 pb-3.5 pt-2.5">
                     <p className="rounded-xl bg-[#ffe9e5] p-3 text-[14px] leading-[1.5] text-[#2a2522]">
                       <span className="mb-1 block text-[11.5px] font-semibold tracking-[0.04em] text-[#9e2f1f]">Why {c.first} is on your list</span>
                       {c.reason}
                     </p>
-                    {isOpen && <Mark k="B" className="-top-2 right-1" />}
+                    {isOpen && <Mark k="B" className="right-1.5 top-[3px]" />}
                   </div>
                 </div>
               </div>

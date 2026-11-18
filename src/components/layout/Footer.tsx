@@ -80,9 +80,10 @@ export function Footer() {
             >
               {EMAIL}
             </a>
-            <CopyEmail className="min-h-[52px] rounded-full bg-iris px-[22px] text-[16px] font-extrabold text-ink transition-colors hover:bg-white md:min-h-12 md:text-[15px]" />
+            <CopyEmail className="min-h-[52px] md:translate-y-[5px] rounded-full bg-iris px-[22px] text-[16px] font-extrabold text-ink transition-colors hover:bg-white md:min-h-12 md:text-[15px]" />
           </div>
-          <div className="grid grid-cols-2 gap-2.5 md:flex md:gap-3">
+          {/* Nudged 5px down: the email’s underline sits low, so box-centring looks too high. */}
+          <div className="grid grid-cols-2 gap-2.5 md:flex md:gap-3 lg:translate-y-[5px]">
             <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className={`pf-btn pf-btn-outline-dark !min-h-[52px] !px-6 ${RESUME_URL ? "" : "col-span-2"}`}>
               LinkedIn
             </a>

@@ -34,16 +34,18 @@ export function About() {
           in my chair.
         </p>
         <p>
-          The chair taught me what research now gives words to: listen past the first request, and notice when a
-          regular quietly stops coming back. I got more interested in the systems around the chair, like booking and
-          retention, than in any single cut.
+          That work taught me what research now gives words to: ask good questions, listen past the first request, and
+          notice when someone quietly stops coming back. Over time I got more interested in the systems around the chair,
+          like booking, retention and the tools that get in the way, than in any single cut. Product design lets me work
+          on those problems for more people at once.
         </p>
         <p>
-          I trained at Designlab’s UX Academy. Now I design for people and small businesses: research first, then the
-          simplest thing that works. I’m looking for a product designer role in Los Angeles, on-site, hybrid or remote.
+          I trained at Designlab’s UX Academy and design products for people and small businesses: research first, then
+          the simplest thing that works. I’m looking for a product designer role in Los Angeles, on-site or hybrid, or fully remote.
         </p>
         <p>
-          Outside of design, I ride, lift weights and play piano. I speak Russian and English.
+          Off the clock I play soccer in a city league and travel to hike: 10 US national parks so far. I also ride, lift
+          and finished music school in piano with honors. I speak Russian and English.
         </p>
       </div>
 

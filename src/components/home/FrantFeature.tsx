@@ -4,7 +4,7 @@ import { Evidence, Wrap } from "../layout/Wrap";
 
 type ClientId = "mike" | "james" | "jordan";
 
-/* Data from the Frant prototype and test notes. Names and dates are the prototype's test data. */
+/* Data from the Frant prototype and test notes. Names and dates are the prototype’s test data. */
 const R2: { id: ClientId; n: number; name: string; first: string; meta: string; late: string; reason: string }[] = [
   { id: "mike", n: 1, name: "Mike Reyes", first: "Mike", meta: "Every 3 wks · last visit Aug 13", late: "4 wks late", reason: "Usually comes in every 3 weeks. Last visit Aug 13, so about 4 weeks later than usual." },
   { id: "james", n: 2, name: "James Turner", first: "James", meta: "Every 2 wks · last visit Aug 27", late: "3 wks late", reason: "Usually comes in every 2 weeks. Last visit Aug 27, so about 3 weeks later than usual." },
@@ -35,7 +35,7 @@ function Screen({ open, setOpen }: { open: ClientId | null; setOpen: (id: Client
           <circle cx="8" cy="8" r="6.5" fill="none" stroke="#9e2f1f" strokeWidth="1.4" />
           <path d="M8 7v4M8 5v.01" stroke="#9e2f1f" strokeWidth="1.6" strokeLinecap="round" />
         </svg>
-        Sorted by weeks past each client's usual visit
+        Sorted by weeks past each client’s usual visit
       </p>
       <ul>
         {R2.map((c) => {
@@ -83,7 +83,7 @@ function Screen({ open, setOpen }: { open: ClientId | null; setOpen: (id: Client
         })}
       </ul>
       <div className="relative mt-3.5 rounded-[14px] bg-[#ece6dc] px-3.5 py-3 text-[13px] leading-[1.45] text-[#3d3833]">
-        <b className="text-[#0b0b0b]">Why this order?</b> Clients who are furthest past their own rhythm come first. It's a suggestion. You can reach out to anyone.
+        <b className="text-[#0b0b0b]">Why this order?</b> Clients who are furthest past their own rhythm come first. It’s a suggestion. You can reach out to anyone.
         <Mark k="C" className="-right-[11px] -top-[11px]" />
       </div>
     </div>
@@ -113,7 +113,7 @@ function Notes() {
         <Note k="C" title="A suggestion, not an order.">You can reach out to anyone.</Note>
       </ol>
       <div className="mt-7 border-t-2 border-ink pt-[18px]">
-        <Evidence className="text-[13px]">Tested with the same 5 barbers</Evidence>
+        <Evidence className="text-[13px]">Tested with the same 5 participants</Evidence>
         <p className="mt-3 flex items-baseline gap-1.5 text-[44px] font-extrabold leading-[0.9] tracking-[-0.05em] tabular-nums lg:text-[56px]">
           4.0 → 4.8
           <span className="text-[17px] font-bold tracking-normal">/ 5</span>

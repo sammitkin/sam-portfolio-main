@@ -304,7 +304,7 @@ export function DealsHub() {
             </Prose>
             <PhoneRow
               items={[
-                { img: img("deals/mid-chevron", "Mid-fi Chevron Local Deal that mentions an eligible card without saying which card"), tag: "Round 1, mid-fi", label: "“Use your eligible card”, but which one?" },
+                { img: img("deals/mid-chevron", "Mid-fi Chevron Local Deal that mentions an eligible card without saying which card"), tag: "Round 1, mid-fi", label: "“Use your eligible card,” but which one?" },
                 { img: img("deals/local", "Hi-fi Chevron Local Deal with an Eligible card row showing the exact card"), tag: "Round 2, hi-fi", label: "The exact card, on every offer type." },
               ]}
             />
@@ -348,7 +348,7 @@ export function DealsHub() {
               <PhoneRow
                 items={[
                   { img: img("deals/activate", "Starbucks offer before activation, with an Activate offer button"), tag: "Before activation", label: "One clear action." },
-                  { img: img("deals/activated", "Starbucks offer after activation, showing 5% cash back added to card as a status"), tag: "After", label: "“5% cash back added to card”, shown as a status." },
+                  { img: img("deals/activated", "Starbucks offer after activation, showing 5% cash back added to card as a status"), tag: "After", label: "“5% cash back added to card,” shown as a status." },
                 ]}
               />
               <SubHeading>Four small iterations after round two.</SubHeading>

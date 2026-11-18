@@ -64,16 +64,24 @@ export function Hero() {
           <span className="pf-rise-2 block pl-[0.3em] md:pl-[0.45em] lg:pl-[0.52em]">Mitkin</span>
         </h1>
 
-        <div className="ml-auto mr-1.5 mt-10 w-[74%] md:col-start-2 md:row-start-3 md:ml-0 md:mr-3 md:mt-12 md:w-auto md:justify-self-stretch lg:col-span-4 lg:col-start-9 lg:row-span-3 lg:row-start-1 lg:mr-0 lg:mt-16">
+        {/* Phones: say the role and offer the work right under the name, before the portrait. */}
+        <div className="mt-5 flex items-baseline justify-between gap-4 md:hidden">
+          <p className="text-[26px] font-extrabold leading-none tracking-[-0.045em]">Product Designer</p>
+          <a href="/#work" onClick={(e) => goToSection("work", e)} className="pf-link whitespace-nowrap text-[15px] font-bold">
+            View work
+          </a>
+        </div>
+
+        <div className="ml-auto mr-1.5 mt-7 w-[74%] md:col-start-2 md:row-start-3 md:ml-0 md:mr-3 md:mt-12 md:w-auto md:justify-self-stretch lg:col-span-4 lg:col-start-9 lg:row-span-3 lg:row-start-1 lg:mr-0 lg:mt-16">
           <Portrait />
         </div>
 
         <div className="md:col-start-1 md:row-start-3 md:mt-12 md:self-end lg:col-span-8 lg:row-start-3 lg:mt-14 lg:grid lg:grid-cols-8 lg:items-start lg:gap-x-6 lg:self-start">
           <div className="lg:col-span-3">
-            <p className="mt-8 text-[32px] font-extrabold leading-none tracking-[-0.045em] md:mt-0 md:text-[40px] lg:text-[clamp(32px,3.05vw,44px)]">
+            <p className="hidden text-[32px] font-extrabold md:block leading-none tracking-[-0.045em] md:mt-0 md:text-[40px] lg:text-[clamp(32px,3.05vw,44px)]">
               Product Designer
             </p>
-            <p className="mt-2.5 text-[15px] font-semibold leading-[1.45] text-on-iris lg:mt-3.5 lg:text-[16px]">
+            <p className="mt-8 text-[15px] font-semibold leading-[1.45] text-on-iris md:mt-2.5 lg:mt-3.5 lg:text-[16px]">
               Research, service design and interface craft
             </p>
           </div>

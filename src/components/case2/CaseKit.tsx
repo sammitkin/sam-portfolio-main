@@ -322,10 +322,23 @@ export function PhoneRow({ items, caption }: { items: { img: Img; tag?: string; 
   );
 }
 
-export function WideImage({ img, caption, minWidth, className = "" }: { img: Img; caption?: ReactNode; minWidth?: number; className?: string }) {
+export function WideImage({
+  img,
+  caption,
+  minWidth,
+  label,
+  className = "",
+}: {
+  img: Img;
+  caption?: ReactNode;
+  minWidth?: number;
+  /** Short name for the sideways-scrolling region, e.g. "Worker journey map". */
+  label?: string;
+  className?: string;
+}) {
   return (
     <figure className={`mt-8 ${className}`}>
-      <div className="-mx-5 overflow-x-auto px-5 md:mx-0 md:px-0" tabIndex={minWidth ? 0 : undefined} role={minWidth ? "region" : undefined} aria-label={minWidth ? "Wide image, scrolls sideways" : undefined}>
+      <div className="-mx-5 overflow-x-auto px-5 md:mx-0 md:px-0" tabIndex={minWidth ? 0 : undefined} role={minWidth ? "region" : undefined} aria-label={minWidth ? `${label ?? "Wide image"}, scrolls sideways` : undefined}>
         <div style={minWidth ? { minWidth } : undefined}>
           <Zoomable
             img={img}
@@ -414,6 +427,7 @@ export function CaseIntro({
   kicker,
   title,
   meta,
+  lede,
   note,
   link,
 }: {
@@ -422,6 +436,8 @@ export function CaseIntro({
   kicker: string;
   title: ReactNode;
   meta: [string, string][];
+  /** One line under the title that names the core decision. */
+  lede?: ReactNode;
   note?: ReactNode;
   link?: { href: string; label: string };
 }) {
@@ -444,6 +460,7 @@ export function CaseIntro({
         <h1 className="mt-4 text-[44px] font-extrabold leading-[0.96] tracking-[-0.055em] md:mt-6 md:text-[64px] lg:text-[clamp(64px,5.85vw,84px)] lg:leading-[0.95]">
           {title}
         </h1>
+        {lede && <p className="mt-5 max-w-[24em] text-[20px] font-extrabold leading-[1.25] tracking-[-0.02em] md:mt-6 md:text-[24px]">{lede}</p>}
         {note && <p className="mt-5 max-w-[40em] text-[14px] font-medium leading-[1.5] text-graphite md:text-[15px]">{note}</p>}
         {link && <ExternalButton href={link.href} label={link.label} className="mt-6" />}
       </div>

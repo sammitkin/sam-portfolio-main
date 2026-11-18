@@ -22,6 +22,7 @@ import {
   useActiveSection,
   type SectionDef,
 } from "../components/case2/CaseKit";
+import { Wrap } from "../components/layout/Wrap";
 import { Evidence } from "../components/layout/Wrap";
 import { img } from "../data/caseImages";
 import { usePageMeta } from "../lib/usePageMeta";
@@ -55,7 +56,8 @@ export function DealsHub() {
         dot="bg-deals"
         kicker="Deals Hub, an iOS feature concept for banking"
         title="One clear, native place for bank cash-back deals."
-        note="Student concept project. Not affiliated with or endorsed by Bank of America. Merchant names and logos belong to their owners. Account balances shown are fictional."
+        lede="Show the exact card before someone pays."
+        note="Student concept. Not affiliated with Bank of America."
         link={{ href: PROTOTYPE_URL, label: "Try the prototype" }}
         meta={[
           ["Role", "Solo UX/UI designer"],
@@ -270,6 +272,7 @@ export function DealsHub() {
               <WideImage
                 img={img("deals/midfi-overview", "Mid-fi Deals Hub screens: entry point, Explore, Activate, Shop online, Local Deal and My Offers")}
                 minWidth={900}
+                label="Mid-fi screens overview"
                 caption="The mid-fi prototype used in round one, from the Accounts entry point to My Offers."
               />
               <SubHeading>Making it feel native, not bolted on.</SubHeading>
@@ -417,6 +420,13 @@ export function DealsHub() {
         color="bg-move"
         line="Staying ahead of the admin after a move. Testing led to two fixes."
       />
+
+      <Wrap className="pt-10 md:pt-12">
+        <p className="max-w-[40em] text-[14px] font-medium leading-[1.5] text-graphite">
+          Student concept project. Not affiliated with or endorsed by Bank of America. Merchant names and logos belong to
+          their owners. Account balances shown are fictional.
+        </p>
+      </Wrap>
     </>
   );
 }

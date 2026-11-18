@@ -67,7 +67,7 @@ function Screen({ open, setOpen }: { open: ClientId | null; setOpen: (id: Client
                   {c.late}
                 </span>
               </button>
-              <div id={panel} className="pf-expand" data-open={isOpen}>
+              <div id={panel} className="pf-expand" data-open={isOpen} aria-hidden={!isOpen}>
                 <div>
                   <div className="relative px-3.5 pb-3.5 pt-2.5">
                     <p className="rounded-xl bg-[#ffe9e5] p-3 text-[14px] leading-[1.5] text-[#2a2522]">

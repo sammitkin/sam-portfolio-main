@@ -62,8 +62,8 @@ function CopyEmail({ className }: { className: string }) {
 export function Footer() {
   const draw = useDrawOnce();
   return (
-    <footer id="contact" className="on-dark mx-auto max-w-[1440px] px-2 pb-2 md:px-3 md:pb-3 lg:px-4 lg:pb-4">
-      <div className="rounded-[28px] bg-night px-5 pb-6 pt-14 text-white md:rounded-[32px] md:px-10 md:pt-20 lg:rounded-[40px] lg:px-14 lg:pb-10 lg:pt-[104px]">
+    <footer id="contact" className="on-dark mx-auto w-full max-w-[1440px] px-2 pb-2 md:px-3 md:pb-3 lg:px-4 lg:pb-4">
+      <div className="rounded-[28px] bg-night px-5 pb-6 pt-14 text-white md:rounded-[32px] md:px-10 md:pt-20 lg:rounded-[40px] lg:px-14 lg:pb-10 lg:pt-[88px]">
         <p className="inline-flex items-center gap-2.5 text-[14px] font-bold text-iris md:text-[16px]">
           <span aria-hidden="true" className="size-2 rounded-full bg-iris md:size-[9px]" />
           Currently seeking product design opportunities
@@ -94,8 +94,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div ref={draw.ref} className="mt-16 lg:mt-[120px]">
-          <Logo color="#c7b8ff" label="SM, Sam Mitkin" className="h-auto w-full" pathClassName={draw.cls} />
+        <div ref={draw.ref} className="mt-16 lg:mt-[88px]">
+          <Logo color="#c7b8ff" label="SM, Sam Mitkin" className="h-auto w-full md:w-[82%] lg:w-[68%]" pathClassName={draw.cls} />
         </div>
 
         <div className="mt-7 flex justify-between text-[13px] font-semibold text-on-night md:text-[14px] lg:mt-10">

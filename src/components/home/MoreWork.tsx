@@ -14,7 +14,7 @@ const MOVE_SIZES = "(min-width: 768px) 180px, 100px";
 export function MoreWork() {
   return (
     <Wrap as="section" aria-label="More work" className="pt-[72px] md:pt-28 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-6 lg:pt-32">
-      <article id="tasky" aria-labelledby="tasky-title" className="lg:col-span-12 lg:grid lg:grid-cols-12 lg:items-end lg:gap-x-6">
+      <article id="tasky" aria-labelledby="tasky-title" className="lg:col-span-12 lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-6">
         <div className="-mx-5 grid h-[380px] grid-cols-2 gap-3.5 overflow-hidden bg-tasky px-5 pt-7 md:mx-0 md:h-[520px] md:gap-7 md:px-12 md:pt-10 lg:col-span-7 lg:h-[540px]">
           {[
             [taskyDetails, "Decide before you commit", "text-tasky-soft"],

@@ -68,7 +68,7 @@ export function Tasky() {
           ["Team", "3 UX designers"],
           ["Timeline", "5 weeks, Oct–Nov 2026"],
           ["Platform", "Android, mobile-first"],
-          ["Outcome", "Client rated it 5/5"],
+          ["Client feedback", "5/5"],
         ]}
       />
 
@@ -195,6 +195,7 @@ export function Tasky() {
             <WideImage
               img={img("tasky/journey", "Worker journey map in eight stages, from Discover to Paid and rated, with rows for today, actions, thoughts, emotions, pain points and opportunities")}
               minWidth={760}
+              label="Worker journey map"
               caption="Worker journey map. These moments became our core design ideas: an arrival code, a completion code, a location shown only after selection, and a simple way to report a problem."
             />
             <More label="More on the research">
@@ -244,12 +245,14 @@ export function Tasky() {
             <WideImage
               img={img("tasky/sitemap", "MVP sitemap with columns for start, worker, work poster, PlanIt staff and shared screens")}
               minWidth={760}
+              label="MVP sitemap"
               caption="MVP sitemap for workers, posters and staff. Ideas for later are listed bottom right."
             />
             <More label="More on the data model">
               <WideImage
                 img={img("tasky/datamodel", "Conceptual data model: user, worker and poster profiles, work post, interest, work session, rating, report, payment confirmation and receipt")}
                 minWidth={760}
+                label="Conceptual data model"
                 caption="Conceptual data model. What Tasky keeps track of, and how each part connects. Conceptual only, not a database design."
               />
             </More>

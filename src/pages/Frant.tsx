@@ -505,6 +505,7 @@ export function Frant() {
                 <WideImage
                   img={img("frant/lofi-overview", "The 14 lo-fi screens of Frant, from onboarding to the native SMS composer")}
                   minWidth={900}
+                  label="Lo-fi screens overview"
                   caption="The 14-screen lo-fi prototype, from onboarding to the handoff to Messages."
                 />
                 <SubHeading>1. Priority needed a reason.</SubHeading>

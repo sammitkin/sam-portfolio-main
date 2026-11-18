@@ -42,8 +42,7 @@ export function About() {
           the simplest thing that works. I’m looking for a product designer role in Los Angeles, on-site or hybrid, or fully remote.
         </p>
         <p>
-          Off the clock I play soccer in a city league and travel to hike: 10 US national parks so far. I also ride, lift
-          and finished music school in piano with honors. I speak Russian and English.
+          Outside of design, I ride, lift weights and play piano. I speak Russian and English.
         </p>
       </div>
 

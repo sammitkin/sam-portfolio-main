@@ -46,6 +46,17 @@ export function Header() {
 
   useEffect(() => setOpen(false), [pathname]);
 
+  // The menu is mobile-only (md:hidden). If the window widens past md while it is open,
+  // close it so the page behind is not left inert and unscrollable.
+  useEffect(() => {
+    if (!open) return;
+    const mq = window.matchMedia("(min-width: 768px)");
+    const onChange = () => mq.matches && setOpen(false);
+    onChange();
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, [open]);
+
   useEffect(() => {
     if (!open) return;
     const prev = document.body.style.overflow;

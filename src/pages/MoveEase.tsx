@@ -261,6 +261,7 @@ export function MoveEase() {
               <WideImage
                 img={img("moveease/midfi-flow", "Mid-fi screens connected by arrows: Dashboard, My Tasks, Task detail, Calendar and Shared Plan")}
                 minWidth={900}
+                label="Mid-fi flow"
                 caption="Mid-fi flow: from the dashboard to a task, its deadline and the shared plan."
               />
               <SubHeading>Three decisions that shaped the interface.</SubHeading>

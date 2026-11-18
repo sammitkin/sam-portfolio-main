@@ -8,6 +8,7 @@ import hike1 from "@/assets/images/about/hike.webp";
 import hike2 from "@/assets/images/about/hike@2x.webp";
 import hike3 from "@/assets/images/about/hike@3x.webp";
 import { Wrap } from "../layout/Wrap";
+import { SectionRule } from "./SectionRule";
 
 const PHOTOS = [
   { src: [work1, work2, work3], alt: "Sam styling a model’s hair with a comb and hairspray on an outdoor Redken shoot", caption: "On set for Redken." },
@@ -19,6 +20,7 @@ const PHOTOS = [
 export function About() {
   return (
     <Wrap as="section" id="about" aria-labelledby="about-title" className="pt-[88px] md:pt-32 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-6 lg:pt-40">
+      <SectionRule label="About" className="md:mb-10 lg:mb-14" />
       <h2
         id="about-title"
         className="text-[48px] font-extrabold leading-[0.95] tracking-[-0.055em] md:text-[64px] lg:col-span-5 lg:text-[clamp(64px,5.85vw,84px)]"

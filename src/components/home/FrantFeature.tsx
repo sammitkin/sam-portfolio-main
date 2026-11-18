@@ -133,7 +133,7 @@ export function FrantFeature() {
     <section id="frant" aria-labelledby="frant-title" className="bg-frant">
       <Wrap className="pb-14 pt-12 md:pb-24 md:pt-20 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-6 lg:pb-28 lg:pt-[104px]">
         <p className="text-[15px] font-extrabold lg:col-span-8 lg:text-[17px]">
-          Frant, featured case study <span className="font-semibold">· Designlab UX Academy, 2026</span>
+          <span aria-hidden="true" className="tabular-nums">01 · </span>Frant, featured case study <span className="font-semibold">· Designlab UX Academy, 2026</span>
         </p>
         <h2
           id="frant-title"

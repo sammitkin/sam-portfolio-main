@@ -18,7 +18,7 @@ export function MoreWork() {
         <div className="-mx-5 grid h-[380px] grid-cols-2 gap-3.5 overflow-hidden bg-tasky px-5 pt-7 md:mx-0 md:h-[520px] md:gap-7 md:px-12 md:pt-10 lg:col-span-7 lg:h-[540px]">
           {[
             [taskyDetails, "Decide before you commit", "text-tasky-soft"],
-            [taskyCode, "One simple rule for the code", "text-white"],
+            [taskyCode, "One rule for the code", "text-white"],
           ].map(([im, label, color]) => {
             const i = im as typeof taskyDetails;
             return (

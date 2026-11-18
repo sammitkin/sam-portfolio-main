@@ -100,7 +100,7 @@ export function Footer() {
 
         <div className="mt-7 flex justify-between text-[13px] font-semibold text-on-night md:text-[14px] lg:mt-10">
           <span>© 2026 Sam Mitkin</span>
-          <a href="#top" className="text-on-night underline decoration-1 underline-offset-4 hover:text-white" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? "auto" : "smooth" }); document.getElementById("main")?.focus({ preventScroll: true }); }}>
+          <a href="#top" className="-my-3 inline-flex min-h-11 items-center text-on-night underline decoration-1 underline-offset-4 hover:text-white" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? "auto" : "smooth" }); document.getElementById("main")?.focus({ preventScroll: true }); }}>
             Back to top
           </a>
         </div>

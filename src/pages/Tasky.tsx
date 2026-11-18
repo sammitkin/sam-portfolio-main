@@ -442,10 +442,10 @@ export function Tasky() {
       <Lesson>The riskiest moments happened away from the screen. That’s where the design had to start.</Lesson>
 
       <NextCase
-        to="/frant"
-        name="Frant"
-        color="bg-frant"
-        line="Helping independent barbers keep their regulars."
+        to="/deals-hub"
+        name="Deals Hub"
+        color="bg-deals"
+        line="Show the exact card before someone pays. 5 of 5 found it in round two."
       />
     </>
   );

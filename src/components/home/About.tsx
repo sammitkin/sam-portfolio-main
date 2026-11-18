@@ -15,11 +15,6 @@ const PHOTOS = [
   { src: [hike1, hike2, hike3], alt: "Sam in a yellow rain jacket in a Yosemite meadow below misty granite cliffs", caption: "Yosemite, one of 10 national parks so far." },
 ];
 
-const PRINCIPLES = [
-  { title: "Clarity over complexity.", body: "Every element earns its place. When in doubt, simplify." },
-  { title: "Research before assumptions.", body: "Real understanding comes from listening." },
-  { title: "Less, but better.", body: "Restraint is a skill." },
-];
 
 export function About() {
   return (
@@ -73,16 +68,6 @@ export function About() {
         ))}
       </ul>
 
-      <ul className="mt-10 md:mt-14 lg:col-span-12 lg:mt-[72px]">
-        {PRINCIPLES.map((p) => (
-          <li key={p.title} className="border-t-2 border-ink py-4 lg:grid lg:grid-cols-12 lg:items-baseline lg:gap-x-6 lg:py-[22px]">
-            <span className="block text-[22px] font-extrabold tracking-[-0.03em] lg:col-span-5 lg:text-[30px] lg:leading-[1.05] lg:tracking-[-0.035em]">
-              {p.title}
-            </span>
-            <span className="mt-1 block text-[15px] font-medium leading-[1.5] text-body2 lg:col-span-6 lg:col-start-7 lg:mt-0 lg:text-[17px]">{p.body}</span>
-          </li>
-        ))}
-      </ul>
     </Wrap>
   );
 }

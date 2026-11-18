@@ -1,4 +1,4 @@
-import portraitImg from "@/assets/images/portrait.webp";
+import portraitImg from "@/assets/images/portrait-2026.webp";
 import { EMAIL_URL, LINKEDIN_URL, RESUME_URL } from "../../data/site";
 import { useSectionNav } from "../layout/navigation";
 
@@ -10,19 +10,19 @@ function Portrait() {
         <img
           src={portraitImg}
           alt="Sam Mitkin"
-          width={640}
-          height={800}
+          width={780}
+          height={974}
           loading="eager"
           fetchPriority="high"
           decoding="async"
-          className="block size-full origin-[50%_32%] scale-[1.16] object-cover object-[50%_26%] [filter:saturate(0.9)_contrast(1.04)]"
+          className="block size-full object-cover object-[50%_30%]"
         />
       </div>
       <svg
         aria-hidden="true"
         viewBox="0 0 400 520"
         preserveAspectRatio="none"
-        className="pf-arch-line pointer-events-none absolute inset-0 size-full overflow-visible"
+        className="pf-arch-line pointer-events-none absolute overflow-visible"
       >
         <path
           pathLength={1}

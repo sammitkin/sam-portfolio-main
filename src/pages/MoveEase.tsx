@@ -85,7 +85,7 @@ export function MoveEase() {
             body: "Four interviews, a persona, information architecture, lo-fi to hi-fi design, and a usability test with five participants.",
           },
           {
-            label: "Result, tested",
+            label: "Found in testing",
             kind: "tested",
             body: "Testing found two priority fixes: a labeled New Task button and a fully tappable assignment row.",
           },
@@ -333,7 +333,7 @@ export function MoveEase() {
                   body: (
                     <ul>
                       <li>A single dashboard entry point made navigation much easier.</li>
-                      <li>Two task categories reduced cognitive load.</li>
+                      <li>Two task categories, Address Updates and Utilities Setup, split the list into smaller groups.</li>
                     </ul>
                   ),
                 },

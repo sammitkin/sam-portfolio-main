@@ -130,8 +130,12 @@ export function Frant() {
             Frant, an iOS app designed end to end
           </p>
           <h1 className="mt-4 text-[44px] font-extrabold leading-[0.96] tracking-[-0.055em] md:mt-6 md:text-[64px] lg:text-[clamp(64px,5.85vw,84px)] lg:leading-[0.95]">
-            Helping barbers keep their regulars, and what happens after Send.
+            Helping barbers notice when regulars stop coming back.
           </h1>
+          <p className="mt-5 max-w-[40em] text-[14px] font-medium leading-[1.5] text-graphite md:text-[15px]">
+            I designed a priority list that explains who needs attention, then explored what happens after a message is
+            sent.
+          </p>
           <ExternalButton href={PROTOTYPE_URL} label="Try the prototype" className="mt-7" />
         </div>
         <dl className="mt-7 border-t-2 border-ink md:grid md:grid-cols-2 md:gap-x-6 lg:col-span-4 lg:mt-0 lg:block">
@@ -256,7 +260,7 @@ export function Frant() {
           </Section>
 
           {/* 2 Research */}
-          <Section id="research" kicker="Research" title="The gap wasn’t more data. It was one clear next action.">
+          <Section id="research" kicker="Research" title="Barbers had the data. They needed to know who to text today.">
             <Pad>
               <Table
                 head={["App", "For lapsed clients", "Ranks by each client’s rhythm", "Says why"]}
@@ -337,7 +341,7 @@ export function Frant() {
                     },
                   ]}
                 />
-                <SubHeading>A retention layer, not another booking app.</SubHeading>
+                <SubHeading>One loop: see who’s overdue, reach out, track what happens.</SubHeading>
                 <Prose className="mt-4">
                   <p>
                     I designed one loop and kept everything else light. Frant finds regulars who are past their usual
@@ -606,7 +610,7 @@ export function Frant() {
                     and Stacey said they’d forget to log every visit by hand.
                   </p>
                   <p>
-                    This wasn’t a usability bug. People understood the buttons. The risk was behavior: once the real
+                    People understood the buttons, but updating Frant didn’t match what they did after sending a text. Once the real
                     action happened, the job felt finished. If barbers stop updating Frant, the list goes stale and the
                     product loses its value.
                   </p>

@@ -151,7 +151,7 @@ export function MoreWork() {
             MoveEase
           </h2>
           <p className="mt-2 text-[15px] font-medium leading-[1.5] md:mt-3 md:text-[17px] md:leading-[1.55]">
-            <span className="hidden md:inline">Staying ahead of the admin after a move. </span>
+            Staying ahead of the admin after a move. 
             Testing led to two fixes: a labeled New Task button and a fully tappable row.
           </p>
           <Link to="/moveease" className="pf-link inline-flex min-h-11 items-center text-[15px] font-extrabold md:mt-2 md:text-[16px]">

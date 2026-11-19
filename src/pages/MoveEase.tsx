@@ -281,7 +281,7 @@ export function MoveEase() {
           <Pad>
             <Prose className="mt-6">
               <p>
-                Five participants tested the core flows: finding the next task, creating a task, assigning it to a partner,
+                Five participants tested the core flows, including finding the next task, creating a task, assigning it to a partner
                 and checking deadlines.
               </p>
             </Prose>
@@ -367,7 +367,7 @@ export function MoveEase() {
 
       <Lesson>Icon-only buttons can fail under stress. Interfaces should explain themselves without assuming calm attention.</Lesson>
 
-      <NextCase to="/frant" name="Frant" color="bg-frant" line="A rank without a reason feels arbitrary. 42 of 45 tasks done without a hint in round two." />
+      <NextCase to="/frant" name="Frant" color="bg-frant" line="A rank without a reason feels arbitrary. 42 of 45 task attempts without a hint in round two." />
     </>
   );
 }

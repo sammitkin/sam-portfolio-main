@@ -242,3 +242,16 @@ body {
 .pf-details > div > figure:last-child tbody tr:last-child {
   border-bottom: 0;
 }
+
+/* Typesetting: no one-word last lines.
+   Headings and short lines are balanced across lines; body text avoids a lone last word.
+   Browsers without support simply wrap as before. */
+h1, h2, h3, h4, dt, figcaption, blockquote, figure p, li > p, li > span, .pf-balance {
+  text-wrap: balance;
+}
+p, li, dd {
+  text-wrap: pretty;
+}
+figure p, li > p, li > span {
+  text-wrap: balance;
+}

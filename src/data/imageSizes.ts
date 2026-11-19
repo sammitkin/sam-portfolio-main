@@ -220,6 +220,18 @@ export const imageSizes: Record<string, [number, number]> = {
     360,
     855
   ],
+  "tasky/mid-details": [
+    360,
+    800
+  ],
+  "tasky/mid-finish": [
+    360,
+    800
+  ],
+  "tasky/mid-find": [
+    360,
+    800
+  ],
   "tasky/paid": [
     360,
     800

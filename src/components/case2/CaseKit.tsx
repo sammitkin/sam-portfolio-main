@@ -244,7 +244,7 @@ export function Metrics({ items, size = "l" }: { items: { value: string; label: 
   return (
     <dl className="mt-8 grid grid-cols-2 gap-x-4 gap-y-6 md:grid-cols-4 md:gap-6">
       {items.map((m) => (
-        <div key={m.label} className="flex flex-col-reverse border-t-2 border-ink pt-3.5 md:pt-[18px]">
+        <div key={m.label} className="flex flex-col-reverse justify-end border-t-2 border-ink pt-3.5 md:pt-[18px]">
           <dt className="mt-2 text-[14px] font-semibold leading-[1.4] text-graphite md:mt-2.5 md:text-[15px]">{m.label}</dt>
           <dd
             className={`font-extrabold leading-[0.9] tracking-[-0.06em] tabular-nums ${size === "l" ? "text-[48px] md:text-[60px] lg:text-[72px]" : "text-[36px] md:text-[44px]"}`}

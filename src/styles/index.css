@@ -237,3 +237,8 @@ body {
     stroke-dashoffset: 0;
   }
 }
+
+/* A table that ends a "More" panel: the panel's own bottom rule closes it, so drop the table's last rule */
+.pf-details > div > figure:last-child tbody tr:last-child {
+  border-bottom: 0;
+}

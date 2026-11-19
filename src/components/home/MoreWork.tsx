@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { img, SIZES } from "../../data/caseImages";
 import { Wrap } from "../layout/Wrap";
+import { SectionRule } from "./SectionRule";
 
 const taskyDetails = img("tasky/details", "Tasky work details: pay, date, how long and the town, with an I am interested button");
 const taskyCode = img("tasky/code", "Tasky screen asking the worker to get the completion code from the poster");
@@ -15,6 +16,7 @@ export function MoreWork() {
   return (
     <Wrap as="section" aria-label="More work" className="pt-[72px] md:pt-28 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-6 lg:pt-32">
       <article id="tasky" aria-labelledby="tasky-title" className="lg:col-span-12 lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-6">
+        <SectionRule label="02" />
         <div className="-mx-5 grid h-[380px] grid-cols-2 gap-3.5 overflow-hidden bg-tasky px-5 pt-7 md:mx-0 md:h-[520px] md:gap-7 md:px-12 md:pt-10 lg:col-span-7 lg:h-[540px]">
           {[
             [taskyDetails, "Decide before you commit", "text-tasky-soft"],
@@ -58,6 +60,7 @@ export function MoreWork() {
       </article>
 
       <article id="deals" aria-labelledby="deals-title" className="mt-[72px] md:mt-28 lg:col-span-7 lg:mt-32">
+        <SectionRule label="03" />
         <div className="-mx-5 grid h-[380px] grid-cols-2 gap-3.5 overflow-hidden bg-deals px-5 pt-7 md:mx-0 md:h-[520px] md:gap-7 md:px-12 md:pt-10 lg:h-[540px]">
           <figure>
             <figcaption className="mb-2.5 text-[13px] font-bold text-deals-soft md:mb-3.5 md:text-[14px]">Every deal in one place</figcaption>
@@ -115,8 +118,9 @@ export function MoreWork() {
       <article
         id="moveease"
         aria-labelledby="moveease-title"
-        className="mt-14 grid grid-cols-[132px_1fr] items-start gap-[18px] border-t-2 border-ink pt-5 md:mt-24 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] md:gap-10 md:border-t-0 md:pt-0 lg:col-span-4 lg:col-start-9 lg:mt-72 lg:block"
+        className="mt-14 grid grid-cols-[132px_1fr] items-start gap-x-[18px] md:mt-24 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] md:gap-x-10 lg:col-span-4 lg:col-start-9 lg:mt-72 lg:block"
       >
+        <SectionRule label="04" />
         <div className="grid h-[176px] grid-cols-1 gap-[18px] overflow-hidden bg-move px-4 pt-[18px] md:h-[420px] md:grid-cols-2 md:px-9 md:pt-10">
           <img
             src={moveDash.src}
@@ -147,7 +151,7 @@ export function MoreWork() {
             MoveEase
           </h2>
           <p className="mt-2 text-[15px] font-medium leading-[1.5] md:mt-3 md:text-[17px] md:leading-[1.55]">
-            <span className="hidden md:inline">Staying ahead of the admin after a move. </span>
+            Staying ahead of the admin after a move. 
             Testing led to two fixes: a labeled New Task button and a fully tappable row.
           </p>
           <Link to="/moveease" className="pf-link inline-flex min-h-11 items-center text-[15px] font-extrabold md:mt-2 md:text-[16px]">

@@ -42,7 +42,7 @@ export function DealsHub() {
   usePageMeta({
     title: "Deals Hub Case Study — Sam Mitkin",
     description:
-      "Deals Hub: a feature concept that brings Bank of America cash-back deals into one native place. Five interviews and two rounds of usability testing.",
+      "Deals Hub: a feature concept that brings Bank of America cash-back deals into one place inside the app. Five interviews and two rounds of usability testing.",
     path: "/deals-hub",
   });
   const active = useActiveSection(IDS);
@@ -55,7 +55,7 @@ export function DealsHub() {
         name="Deals Hub"
         dot="bg-deals"
         kicker="Deals Hub, an iOS feature concept for banking"
-        title="One clear, native place for bank cash-back deals."
+        title="Making cash-back deals easier to find, use and track."
         lede="Show the exact card before someone pays."
         note="Student concept. Not affiliated with Bank of America."
         link={{ href: PROTOTYPE_URL, label: "Try the prototype" }}
@@ -164,7 +164,7 @@ export function DealsHub() {
         </Section>
 
         {/* 2 Research */}
-        <Section id="research" kicker="Research" title="Five people, four patterns.">
+        <Section id="research" kicker="Research" title="Deals were found by chance, and their status got lost.">
           <Pad>
             <Points
               columns={2}
@@ -296,7 +296,7 @@ export function DealsHub() {
         </Section>
 
         {/* 4 Key decision / testing */}
-        <Section id="testing" kicker="Key decision" title="One card detail decided the second round.">
+        <Section id="testing" kicker="Key decision" title="One missing card detail changed the design.">
           <DecisionPanel tint="bg-deals-tint">
             <Prose>
               <p>

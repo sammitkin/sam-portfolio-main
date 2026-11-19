@@ -60,7 +60,7 @@ export function Tasky() {
         dot="bg-tasky"
         kicker="Tasky, a client project for PlanIt! Efficiency Solutions"
         title="Finding local work people can trust."
-        note="Team project with two other UX designers. I led research and synthesis, owned the worker flow (about 35 screens and states), and joined and tested our clickable prototype. My teammates owned the poster and staff flows. Shared with the client’s permission."
+        note="Team project with two other UX designers. I led research and synthesis, owned the worker flow (about 35 screens and states), and joined the three flows into one clickable prototype, then checked every path before the client review. My teammates owned the poster and staff flows. Shared with the client’s permission."
         link={{ href: PROTOTYPE_URL, label: "Try the prototype" }}
         meta={[
           ["Client", "PlanIt! Efficiency Solutions"],
@@ -295,7 +295,7 @@ export function Tasky() {
         </Section>
 
         {/* 5 Key decision */}
-        <Section id="testing" kicker="Key decision" title="Testing turned a confusing code into one simple rule.">
+        <Section id="testing" kicker="Key decision" title="Testing showed a confusing code. We made one simple rule.">
           <DecisionPanel tint="bg-tasky-tint">
             <Prose>
               <p>
@@ -409,7 +409,7 @@ export function Tasky() {
                 { img: img("tasky/v2-find", "Exploration: Find work with category chips and large work photos"), tag: "Find work", label: "Category colors make the list scannable." },
                 { img: img("tasky/v2-details", "Exploration: work details with a large photo and the pay in a dark card"), tag: "Work details", label: "Pay and date in one block at the top." },
               ]}
-              caption="My exploration, not shipped. The photos are sample images, AI-generated."
+              caption="My exploration, not part of the final client handoff. The photos are sample images, AI-generated."
             />
           </Pad>
         </Section>

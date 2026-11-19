@@ -26,7 +26,7 @@ export function Home() {
     <>
       <Hero />
       {/* Work starts right after the hero: Frant first, then Tasky, Deals Hub and MoveEase. */}
-      <div id="work">
+      <div id="work" className="scroll-mt-[-32px] md:scroll-mt-[-16px]">
         <FrantFeature />
         <MoreWork />
       </div>

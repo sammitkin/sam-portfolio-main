@@ -65,16 +65,16 @@ export function Footer() {
     <footer id="contact" className="on-dark mx-auto w-full max-w-[1440px] px-2 pb-2 md:px-3 md:pb-3 lg:px-4 lg:pb-4">
       {/* Desktop: the card fills one screen under the sticky header (80px + 16px gap), with sane limits for very short
           and very tall windows. The SM mark runs full width and bleeds off the bottom edge. */}
-      <div className="flex flex-col overflow-hidden rounded-[28px] bg-night px-5 pt-14 text-white md:rounded-[32px] md:px-10 md:pt-20 lg:h-[calc(100svh-96px)] lg:max-h-[1040px] lg:min-h-[700px] lg:rounded-[40px] lg:px-14 lg:pt-[80px]">
+      <div className="flex flex-col overflow-hidden rounded-[28px] bg-night px-5 pt-14 text-white md:rounded-[32px] md:px-10 md:pt-20 lg:h-[calc(100svh-96px)] lg:max-h-[1040px] lg:min-h-[700px] lg:rounded-[40px] lg:px-14 lg:pt-14">
         <p className="inline-flex items-center gap-2.5 text-[14px] font-bold text-iris md:text-[16px]">
           <span aria-hidden="true" className="size-2 rounded-full bg-iris md:size-[9px]" />
           Currently seeking product design opportunities
         </p>
-        <h2 className="mt-5 max-w-[11em] text-[56px] font-extrabold leading-[0.92] tracking-[-0.06em] md:mt-7 md:text-[clamp(72px,8.9vw,128px)] md:leading-[0.9]">
+        <h2 className="mt-5 max-w-[11em] text-[56px] font-extrabold leading-[0.92] tracking-[-0.06em] md:mt-6 md:text-[clamp(72px,7.4vw,108px)] md:leading-[0.9]">
           Pull up a&nbsp;chair.
         </h2>
 
-        <div className="mt-9 flex flex-col gap-5 md:mt-16 lg:flex-row lg:flex-wrap lg:items-center lg:justify-between lg:gap-6">
+        <div className="mt-9 flex flex-col gap-5 md:mt-12 lg:mt-10 lg:flex-row lg:flex-wrap lg:items-center lg:justify-between lg:gap-6">
           <div className="flex flex-col gap-5 md:flex-row md:flex-wrap md:items-center">
             <a
               href={EMAIL_URL}
@@ -97,15 +97,15 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex justify-between text-[13px] font-semibold text-on-night md:mt-16 md:text-[14px] lg:mt-auto lg:pt-12">
+        <div className="mt-12 flex justify-between text-[13px] font-semibold text-on-night md:mt-16 md:text-[14px] lg:mt-auto lg:pt-8">
           <span>© 2026 Sam Mitkin</span>
           <a href="#top" className="-my-3 inline-flex min-h-11 items-center text-on-night underline decoration-1 underline-offset-4 hover:text-white" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: prefersReducedMotion() ? "auto" : "smooth" }); document.getElementById("main")?.focus({ preventScroll: true }); }}>
             Back to top
           </a>
         </div>
 
-        {/* Bleeds about a third of its height past the card edge; vertical % margins resolve against the width. */}
-        <div ref={draw.ref} aria-hidden="true" className="-mb-[13%] mt-5 shrink-0 md:mt-6">
+        {/* Bleeds about 15% of its height past the card edge; vertical % margins resolve against the width. */}
+        <div ref={draw.ref} aria-hidden="true" className="-mb-[6%] mt-5 shrink-0 md:mt-4">
           <Logo color="#c7b8ff" label="SM, Sam Mitkin" className="h-auto w-full" pathClassName={draw.cls} />
         </div>
 

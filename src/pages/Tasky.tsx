@@ -282,6 +282,22 @@ export function Tasky() {
                 { img: img("tasky/sent", "Interest sent with a Pending status and three numbered steps for what happens next"), tag: "Interest sent", label: "Every status has a word, a color and an icon, plus what happens next." },
               ]}
             />
+            <SubHeading>Mid-fi first, in grayscale.</SubHeading>
+            <Prose className="mt-4">
+              <p>
+                I built the worker flow in grayscale mid-fi before moving to hi-fi. The order of facts on each post stayed. Two
+                things changed: “I’m interested” became “I am interested,” once we dropped contractions with the client. And
+                the finish step changed twice: a personal PIN in mid-fi, a completion code in hi-fi, then, after testing, a
+                code the poster holds.
+              </p>
+            </Prose>
+            <PhoneRow
+              items={[
+                { img: img("tasky/mid-find", "Mid-fi Find work list with three grayscale work cards showing pay, day and town"), tag: "Mid-fi, Find work", label: "Pay, day and town on every card from the start." },
+                { img: img("tasky/mid-details", "Mid-fi Work details with Listen to the details, pay, when, how long and where, and an I'm interested button"), tag: "Mid-fi, Work details", label: "The same order of facts carried into hi-fi." },
+                { img: img("tasky/mid-finish", "Mid-fi Finish work asking whether the worker got EC$40 in cash and for the worker's own 4-digit PIN"), tag: "Mid-fi, Finish work", label: "The worker’s own PIN, later replaced." },
+              ]}
+            />
             <More label="More on the work day screens">
               <PhoneRow
                 items={[
@@ -320,8 +336,8 @@ export function Tasky() {
           <Pad>
             <Prose className="mt-8">
               <p>
-                The client wanted codes for security: they stop one side from confirming for the other and lowering the
-                pay. So instead of removing them, we made them simple.
+                The client wanted codes for security: neither side can confirm the work alone. So instead of removing them,
+                we made them simple.
               </p>
             </Prose>
             <Points
@@ -332,7 +348,7 @@ export function Tasky() {
               ]}
             />
             <Note label="Open question, to validate" kind="hypothesis">
-              We couldn’t recruit a worker for testing, so this rule is tested with posters and the client, not with
+              We couldn’t recruit a worker for testing, so this rule was tested with posters and the client, not with
               workers. It’s the first thing I’d test next.
             </Note>
             <More label="More on what testing changed">
@@ -396,7 +412,7 @@ export function Tasky() {
               <p>
                 Alongside the team design, I explored a bolder direction: work photos, category colors and a stronger
                 header. The team chose the simpler version for lower data use and readability, and the client never
-                reviewed mine. So it stays an exploration, not the shipped design.
+                reviewed mine. So it stays an exploration and was not part of the final client handoff.
               </p>
               <p>
                 Looking back, it also slipped into a contraction, “I’m interested,” which we had ruled out with the client.

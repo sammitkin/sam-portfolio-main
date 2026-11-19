@@ -87,7 +87,7 @@ export function Hero() {
           </div>
           <div className="lg:col-span-5">
             <p className="mt-[18px] max-w-[34em] text-[17px] font-medium leading-[1.55] lg:mt-0 lg:text-[19px]">
-              Before design, I spent 10+ years running a client-facing service business. Now I bring that closeness to
+              Before design, I spent 11+ years running a client-facing service business. Now I bring that closeness to
               customers into research, service design and product decisions.
             </p>
             <div className="mt-6 flex flex-col gap-2.5 text-[16px] font-bold md:flex-row md:flex-wrap md:items-center md:gap-3 lg:mt-7">

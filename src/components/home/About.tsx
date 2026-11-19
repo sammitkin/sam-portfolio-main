@@ -7,6 +7,8 @@ import soccer3 from "@/assets/images/about/soccer@3x.webp";
 import hike1 from "@/assets/images/about/hike.webp";
 import hike2 from "@/assets/images/about/hike@2x.webp";
 import hike3 from "@/assets/images/about/hike@3x.webp";
+import chair1 from "@/assets/images/about/chair.webp";
+import chair2 from "@/assets/images/about/chair@2x.webp";
 import { Wrap } from "../layout/Wrap";
 import { SectionRule } from "./SectionRule";
 
@@ -21,12 +23,29 @@ export function About() {
   return (
     <Wrap as="section" id="about" aria-labelledby="about-title" className="scroll-mt-[-88px] pt-[88px] md:scroll-mt-[-128px] md:pt-32 lg:scroll-mt-[-160px] lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-6 lg:pt-40">
       <SectionRule label="About" className="md:mb-10 lg:mb-14" />
-      <h2
-        id="about-title"
-        className="text-[48px] font-extrabold leading-[0.95] tracking-[-0.055em] md:text-[64px] lg:col-span-5 lg:text-[clamp(64px,5.85vw,84px)]"
-      >
-        Eleven years behind the chair.
-      </h2>
+      <div className="lg:col-span-5">
+        <h2
+          id="about-title"
+          className="text-[48px] font-extrabold leading-[0.95] tracking-[-0.055em] md:text-[64px] lg:text-[clamp(64px,5.85vw,84px)]"
+        >
+          Eleven years behind the chair.
+        </h2>
+        {/* Desktop only: fills the column under the title with the work itself. */}
+        <figure className="mt-10 hidden w-[64%] lg:block">
+          <img
+            src={chair1}
+            srcSet={`${chair1} 520w, ${chair2} 1040w`}
+            sizes="300px"
+            width={520}
+            height={642}
+            loading="lazy"
+            decoding="async"
+            alt="Sam giving a client a straight-razor shave in a barbershop"
+            className="block aspect-[4/5] w-full rounded-[28px] object-cover object-[50%_35%]"
+          />
+          <figcaption className="mt-2.5 text-[14px] font-semibold leading-[1.35] text-graphite">At work.</figcaption>
+        </figure>
+      </div>
       <div className="mt-5 max-w-[36em] text-[17px] font-medium leading-[1.6] md:mt-8 lg:col-span-6 lg:col-start-7 lg:mt-0 lg:text-[19px] [&>p+p]:mt-3.5 lg:[&>p+p]:mt-[18px]">
         <p>
           I spent more than 11 years in the barber industry, first in Russia and later in Los Angeles. I ran my own

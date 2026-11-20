@@ -70,16 +70,17 @@ export function About() {
         </p>
       </div>
 
-      {/* Phones: a swipeable row of large photos (next one peeks in). Tablet and up: three in a grid. */}
+      {/* Phones: a swipeable row of large photos (next one peeks in). The right gap sits on the list, not the
+          scroll container, because Safari ignores end padding on overflow containers. Tablet and up: a grid. */}
       <div
         tabIndex={0}
         role="region"
         aria-label="Photos, scroll sideways"
-        className="-mx-5 mt-10 snap-x snap-mandatory scroll-px-5 overflow-x-auto px-5 pb-2 md:mx-0 md:mt-14 md:overflow-visible md:px-0 md:pb-0 lg:col-span-12 lg:mt-[72px]"
+        className="-mx-5 mt-10 snap-x snap-mandatory scroll-pl-5 overflow-x-auto pl-5 pb-2 md:mx-0 md:mt-14 md:overflow-visible md:pl-0 md:pb-0 lg:col-span-12 lg:mt-[72px]"
       >
-      <ul className="flex gap-3 md:grid md:grid-cols-3 md:gap-5 lg:gap-6">
+      <ul className="flex w-max gap-3 pr-5 md:grid md:w-auto md:grid-cols-3 md:gap-5 md:pr-0 lg:gap-6">
         {PHOTOS.map((p) => (
-          <li key={p.caption} className="w-[78%] shrink-0 snap-start md:w-auto">
+          <li key={p.caption} className="w-[78vw] shrink-0 snap-start md:w-auto">
             <figure>
               <img
                 src={p.src[0]}

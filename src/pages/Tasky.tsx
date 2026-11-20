@@ -1,7 +1,6 @@
 import {
   CaseBody,
   CaseIntro,
-  Chips,
   DecisionPanel,
   ExternalButton,
   Flow,
@@ -20,6 +19,7 @@ import {
   Quote,
   Section,
   SubHeading,
+  Table,
   WideImage,
   useActiveSection,
   type SectionDef,
@@ -223,19 +223,54 @@ export function Tasky() {
           <Pad>
             <Prose className="mt-6">
               <p>
-                After our first calls, the client shared a full product vision. It was a strong vision, and much bigger
-                than five weeks.
+                The client’s vision was a full local work platform: verified profiles, GPS check-in, payment evidence,
+                SMS, automatic trust scores, a business portal and a government dashboard. We had five weeks and three
+                designers to deliver a clickable prototype, not a launched product.
               </p>
             </Prose>
-            <Chips
-              label="Moved to Phase 2"
-              items={["ID checks", "GPS check-in", "SMS alerts", "In-app payments", "Trust scores", "Government dashboards"]}
+            <SubHeading>How we decided what stayed</SubHeading>
+            <Points
+              items={[
+                {
+                  title: "The brief set the frame",
+                  body: <p>One primary flow: a worker finds work, understands it and shows interest. Plus posting, choosing a worker, safety reports and light staff review. Payments, ID checks, GPS, messaging and matching were out.</p>,
+                },
+                {
+                  title: "Each feature had to solve a research problem",
+                  body: <p>Our priority list tied every feature to a problem from interviews: finding work, trust, safety, and local context like cash and landmark addresses.</p>,
+                },
+                {
+                  title: "A smaller version over no version",
+                  body: <p>When the need was real but the full feature was out of scope, we designed a simpler version the prototype could show.</p>,
+                },
+              ]}
             />
-            <Prose className="mt-6">
+            <Prose className="mt-8">
               <p>
-                We agreed on one primary flow, a worker who finds work, understands it and shows interest, plus the flows
-                that make it work: posting, choosing a worker, safety reports and light staff review. The rest went into a
-                Phase 2 list. We confirmed decisions with the client every week, so nothing was cut by surprise.
+                My part came first. Before our team’s priority list, I compared the client’s pitch deck with the brief and
+                proposed the split: follow the deck’s MVP direction, and keep verification, payments and business accounts
+                in the backlog.
+              </p>
+            </Prose>
+            <Table
+              head={["The client asked for", "What the MVP does instead", "Why"]}
+              rows={[
+                ["GPS check-in", "An arrival code and an “I have arrived” button", "GPS was outside the brief"],
+                ["ID and background checks", "Trust badges as visual states; staff approve every post before it goes live", "ID verification was outside the brief"],
+                ["In-app payments", "The posting fee is paid outside the app and confirmed by staff; a completion code after the poster confirms payment", "Payment systems were outside the brief"],
+                ["SMS alerts", "In-app notifications", "Out of scope; the strongest later option for basic-phone users"],
+                ["Sending work straight to past workers", "Posters choose manually; urgent work becomes a paid featured post", "It needed a new flow, and matching was out"],
+                ["Automatic trust scores", "Two-way ratings and badges", "It would change ratings, profiles and related features"],
+                ["A desktop staff tool", "Mobile staff screens with approval, fee and report queues", "Not enough time in five weeks"],
+                ["Contractor quotes", "Level 1 work with a set price", "A site visit before pricing doesn’t fit the fixed-price flow"],
+              ]}
+              caption="Everything in the left column went into the Phase 2 list in our handoff, along with in-app messaging (designed as a concept only) and the government dashboard."
+            />
+            <Prose className="mt-8">
+              <p>
+                We reviewed these decisions with the client on weekly calls and in written feedback, so nothing was cut by
+                surprise. One decision went the other way: the posting fee was cut from our first priority list, then came
+                back as a display-only screen once the client explained that the fee is paid outside the app.
               </p>
               <p>
                 To keep three designers consistent, I built a sitemap and a conceptual data model. They gave us one

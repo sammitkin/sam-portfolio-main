@@ -244,15 +244,39 @@ export function DealsHub() {
               img={img("deals/userflow", "User flow: open the app, tap Deals Hub, select an offer, then branch by offer type. Activated offers move to My Offers; if a purchase isn’t matched, the user can report a missing reward")}
               caption="User flow: discover, activate and track an offer. Ovals mark start and end points, diamonds mark decisions."
             />
-            <SubHeading>Two lo-fi passes before mid-fi.</SubHeading>
+            <SubHeading>Two lo-fi directions. I kept the one closest to the real app.</SubHeading>
             <Prose className="mt-4">
               <p>
-                I sketched the six-screen flow by hand first, then redrew it as a cleaner second pass: a list instead of a
-                grid on Deals Hub home, Activate next to the eligible card, and a single progress bar in My Offers.
+                I sketched the same six screens in two directions. Version 2 tested different structures for the same content:
+                a list instead of a grid, an inline savings total instead of a boxed one, and Activate combined with the
+                eligible card. I moved forward with version 1 because it stays closest to the existing Bank of America app
+                structure. The feature had to work inside the current design system, not introduce an unfamiliar pattern.
               </p>
             </Prose>
-            <WideImage img={img("deals/lofi-v1", "Lo-fi version 1, hand-drawn: entry point, Deals Hub home, activate offer, shop through link, local deal and my activated offers")} caption="Lo-fi, version 1. Click to zoom in." />
-            <WideImage img={img("deals/lofi-v2", "Lo-fi version 2: the same six screens redrawn with a list layout and the Activate button next to the eligible card")} caption="Lo-fi, version 2. Click to zoom in." />
+            <WideImage img={img("deals/lofi-v1", "Lo-fi version 1, hand-drawn: entry point, Deals Hub home, activate offer, shop through link, local deal and my activated offers")} caption="Lo-fi, version 1, the direction I chose. Click to zoom in." />
+            <WideImage img={img("deals/lofi-v2", "Lo-fi version 2, an alternative direction: the same six screens with a list layout, Activate next to the eligible card and a single progress bar")} caption="Lo-fi, version 2, the alternative I set aside. Click to zoom in." />
+            <SubHeading>How I narrowed it down.</SubHeading>
+            <Points
+              columns={2}
+              items={[
+                {
+                  title: "One entry point, on Accounts",
+                  body: "A Deals Hub card under BofA Rewards. I dropped an entry in the hamburger menu after my mentor’s review: “It’s not gonna get used.” A fifth tab would have changed the app’s main navigation for a single feature.",
+                },
+                {
+                  title: "All three offer types, not one",
+                  body: "Two of five participants confused offer types, so one simplified offer would hide the real problem. My mentor agreed: “it’ll be too simple if you just prototype one.”",
+                },
+                {
+                  title: "The exact eligible card",
+                  body: "In interviews, one participant wasn’t sure which of his cards an offer worked with. So every offer names the card right above the action.",
+                },
+                {
+                  title: "A four-step tracker",
+                  body: "Today, an activated offer shows only a checkmark. Participants described the stages on their own, from activated to paid, so My Offers tracks Activated, Purchase detected, Pending and Credited.",
+                },
+              ]}
+            />
             <PhoneRow
               items={[
                 { img: img("deals/activate", "Starbucks offer with the eligible card and an Activate offer button"), tag: "Activate", label: "One tap adds the offer to the eligible card." },

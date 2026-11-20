@@ -247,11 +247,10 @@ export function DealsHub() {
             <SubHeading>Two lo-fi directions. I kept the one closest to the real app.</SubHeading>
             <Prose className="mt-4">
               <p>
-                I sketched the same six screens in two directions. Version 2 tried a list on Deals Hub home, Activate next to
-                the eligible card and a single progress bar in My Offers. Version 1 kept a grid, the eligible card above a
-                full-width Activate button and a four-step tracker. I chose version 1 because it stays closest to the
-                existing Bank of America app, and my audit and competitor review showed that the missing native feel was
-                the problem specific to Bank of America.
+                I sketched the same six screens in two directions. Version 2 tested different structures for the same content:
+                a list instead of a grid, an inline savings total instead of a boxed one, and Activate combined with the
+                eligible card. I moved forward with version 1 because it stays closest to the existing Bank of America app
+                structure. The feature had to work inside the current design system, not introduce an unfamiliar pattern.
               </p>
             </Prose>
             <WideImage img={img("deals/lofi-v1", "Lo-fi version 1, hand-drawn: entry point, Deals Hub home, activate offer, shop through link, local deal and my activated offers")} caption="Lo-fi, version 1, the direction I chose. Click to zoom in." />

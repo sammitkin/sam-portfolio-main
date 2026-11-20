@@ -70,26 +70,34 @@ export function About() {
         </p>
       </div>
 
-      <ul className="mt-10 grid grid-cols-3 gap-2.5 md:mt-14 md:gap-5 lg:col-span-12 lg:mt-[72px] lg:gap-6">
+      {/* Phones: a swipeable row of large photos (next one peeks in). Tablet and up: three in a grid. */}
+      <div
+        tabIndex={0}
+        role="region"
+        aria-label="Photos, scroll sideways"
+        className="-mx-5 mt-10 snap-x snap-mandatory scroll-px-5 overflow-x-auto px-5 pb-2 md:mx-0 md:mt-14 md:overflow-visible md:px-0 md:pb-0 lg:col-span-12 lg:mt-[72px]"
+      >
+      <ul className="flex gap-3 md:grid md:grid-cols-3 md:gap-5 lg:gap-6">
         {PHOTOS.map((p) => (
-          <li key={p.caption}>
+          <li key={p.caption} className="w-[78%] shrink-0 snap-start md:w-auto">
             <figure>
               <img
                 src={p.src[0]}
                 srcSet={`${p.src[0]} 400w, ${p.src[1]} 800w, ${p.src[2]} 1200w`}
-                sizes="(min-width: 1024px) 400px, 31vw"
+                sizes="(min-width: 1024px) 400px, (min-width: 768px) 31vw, 78vw"
                 width={400}
                 height={500}
                 loading="lazy"
                 decoding="async"
                 alt={p.alt}
-                className="block aspect-[4/5] w-full rounded-[16px] object-cover md:rounded-[22px] lg:rounded-[28px]"
+                className="block aspect-[4/5] w-full rounded-[22px] object-cover lg:rounded-[28px]"
               />
-              <figcaption className="mt-2 text-[12px] font-semibold leading-[1.35] text-graphite md:mt-2.5 md:text-[14px]">{p.caption}</figcaption>
+              <figcaption className="mt-2.5 text-[14px] font-semibold leading-[1.35] text-graphite">{p.caption}</figcaption>
             </figure>
           </li>
         ))}
       </ul>
+      </div>
 
     </Wrap>
   );

@@ -53,11 +53,11 @@ const LOOP: [string, string][] = [
 
 function Loop({ onPaper = false }: { onPaper?: boolean }) {
   return (
-    <ol className="flex flex-wrap gap-2 lg:flex-col lg:items-start lg:gap-2.5">
+    <ol className="flex flex-wrap gap-2 lg:flex-col lg:items-start lg:gap-3">
       {LOOP.map(([label, cls]) => (
         <li key={label}>
           <span
-            className={`inline-flex rounded-full px-3.5 py-[7px] font-ui text-[13px] font-semibold md:text-[15px] ${cls} ${onPaper && cls.includes("bg-white") ? "shadow-[inset_0_0_0_1px_var(--color-hair)]" : ""}`}
+            className={`inline-flex rounded-full px-3.5 py-[7px] font-ui text-[13px] font-semibold md:text-[15px] lg:px-5 lg:py-2.5 lg:text-[20px] ${cls} ${onPaper && cls.includes("bg-white") ? "shadow-[inset_0_0_0_1px_var(--color-hair)]" : ""}`}
           >
             {label}
           </span>
@@ -150,7 +150,7 @@ export function Frant() {
 
       {/* Product showcase: straight-edged Frant band */}
       <section aria-label="Frant screens" className="mt-10 bg-frant md:mt-14 lg:mt-16">
-        <div className="mx-auto grid h-[400px] max-w-[1440px] grid-cols-2 items-start gap-3.5 overflow-hidden px-5 pt-8 md:h-[560px] md:grid-cols-3 md:gap-6 md:px-10 md:pt-12 lg:h-[640px] lg:grid-cols-12 lg:px-[72px] lg:pt-0">
+        <div className="mx-auto grid h-[400px] max-w-[1440px] grid-cols-2 items-start gap-3.5 overflow-hidden px-5 pt-8 md:h-[560px] md:grid-cols-3 md:gap-6 md:px-10 md:pt-12 lg:h-[640px] lg:grid-cols-12 lg:px-[72px] lg:pt-14">
           <img
             src={img("frant/home", "").src}
             srcSet={img("frant/home", "").srcSet}
@@ -159,7 +159,7 @@ export function Frant() {
             height={956}
             alt="Frant Home: three regulars are past their usual visit"
             fetchPriority="high"
-            className="block w-full rounded-t-[26px] md:rounded-t-[36px] lg:col-span-4 lg:mt-3 lg:max-w-[380px] lg:justify-self-center lg:rounded-t-[44px] lg:shadow-[0_-20px_60px_-30px_rgba(110,24,10,0.6)]"
+            className="block w-full rounded-t-[26px] md:rounded-t-[36px] lg:col-span-4 lg:max-w-[380px] lg:justify-self-center lg:rounded-t-[44px] lg:shadow-[0_-20px_60px_-30px_rgba(110,24,10,0.6)]"
           />
           <img
             src={img("frant/visit-logged", "").src}
@@ -171,9 +171,9 @@ export function Frant() {
             className="mt-12 block w-full rounded-t-[26px] md:mt-24 md:rounded-t-[36px] lg:col-span-4 lg:mt-[176px] lg:max-w-[340px] lg:justify-self-center lg:rounded-t-[40px] lg:shadow-[0_-20px_60px_-30px_rgba(110,24,10,0.6)]"
           />
           <div className="hidden md:block md:pt-6 lg:col-span-4 lg:pt-[72px]">
-            <p className="mb-5 text-[18px] font-extrabold">The loop Frant tracks</p>
+            <p className="mb-5 text-[18px] font-extrabold lg:mb-6 lg:text-[24px]">The loop Frant tracks</p>
             <Loop />
-            <p className="mt-7 text-[18px] font-bold leading-[1.45]">22 hi-fi screens, three linked flows, one UI kit.</p>
+            <p className="mt-7 text-[18px] font-bold leading-[1.45] lg:mt-9 lg:text-[24px] lg:leading-[1.35]">22 hi-fi screens, three linked flows, one UI kit.</p>
           </div>
         </div>
       </section>
@@ -427,7 +427,7 @@ export function Frant() {
           </Section>
 
           {/* 3 Key decision */}
-          <Section id="decision" kicker="Key decision" title="Every rank comes with its reason.">
+          <Section id="decision" kicker="Key decision" title="Overdue clients, ranked by how late they are.">
             <div className="mt-7 bg-frant-tint px-5 py-9 md:mt-10 md:px-10 md:py-12 lg:grid lg:grid-cols-[360px_minmax(0,1fr)] lg:items-start lg:gap-14 lg:p-14">
               <div className="relative mx-auto w-[280px] md:w-[320px] lg:w-[360px]">
                 <Zoomable

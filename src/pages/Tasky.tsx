@@ -255,14 +255,14 @@ export function Tasky() {
             <Table
               head={["The client asked for", "The need behind it", "What the MVP does instead, and why it’s enough"]}
               rows={[
-                ["GPS check-in", "Confirm the worker actually arrived", "An arrival code. Only the poster has it and gives it in person, so a valid code means both people met at the work, with no location tracking."],
-                ["ID and background checks", "Know the work and the people are safe", "Staff approve every post before it goes live. Trust badges show where verification will appear, and ID checks at sign-up come in Phase 2."],
-                ["In-app payments", "Proof that the work was done and paid", "People already pay in cash. The completion code appears only after the poster confirms the work and the payment, so neither side can close the job alone. “Did not get a code?” goes to staff."],
-                ["SMS alerts", "Tell people when their status changes", "In-app notifications cover smartphone users. SMS is the first Phase 2 step for people with basic phones."],
-                ["Sending work straight to past workers", "Fill a job fast with someone the poster trusts", "The poster chooses from profiles and ratings, and urgent work becomes a paid featured post that reaches workers sooner."],
-                ["Automatic trust scores", "Show who is reliable", "Two-way ratings already show it. Automatic scores would change ratings, profiles and related features, and staff resolve disputes outside the app."],
-                ["A desktop staff tool", "Let staff approve posts, confirm fees and handle reports", "The same three queues work on a phone. A desktop dashboard would reuse them, so it waits for Phase 2."],
-                ["Contractor quotes", "Cover skilled jobs", "Skilled jobs need a site visit before a price, which the fixed-price flow doesn’t support. The MVP covers Level 1 work with a set price."],
+                ["GPS check-in", "Confirm the right worker showed up, and record the start", "The worker taps “I have arrived” and enters a one-time code the poster gives them. Only the poster has the code, so a valid code means the right worker met the poster at the work."],
+                ["ID and background checks", "Know which workers can be trusted", "Staff approve every post before it goes live, and badges show trust levels as visual states. That gives trust signals without building verification. How to check ID at sign-up is the client’s Phase 2 decision."],
+                ["In-app payments", "Stop a poster from confirming the work alone or lowering the pay", "The poster pays in cash. The completion code appears only after the poster confirms the work is done and paid, so it proves both. With no code or no pay, the worker can still finish and report it to staff."],
+                ["SMS alerts", "Keep both sides informed, including people with basic phones", "In-app alerts for interest, selection, approval and status changes, which the client agreed to for the MVP. SMS stays the strongest later option for basic phones."],
+                ["Sending work straight to past workers", "Fill a job with workers the poster already knows", "The poster chooses from interested workers, with no ranking. Sending posts to past workers needs a new flow and matching, both outside the brief."],
+                ["Automatic trust scores", "Reward reliable workers", "Two-way ratings on five qualities, hidden until both sides submit. Reputation builds from patterns, so one bad day doesn’t define someone, and staff can remove an unfair rating after review."],
+                ["A desktop dashboard", "Give staff and businesses a view from a desk", "Mobile staff screens with queues for posts to approve, fees to confirm and reported issues. A business dashboard serves users we never interviewed, so it needs its own research first."],
+                ["Contractor quotes", "Cover skilled jobs", "Level 1 work, with pay agreed before the work starts. Skilled and licensed work carries liability, and a quote after a site visit doesn’t fit a flow where pay is set first."],
               ]}
               caption="The brief excluded payments, ID checks, GPS, messaging and matching, so the question was how to meet each need without them. Everything in the left column went into the Phase 2 list in our handoff, along with in-app messaging (designed as a concept only) and the government dashboard."
             />

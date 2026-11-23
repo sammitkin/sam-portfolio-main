@@ -253,18 +253,18 @@ export function Tasky() {
               </p>
             </Prose>
             <Table
-              head={["The client asked for", "What the MVP does instead", "Why"]}
+              head={["The client asked for", "The need behind it", "What the MVP does instead, and why it’s enough"]}
               rows={[
-                ["GPS check-in", "An arrival code and an “I have arrived” button", "GPS was outside the brief"],
-                ["ID and background checks", "Trust badges as visual states; staff approve every post before it goes live", "ID verification was outside the brief"],
-                ["In-app payments", "The posting fee is paid outside the app and confirmed by staff; a completion code after the poster confirms payment", "Payment systems were outside the brief"],
-                ["SMS alerts", "In-app notifications", "Out of scope; the strongest later option for basic-phone users"],
-                ["Sending work straight to past workers", "Posters choose manually; urgent work becomes a paid featured post", "It needed a new flow, and matching was out"],
-                ["Automatic trust scores", "Two-way ratings and badges", "It would change ratings, profiles and related features"],
-                ["A desktop staff tool", "Mobile staff screens with approval, fee and report queues", "Not enough time in five weeks"],
-                ["Contractor quotes", "Level 1 work with a set price", "A site visit before pricing doesn’t fit the fixed-price flow"],
+                ["GPS check-in", "Confirm the worker actually arrived", "An arrival code. Only the poster has it and gives it in person, so a valid code means both people met at the work, with no location tracking."],
+                ["ID and background checks", "Know the work and the people are safe", "Staff approve every post before it goes live. Trust badges show where verification will appear, and ID checks at sign-up come in Phase 2."],
+                ["In-app payments", "Proof that the work was done and paid", "People already pay in cash. The completion code appears only after the poster confirms the work and the payment, so neither side can close the job alone. “Did not get a code?” goes to staff."],
+                ["SMS alerts", "Tell people when their status changes", "In-app notifications cover smartphone users. SMS is the first Phase 2 step for people with basic phones."],
+                ["Sending work straight to past workers", "Fill a job fast with someone the poster trusts", "The poster chooses from profiles and ratings, and urgent work becomes a paid featured post that reaches workers sooner."],
+                ["Automatic trust scores", "Show who is reliable", "Two-way ratings already show it. Automatic scores would change ratings, profiles and related features, and staff resolve disputes outside the app."],
+                ["A desktop staff tool", "Let staff approve posts, confirm fees and handle reports", "The same three queues work on a phone. A desktop dashboard would reuse them, so it waits for Phase 2."],
+                ["Contractor quotes", "Cover skilled jobs", "Skilled jobs need a site visit before a price, which the fixed-price flow doesn’t support. The MVP covers Level 1 work with a set price."],
               ]}
-              caption="Everything in the left column went into the Phase 2 list in our handoff, along with in-app messaging (designed as a concept only) and the government dashboard."
+              caption="The brief excluded payments, ID checks, GPS, messaging and matching, so the question was how to meet each need without them. Everything in the left column went into the Phase 2 list in our handoff, along with in-app messaging (designed as a concept only) and the government dashboard."
             />
             <Prose className="mt-8">
               <p>

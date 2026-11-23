@@ -253,18 +253,18 @@ export function Tasky() {
               </p>
             </Prose>
             <Table
-              head={["The client asked for", "What the MVP does instead", "Why"]}
+              head={["The client asked for", "The need behind it", "What the MVP does instead, and why it’s enough"]}
               rows={[
-                ["GPS check-in", "An arrival code and an “I have arrived” button", "GPS was outside the brief"],
-                ["ID and background checks", "Trust badges as visual states; staff approve every post before it goes live", "ID verification was outside the brief"],
-                ["In-app payments", "The posting fee is paid outside the app and confirmed by staff; a completion code after the poster confirms payment", "Payment systems were outside the brief"],
-                ["SMS alerts", "In-app notifications", "Out of scope; the strongest later option for basic-phone users"],
-                ["Sending work straight to past workers", "Posters choose manually; urgent work becomes a paid featured post", "It needed a new flow, and matching was out"],
-                ["Automatic trust scores", "Two-way ratings and badges", "It would change ratings, profiles and related features"],
-                ["A desktop staff tool", "Mobile staff screens with approval, fee and report queues", "Not enough time in five weeks"],
-                ["Contractor quotes", "Level 1 work with a set price", "A site visit before pricing doesn’t fit the fixed-price flow"],
+                ["GPS check-in", "Confirm the right worker showed up, and record the start", "The worker taps “I have arrived” and enters a one-time code the poster gives them. Only the poster has the code, so a valid code means the right worker met the poster at the work."],
+                ["ID and background checks", "Know which workers can be trusted", "Staff approve every post before it goes live, and badges show trust levels as visual states. That gives trust signals without building verification. How to check ID at sign-up is the client’s Phase 2 decision."],
+                ["In-app payments", "Stop a poster from confirming the work alone or lowering the pay", "The poster pays in cash. The completion code appears only after the poster confirms the work is done and paid, so it proves both. With no code or no pay, the worker can still finish and report it to staff."],
+                ["SMS alerts", "Keep both sides informed, including people with basic phones", "In-app alerts for interest, selection, approval and status changes, which the client agreed to for the MVP. SMS stays the strongest later option for basic phones."],
+                ["Sending work straight to past workers", "Fill a job with workers the poster already knows", "The poster chooses from interested workers, with no ranking. Sending posts to past workers needs a new flow and matching, both outside the brief."],
+                ["Automatic trust scores", "Reward reliable workers", "Two-way ratings on five qualities, hidden until both sides submit. Reputation builds from patterns, so one bad day doesn’t define someone, and staff can remove an unfair rating after review."],
+                ["A desktop dashboard", "Give staff and businesses a view from a desk", "Mobile staff screens with queues for posts to approve, fees to confirm and reported issues. A business dashboard serves users we never interviewed, so it needs its own research first."],
+                ["Contractor quotes", "Cover skilled jobs", "Level 1 work, with pay agreed before the work starts. Skilled and licensed work carries liability, and a quote after a site visit doesn’t fit a flow where pay is set first."],
               ]}
-              caption="Everything in the left column went into the Phase 2 list in our handoff, along with in-app messaging (designed as a concept only) and the government dashboard."
+              caption="The brief excluded payments, ID checks, GPS, messaging and matching, so the question was how to meet each need without them. Everything in the left column went into the Phase 2 list in our handoff, along with in-app messaging (designed as a concept only) and the government dashboard."
             />
             <Prose className="mt-8">
               <p>

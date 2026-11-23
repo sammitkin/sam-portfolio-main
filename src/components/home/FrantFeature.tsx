@@ -137,26 +137,30 @@ export function FrantFeature() {
         </p>
         <h2
           id="frant-title"
-          className="mt-[18px] max-w-[14em] text-[44px] font-extrabold leading-[0.96] tracking-[-0.055em] md:text-[64px] lg:col-span-8 lg:col-start-1 lg:row-start-2 lg:mt-7 lg:text-[clamp(64px,5.85vw,84px)] lg:leading-[0.95]"
+          className="mt-[18px] max-w-[14em] text-[44px] font-extrabold leading-[0.96] tracking-[-0.055em] md:text-[64px] lg:col-span-12 lg:col-start-1 lg:row-start-2 lg:mt-7 lg:text-[clamp(64px,5.85vw,84px)] lg:leading-[0.95]"
         >
           A rank without a reason feels arbitrary.
         </h2>
-        <div className="mt-4 max-w-[36em] lg:col-span-4 lg:col-start-9 lg:row-start-2 lg:mt-9">
-          <p className="text-[16px] font-medium leading-[1.55] lg:text-[18px]">
+        <div className="mt-4 max-w-[36em] lg:col-span-12 lg:col-start-1 lg:row-start-3 lg:mt-10 lg:grid lg:max-w-none lg:grid-cols-12 lg:items-start lg:gap-x-6">
+          <p className="text-[16px] font-medium leading-[1.55] lg:col-span-5 lg:text-[19px]">
             Frant helps independent barbers see which regulars are overdue and reach out in their own words.
             <span className="lg:hidden"> Solo UX/UI, 5 weeks, 6 interviews, 2 test rounds.</span>
           </p>
-          <dl className="mt-5 hidden grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 text-[15px] lg:grid">
-            <dt className="font-medium">Role</dt>
-            <dd className="font-extrabold">Solo UX/UI designer</dd>
-            <dt className="font-medium">Time</dt>
-            <dd className="font-extrabold">5 weeks, about 100 hours</dd>
-            <dt className="font-medium">Research</dt>
-            <dd className="font-extrabold">6 interviews, 2 test rounds</dd>
+          <dl className="hidden text-[15px] lg:col-span-6 lg:col-start-7 lg:mt-1 lg:grid lg:grid-cols-3 lg:gap-x-6">
+            {[
+              ["Role", "Solo UX/UI designer"],
+              ["Time", "5 weeks, about 100 hours"],
+              ["Research", "6 interviews, 2 test rounds"],
+            ].map(([k, v]) => (
+              <div key={k} className="border-t-2 border-ink pt-2.5">
+                <dt className="font-medium">{k}</dt>
+                <dd className="mt-0.5 font-extrabold leading-[1.35]">{v}</dd>
+              </div>
+            ))}
           </dl>
         </div>
 
-        <div className="mt-6 md:mt-10 md:grid md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:gap-x-10 lg:col-span-12 lg:row-start-3 lg:mt-14 xl:col-span-10 xl:col-start-2 xl:mt-20 xl:grid-cols-[minmax(0,5fr)_minmax(0,4fr)] xl:gap-x-16">
+        <div className="mt-6 md:mt-10 md:grid md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:gap-x-10 lg:col-span-12 lg:row-start-4 lg:mt-20 xl:col-span-10 xl:col-start-2 xl:mt-24 xl:grid-cols-[minmax(0,5fr)_minmax(0,4fr)] xl:gap-x-16">
           <div className="xl:px-5">
             <p className="mb-3.5 inline-flex min-h-[34px] items-center gap-2 rounded-full bg-ink px-3.5 text-[14px] font-bold text-white">
               <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true">
